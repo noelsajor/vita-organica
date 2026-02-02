@@ -440,6 +440,34 @@ p {
     align-items: center;
     justify-content: center;
   }
+
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+  }
+
+  /* Keep nav-row from forcing a new line */
+  .nav-row {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  /* Make sure actions align to the right */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--spacing-s);
+  }
+
+  /* Ensure burger is visible */
+  .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 
