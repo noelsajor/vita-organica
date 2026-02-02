@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Label Supplement Manufacturing | Homepage Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <!-- Row 1: Logo -->
+      <div class="logo">
+        <a href="/" class="logo-link" aria-label="Home">
+          <div class="logo-placeholder">[LOGO]</div>
+        </a>
+      </div>
+
+      <!-- Row 2: Nav + Actions on same line -->
+      <div class="nav-row">
+        <nav class="main-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+
+            <!-- Private Label (Dropdown) -->
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="dropdown-private-label"
+              >
+                Private Label
+                <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-private-label" role="menu">
+                <li><a role="menuitem" href="/private-label-supplements">Private Label Overview</a></li>
+                <li><a role="menuitem" href="/private-label-gummies">Gummies</a></li>
+                <li><a role="menuitem" href="/private-label-capsules">Capsules</a></li>
+                <li><a role="menuitem" href="/private-label-honey">Honey Supplements</a></li>
+                <li><a role="menuitem" href="/private-label-drinks">Drinks / Powders</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/manufacturing">Manufacturing</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/design-packaging">Design &amp; Packaging</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/capabilities">Capabilities</a>
+            </li>
+
+            <!-- Resources (Dropdown) -->
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="dropdown-resources"
+              >
+                Resources
+                <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-resources" role="menu">
+                <li><a role="menuitem" href="/blog">Blog</a></li>
+                <li><a role="menuitem" href="/how-it-works">How It Works</a></li>
+                <li><a role="menuitem" href="/pricing">Pricing / MOQ</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Actions (same row as nav) -->
+        <div class="header-actions">
+          <a class="nav-utility-link" href="/pricing">View MOQs</a>
+          <a class="btn-primary header-cta" href="/request-quote">Request a Quote</a>
+
+          <button
+            class="mobile-menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            [☰]
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Panel -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile primary navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="/">Home</a></li>
+
+        <li class="mobile-dropdown">
+          <button
+            class="mobile-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-private-label"
+          >
+            Private Label <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="mobile-submenu" id="mobile-private-label">
+            <li><a href="/private-label-supplements">Private Label Overview</a></li>
+            <li><a href="/private-label-gummies">Gummies</a></li>
+            <li><a href="/private-label-capsules">Capsules</a></li>
+            <li><a href="/private-label-honey">Honey Supplements</a></li>
+            <li><a href="/private-label-drinks">Drinks / Powders</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/manufacturing">Manufacturing</a></li>
+        <li><a href="/design-packaging">Design &amp; Packaging</a></li>
+        <li><a href="/capabilities">Capabilities</a></li>
+
+        <li class="mobile-dropdown">
+          <button
+            class="mobile-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-resources"
+          >
+            Resources <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="mobile-submenu" id="mobile-resources">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/how-it-works">How It Works</a></li>
+            <li><a href="/pricing">Pricing / MOQ</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/about">About</a></li>
+
+        <li class="mobile-cta-group">
+          <a class="btn-secondary" href="/pricing">View MOQs</a>
+          <a class="btn-primary" href="/request-quote">Request a Quote</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Section A: Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1>Launch Your Supplement Brand in 60 Days—Without the Manufacturing Headaches</h1>
+                        <p class="hero-subheadline">FDA-registered, cGMP-certified manufacturing for gummies, capsules, honey supplements, and functional drinks. Low MOQs. Fast turnaround.</p>
+                        
+                        <div class="trust-badges">
+                            <div class="badge">
+                                <span class="badge-icon">✓</span>
+                                <span class="badge-label">FDA Registered</span>
+                            </div>
+                            <div class="badge">
+                                <span class="badge-icon">✓</span>
+                                <span class="badge-label">cGMP Certified</span>
+                            </div>
+                            <div class="badge">
+                                <span class="badge-icon">✓</span>
+                                <span class="badge-label">Made in USA</span>
+                            </div>
+                            <div class="badge">
+                                <span class="badge-icon">✓</span>
+                                <span class="badge-label">15+ Years</span>
+                            </div>
+                        </div>
+
+                        <div class="cta-group">
+                            <button class="btn-primary">View MOQs & Lead Times</button>
+                            <button class="btn-secondary">Talk to an Expert</button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="media-placeholder">Hero Image</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Credibility Strip -->
+        <section class="credibility-strip">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">[icon]</div>
+                        <div class="stat-number">150M+</div>
+                        <div class="stat-label">Units Produced Annually</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">[icon]</div>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Brands Launched</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">[icon]</div>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Manufacturing Formats</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">[icon]</div>
+                        <div class="stat-number">60-Day</div>
+                        <div class="stat-label">Average Time to Market</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: What We Manufacture -->
+        <section class="manufacturing-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Choose Your Manufacturing Format</h2>
+                    <p class="section-subheadline">We specialize in four high-demand supplement formats—each with transparent pricing, realistic timelines, and support from formula to final product.</p>
+                </div>
+                
+                <div class="format-grid">
+                    <div class="format-card">
+                        <div class="format-icon">[Gummy Icon]</div>
+                        <h3>Gummies</h3>
+                        <p>Pectin or gelatin-based gummies in custom shapes, flavors, and dosages.</p>
+                        <ul class="format-details">
+                            <li><strong>MOQ:</strong> 5,000–15,000 units</li>
+                            <li><strong>Lead Time:</strong> 6–8 weeks</li>
+                            <li><strong>Best For:</strong> Consumer brands, kids' vitamins</li>
+                        </ul>
+                        <a href="#" class="text-link">See Gummy Specs →</a>
+                    </div>
+
+                    <div class="format-card">
+                        <div class="format-icon">[Capsule Icon]</div>
+                        <h3>Capsules</h3>
+                        <p>Vegan or gelatin capsules with precise dosing and clean ingredient profiles.</p>
+                        <ul class="format-details">
+                            <li><strong>MOQ:</strong> 2,500–10,000 bottles</li>
+                            <li><strong>Lead Time:</strong> 4–6 weeks</li>
+                            <li><strong>Best For:</strong> Nootropics, herbal blends</li>
+                        </ul>
+                        <a href="#" class="text-link">See Capsule Specs →</a>
+                    </div>
+
+                    <div class="format-card">
+                        <div class="format-icon">[Honey Icon]</div>
+                        <h3>Honey Supplements</h3>
+                        <p>Raw honey infused with functional ingredients—elderberry, turmeric, immune blends.</p>
+                        <ul class="format-details">
+                            <li><strong>MOQ:</strong> 1,000–5,000 jars</li>
+                            <li><strong>Lead Time:</strong> 5–7 weeks</li>
+                            <li><strong>Best For:</strong> Premium wellness brands</li>
+                        </ul>
+                        <a href="#" class="text-link">See Honey Specs →</a>
+                    </div>
+
+                    <div class="format-card">
+                        <div class="format-icon">[Drink Icon]</div>
+                        <h3>Functional Drinks & Powders</h3>
+                        <p>Single-serve powders, RTD beverages, and dissolvable stick packs.</p>
+                        <ul class="format-details">
+                            <li><strong>MOQ:</strong> 3,000–10,000 servings</li>
+                            <li><strong>Lead Time:</strong> 8–10 weeks</li>
+                            <li><strong>Best For:</strong> Sports nutrition, energy</li>
+                        </ul>
+                        <a href="#" class="text-link">See Drink Specs →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: How It Works -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>From Concept to Shelf in 5 Simple Steps</h2>
+                    <p class="section-subheadline">Our streamlined process takes the guesswork out of private label manufacturing. You'll know exactly what to expect—and when.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <h3>Discovery & Formula Development</h3>
+                        <p>We discuss your goals and create or refine your supplement formula.</p>
+                        <div class="step-meta">
+                            <span class="step-timeline">Timeline: 1–2 weeks</span>
+                            <span class="step-role">Your Role: Share your vision</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <h3>Compliance & Labeling Review</h3>
+                        <p>Our regulatory team ensures your formula meets FDA guidelines.</p>
+                        <div class="step-meta">
+                            <span class="step-timeline">Timeline: 1 week</span>
+                            <span class="step-role">Your Role: Approve label design</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <h3>Sample Production & Testing</h3>
+                        <p>We produce samples for your approval with third-party testing.</p>
+                        <div class="step-meta">
+                            <span class="step-timeline">Timeline: 2–3 weeks</span>
+                            <span class="step-role">Your Role: Test samples, request adjustments</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <h3>Full Production Run</h3>
+                        <p>We manufacture your full order with quality checks at every stage.</p>
+                        <div class="step-meta">
+                            <span class="step-timeline">Timeline: 4–8 weeks</span>
+                            <span class="step-role">Your Role: Minimal—we handle production</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-number">5</div>
+                        <h3>Packaging & Fulfillment</h3>
+                        <p>Products are bottled, labeled, and prepared for shipment.</p>
+                        <div class="step-meta">
+                            <span class="step-timeline">Timeline: 1–2 weeks</span>
+                            <span class="step-role">Your Role: Coordinate delivery logistics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-callout">
+                    <strong>Average Total Time:</strong> 60–75 days from kickoff to delivery
+                </div>
+
+                <div class="section-cta">
+                    <button class="btn-primary">Download Manufacturing Guide</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section E: Why Choose Us -->
+        <section class="differentiation-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Brands Choose Us Over Generic Manufacturers</h2>
+                    <p class="section-subheadline">We're not just a factory—we're your manufacturing partner. Here's what sets us apart.</p>
+                </div>
+
+                <div class="diff-grid">
+                    <div class="diff-card">
+                        <div class="diff-icon">[icon]</div>
+                        <h4>Lower MOQs for Startups</h4>
+                        <p>Launch with 1,000–5,000 units, not 50,000. We work with first-time founders and growing brands alike.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">[icon]</div>
+                        <h4>Speed to Market</h4>
+                        <p>Our 60-day average turnaround beats industry standard by 30%. Get your product to customers faster.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">[icon]</div>
+                        <h4>Full Compliance Support</h4>
+                        <p>From FDA registration to label claims review, we handle regulatory complexity so you don't have to.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">[icon]</div>
+                        <h4>Formula Customization</h4>
+                        <p>Don't settle for stock formulas. Our in-house formulators create custom blends tailored to your brand.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">[icon]</div>
+                        <h4>Transparent Pricing</h4>
+                        <p>No hidden fees. No surprise upcharges. You'll know your exact cost per unit before production starts.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-icon">[icon]</div>
+                        <h4>U.S.-Based Quality Control</h4>
+                        <p>Every batch tested in our FDA-registered, cGMP-certified facility. No overseas quality gambles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section F: Audience Segmentation -->
+        <section class="audience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Whether You're Launching or Scaling, We're Built for Your Stage</h2>
+                </div>
+
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <div class="audience-icon">[icon]</div>
+                        <h3>Launch Your First Product Without the Overwhelm</h3>
+                        <p>You have a vision but need guidance. We'll walk you through formula development, compliance, and production.</p>
+                        <div class="benefits-list">
+                            <strong>What You Get:</strong>
+                            <ul>
+                                <li>Dedicated project manager</li>
+                                <li>Formula development support</li>
+                                <li>Label compliance review</li>
+                                <li>Low minimum orders</li>
+                            </ul>
+                        </div>
+                        <button class="btn-primary btn-audience">Book a Founder Strategy Call</button>
+                    </div>
+
+                    <div class="audience-card">
+                        <div class="audience-icon">[icon]</div>
+                        <h3>Expand Your Product Line with Confidence</h3>
+                        <p>You know the game. You need a manufacturing partner who can keep up with your growth and maintain quality.</p>
+                        <div class="benefits-list">
+                            <strong>What You Get:</strong>
+                            <ul>
+                                <li>Priority production scheduling</li>
+                                <li>Flexible MOQ scaling</li>
+                                <li>Custom formulation options</li>
+                                <li>Dedicated account management</li>
+                            </ul>
+                        </div>
+                        <button class="btn-secondary btn-audience">Request a Custom Quote</button>
+                    </div>
+
+                    <div class="audience-card">
+                        <div class="audience-icon">[icon]</div>
+                        <h3>White-Label Solutions for Your Clients</h3>
+                        <p>You bring the clients, we bring the manufacturing expertise. Partner with us to offer private label services.</p>
+                        <div class="benefits-list">
+                            <strong>What You Get:</strong>
+                            <ul>
+                                <li>Partner pricing structures</li>
+                                <li>Multi-client management</li>
+                                <li>Co-branding options</li>
+                                <li>Streamlined ordering process</li>
+                            </ul>
+                        </div>
+                        <button class="btn-secondary btn-audience">Explore Partnership Options</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section G: Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trusted by Brands That Demand Quality</h2>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="quote-text">We launched our first gummy supplement in under 60 days. The team handled everything from formula tweaks to FDA compliance. We had zero experience in manufacturing, and they made it seamless.</p>
+                        <div class="attribution">
+                            <div class="avatar">[SC]</div>
+                            <div class="attribution-text">
+                                <strong>Sarah Chen</strong>
+                                <span>Founder & CEO, VitaFlow Wellness</span>
+                            </div>
+                        </div>
+                        <div class="result-tag">Launched in 58 days</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="quote-text">After working with two overseas manufacturers who couldn't meet our quality standards, we switched here. The difference in communication, transparency, and product quality was night and day.</p>
+                        <div class="attribution">
+                            <div class="avatar">[MR]</div>
+                            <div class="attribution-text">
+                                <strong>Marcus Rodriguez</strong>
+                                <span>Head of Product, Bloom Nutrition</span>
+                            </div>
+                        </div>
+                        <div class="result-tag">3 SKUs launched in 6 months</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="quote-text">As an agency managing multiple supplement brands, we needed a manufacturing partner who could handle variable MOQs and tight timelines. They've become an extension of our team.</p>
+                        <div class="attribution">
+                            <div class="avatar">[JP]</div>
+                            <div class="attribution-text">
+                                <strong>Jennifer Park</strong>
+                                <span>Operations Director, BrandLab Collective</span>
+                            </div>
+                        </div>
+                        <div class="result-tag">12 client brands supported</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section H: Lead Capture -->
+        <section class="lead-capture-section">
+            <div class="container">
+                <div class="lead-capture-grid">
+                    <div class="lead-capture-content">
+                        <h2>Get the Private Label Manufacturing Starter Guide</h2>
+                        <p>Everything you need to know before launching your supplement brand—MOQ ranges, cost breakdowns, timeline expectations, and compliance checklists.</p>
+                        
+                        <ul class="guide-benefits">
+                            <li>✓ MOQ & pricing ranges for each format</li>
+                            <li>✓ Step-by-step production timeline</li>
+                            <li>✓ FDA compliance checklist</li>
+                            <li>✓ Ingredient sourcing guide</li>
+                            <li>✓ Common pitfalls to avoid</li>
+                        </ul>
+
+                        <div class="guide-mockup">[Guide Cover]</div>
+                    </div>
+
+                    <div class="lead-capture-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest">I'm interested in:</label>
+                                <select id="interest" name="interest">
+                                    <option value="">Select format...</option>
+                                    <option value="gummies">Gummies</option>
+                                    <option value="capsules">Capsules</option>
+                                    <option value="honey">Honey Supplements</option>
+                                    <option value="drinks">Drinks/Powders</option>
+                                    <option value="unsure">Not sure yet</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-full">Download Free Guide</button>
+
+                            <p class="privacy-note">We respect your inbox. No spam, just helpful manufacturing insights.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section I: Final CTA -->
+        <section class="final-cta-section">
+            <div class="container">
+                <div class="final-cta-content">
+                    <h2>Ready to Launch or Scale Your Supplement Brand?</h2>
+                    <p>Book a free 30-minute consultation with our manufacturing experts. We'll discuss your goals, review your formula ideas, and create a custom production plan—with zero obligation.</p>
+
+                    <div class="next-steps">
+                        <div class="next-step">
+                            <span class="step-badge">1</span>
+                            <span>Book Your Call</span>
+                        </div>
+                        <div class="next-step">
+                            <span class="step-badge">2</span>
+                            <span>Discuss Your Vision</span>
+                        </div>
+                        <div class="next-step">
+                            <span class="step-badge">3</span>
+                            <span>Get a Custom Plan</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-large">Schedule Your Free Consultation</button>
+                    
+                    <a href="#" class="alt-cta">Prefer email? Contact us here</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Facility</a></li>
+                        <li><a href="#">Certifications</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Manufacturing</h4>
+                    <ul>
+                        <li><a href="#">Gummies</a></li>
+                        <li><a href="#">Capsules</a></li>
+                        <li><a href="#">Honey Supplements</a></li>
+                        <li><a href="#">Functional Drinks</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Manufacturing Guide</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FDA Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Company Name. FDA Registered Facility | cGMP Certified | Made in USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      (function () {
+        const menuBtn = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (menuBtn && mobileNav) {
+          menuBtn.addEventListener('click', () => {
+            const isOpen = mobileNav.classList.toggle('is-open');
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+            menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+          });
+        }
+
+        // Desktop dropdown aria-expanded sync (for a11y)
+        const desktopToggles = document.querySelectorAll('.main-nav .dropdown-toggle');
+        desktopToggles.forEach((btn) => {
+          const parent = btn.closest('.has-dropdown');
+          const menuId = btn.getAttribute('aria-controls');
+          const menu = menuId ? document.getElementById(menuId) : null;
+
+          const setExpanded = (val) => btn.setAttribute('aria-expanded', String(val));
+
+          // Toggle on click (useful for touch laptops)
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            setExpanded(!expanded);
+            if (parent) parent.classList.toggle('open', !expanded);
+          });
+
+          // Close when focus leaves
+          parent?.addEventListener('focusout', (e) => {
+            if (!parent.contains(e.relatedTarget)) {
+              parent.classList.remove('open');
+              setExpanded(false);
+            }
+          });
+
+          // Close on Escape
+          btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              parent?.classList.remove('open');
+              setExpanded(false);
+              btn.blur();
+            }
+          });
+
+          // Close if clicking outside
+          document.addEventListener('click', (e) => {
+            if (parent && !parent.contains(e.target)) {
+              parent.classList.remove('open');
+              setExpanded(false);
+            }
+          });
+
+          // If menu exists, ensure it's not focus-trapping
+          if (menu) {
+            menu.addEventListener('keydown', (e) => {
+              if (e.key === 'Escape') {
+                parent?.classList.remove('open');
+                setExpanded(false);
+                btn.focus();
+              }
+            });
+          }
+        });
+
+        // Mobile dropdown toggles
+        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+        mobileDropdownToggles.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+            const controls = btn.getAttribute('aria-controls');
+            const submenu = controls ? document.getElementById(controls) : null;
+            submenu?.classList.toggle('is-open', !expanded);
+          });
+        });
+      })();
+    </script>
+
+</body>
+</html>
