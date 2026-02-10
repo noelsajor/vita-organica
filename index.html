@@ -28,6 +28,37 @@
             <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/packaging">Packaging</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/design">Design</a>
+            </li>
+
+            <!-- Manufacturing (Dropdown: capabilities) -->
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="dropdown-manufacturing"
+              >
+                Manufacturing
+                <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-manufacturing" role="menu">
+                <li><a role="menuitem" href="/manufacturing">Show All Capabilities</a></li>
+                <li><a role="menuitem" href="/manufacturing/gummies">Gummies</a></li>
+                <li><a role="menuitem" href="/manufacturing/capsules">Capsules</a></li>
+                <li><a role="menuitem" href="/manufacturing/soft-gels">Soft Gels</a></li>
+                <li><a role="menuitem" href="/manufacturing/functional-gels">Gels</a></li>
+                <li><a role="menuitem" href="/manufacturing/powders">Powders</a></li>
+                <li><a role="menuitem" href="/manufacturing/spoons">Spoons</a></li>
+              </ul>
+            </li>
+
             <!-- Private Label (Dropdown) -->
             <li class="nav-item has-dropdown">
               <button
@@ -40,46 +71,48 @@
                 <span class="chevron" aria-hidden="true">▾</span>
               </button>
               <ul class="dropdown-menu" id="dropdown-private-label" role="menu">
-                <li><a role="menuitem" href="/private-label-supplements">Private Label Overview</a></li>
-                <li><a role="menuitem" href="/private-label-gummies">Gummies</a></li>
-                <li><a role="menuitem" href="/private-label-capsules">Capsules</a></li>
-                <li><a role="menuitem" href="/private-label-honey">Honey Supplements</a></li>
-                <li><a role="menuitem" href="/private-label-drinks">Drinks / Powders</a></li>
+                <li><a role="menuitem" href="/private-label">More About our P.L. services &amp; custom formulations</a></li>
               </ul>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/manufacturing">Manufacturing</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/design-packaging">Design &amp; Packaging</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/capabilities">Capabilities</a>
-            </li>
-
-            <!-- Resources (Dropdown) -->
+            <!-- White Label (Dropdown) -->
             <li class="nav-item has-dropdown">
               <button
                 class="nav-link dropdown-toggle"
                 type="button"
                 aria-expanded="false"
-                aria-controls="dropdown-resources"
+                aria-controls="dropdown-white-label"
               >
-                Resources
+                White Label
                 <span class="chevron" aria-hidden="true">▾</span>
               </button>
-              <ul class="dropdown-menu" id="dropdown-resources" role="menu">
-                <li><a role="menuitem" href="/blog">Blog</a></li>
-                <li><a role="menuitem" href="/how-it-works">How It Works</a></li>
-                <li><a role="menuitem" href="/pricing">Pricing / MOQ</a></li>
+              <ul class="dropdown-menu" id="dropdown-white-label" role="menu">
+                <li><a role="menuitem" href="/white-label">More About our W.L. services</a></li>
+              </ul>
+            </li>
+
+            <!-- Contract Manufacturing (Dropdown) -->
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="dropdown-contract-manufacturing"
+              >
+                Contract Manufacturing
+                <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-contract-manufacturing" role="menu">
+                <li><a role="menuitem" href="/contract-manufacturing">More About our Contract Manufacturing services</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
             </li>
           </ul>
         </nav>
@@ -106,6 +139,28 @@
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile primary navigation">
       <ul class="mobile-nav-list">
         <li><a href="/">Home</a></li>
+        <li><a href="/packaging">Packaging</a></li>
+        <li><a href="/design">Design</a></li>
+
+        <li class="mobile-dropdown">
+          <button
+            class="mobile-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-manufacturing"
+          >
+            Manufacturing <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="mobile-submenu" id="mobile-manufacturing">
+            <li><a href="/manufacturing">Show All Capabilities</a></li>
+            <li><a href="/manufacturing/gummies">Gummies</a></li>
+            <li><a href="/manufacturing/capsules">Capsules</a></li>
+            <li><a href="/manufacturing/soft-gels">Soft Gels</a></li>
+            <li><a href="/manufacturing/functional-gels">Gels</a></li>
+            <li><a href="/manufacturing/powders">Powders</a></li>
+            <li><a href="/manufacturing/spoons">Spoons</a></li>
+          </ul>
+        </li>
 
         <li class="mobile-dropdown">
           <button
@@ -117,35 +172,40 @@
             Private Label <span class="chevron" aria-hidden="true">▾</span>
           </button>
           <ul class="mobile-submenu" id="mobile-private-label">
-            <li><a href="/private-label-supplements">Private Label Overview</a></li>
-            <li><a href="/private-label-gummies">Gummies</a></li>
-            <li><a href="/private-label-capsules">Capsules</a></li>
-            <li><a href="/private-label-honey">Honey Supplements</a></li>
-            <li><a href="/private-label-drinks">Drinks / Powders</a></li>
+            <li><a href="/private-label">More About our P.L. services &amp; custom formulations</a></li>
           </ul>
         </li>
-
-        <li><a href="/manufacturing">Manufacturing</a></li>
-        <li><a href="/design-packaging">Design &amp; Packaging</a></li>
-        <li><a href="/capabilities">Capabilities</a></li>
 
         <li class="mobile-dropdown">
           <button
             class="mobile-dropdown-toggle"
             type="button"
             aria-expanded="false"
-            aria-controls="mobile-resources"
+            aria-controls="mobile-white-label"
           >
-            Resources <span class="chevron" aria-hidden="true">▾</span>
+            White Label <span class="chevron" aria-hidden="true">▾</span>
           </button>
-          <ul class="mobile-submenu" id="mobile-resources">
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/how-it-works">How It Works</a></li>
-            <li><a href="/pricing">Pricing / MOQ</a></li>
+          <ul class="mobile-submenu" id="mobile-white-label">
+            <li><a href="/white-label">More About our W.L. services</a></li>
           </ul>
         </li>
 
-        <li><a href="/about">About</a></li>
+        <li class="mobile-dropdown">
+          <button
+            class="mobile-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-contract-manufacturing"
+          >
+            Contract Manufacturing <span class="chevron" aria-hidden="true">▾</span>
+          </button>
+          <ul class="mobile-submenu" id="mobile-contract-manufacturing">
+            <li><a href="/contract-manufacturing">More About our Contract Manufacturing services</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/blog">Blog</a></li>
 
         <li class="mobile-cta-group">
           <a class="btn-secondary" href="/pricing">View MOQs</a>
@@ -159,15 +219,15 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        
+
         <!-- Section A: Hero -->
         <section class="hero">
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content">
                         <h1>Launch Your Supplement Brand in 60 Days—Without the Manufacturing Headaches</h1>
-                        <p class="hero-subheadline">FDA-registered, cGMP-certified manufacturing for gummies, capsules, honey supplements, and functional drinks. Low MOQs. Fast turnaround.</p>
-                        
+                        <p class="hero-subheadline">FDA-registered, cGMP-certified manufacturing for gummies, capsules, soft gels, functional gels, powders, and functional spoons. Low MOQs. Fast turnaround.</p>
+
                         <div class="trust-badges">
                             <div class="badge">
                                 <span class="badge-icon">✓</span>
@@ -215,8 +275,8 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">[icon]</div>
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">Manufacturing Formats</div>
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Manufacturing Capabilities</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">[icon]</div>
@@ -227,132 +287,139 @@
             </div>
         </section>
 
-        <!-- Section C: What We Manufacture -->
+        <!-- Section C: Capabilities -->
         <section class="manufacturing-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Choose Your Manufacturing Format</h2>
-                    <p class="section-subheadline">We specialize in four high-demand supplement formats—each with transparent pricing, realistic timelines, and support from formula to final product.</p>
+                    <h2>Explore Our Manufacturing Capabilities</h2>
+                    <p class="section-subheadline">We support private label, white label, and contract manufacturing across multiple formats—built for fast timelines and consistent quality.</p>
                 </div>
-                
+
                 <div class="format-grid">
                     <div class="format-card">
                         <div class="format-icon">[Gummy Icon]</div>
                         <h3>Gummies</h3>
-                        <p>Pectin or gelatin-based gummies in custom shapes, flavors, and dosages.</p>
+                        <p>Custom shapes, flavors, and functional ingredients—built for modern consumer brands.</p>
                         <ul class="format-details">
-                            <li><strong>MOQ:</strong> 5,000–15,000 units</li>
-                            <li><strong>Lead Time:</strong> 6–8 weeks</li>
-                            <li><strong>Best For:</strong> Consumer brands, kids' vitamins</li>
+                            <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
+                            <li><strong>Also:</strong> Bulk Gummies</li>
+                            <li><strong>Good For:</strong> Wellness, beauty, daily essentials</li>
                         </ul>
-                        <a href="#" class="text-link">See Gummy Specs →</a>
+                        <a href="/manufacturing/gummies" class="text-link">See Gummies →</a>
                     </div>
 
                     <div class="format-card">
                         <div class="format-icon">[Capsule Icon]</div>
                         <h3>Capsules</h3>
-                        <p>Vegan or gelatin capsules with precise dosing and clean ingredient profiles.</p>
+                        <p>Vegan or gelatin capsules with clean ingredient profiles and precise dosing.</p>
                         <ul class="format-details">
-                            <li><strong>MOQ:</strong> 2,500–10,000 bottles</li>
-                            <li><strong>Lead Time:</strong> 4–6 weeks</li>
-                            <li><strong>Best For:</strong> Nootropics, herbal blends</li>
+                            <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
+                            <li><strong>Good For:</strong> Herbal blends, daily protocols</li>
+                            <li><strong>Options:</strong> Multiple capsule sizes</li>
                         </ul>
-                        <a href="#" class="text-link">See Capsule Specs →</a>
+                        <a href="/manufacturing/capsules" class="text-link">See Capsules →</a>
                     </div>
 
                     <div class="format-card">
-                        <div class="format-icon">[Honey Icon]</div>
-                        <h3>Honey Supplements</h3>
-                        <p>Raw honey infused with functional ingredients—elderberry, turmeric, immune blends.</p>
+                        <div class="format-icon">[Soft Gel Icon]</div>
+                        <h3>Soft Gels</h3>
+                        <p>Ideal for oils and fat-soluble actives with premium shelf presence.</p>
                         <ul class="format-details">
-                            <li><strong>MOQ:</strong> 1,000–5,000 jars</li>
-                            <li><strong>Lead Time:</strong> 5–7 weeks</li>
-                            <li><strong>Best For:</strong> Premium wellness brands</li>
+                            <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
+                            <li><strong>Good For:</strong> Omega blends, beauty oils</li>
+                            <li><strong>Options:</strong> Shapes & finishes</li>
                         </ul>
-                        <a href="#" class="text-link">See Honey Specs →</a>
+                        <a href="/manufacturing/soft-gels" class="text-link">See Soft Gels →</a>
                     </div>
 
                     <div class="format-card">
-                        <div class="format-icon">[Drink Icon]</div>
-                        <h3>Functional Drinks & Powders</h3>
-                        <p>Single-serve powders, RTD beverages, and dissolvable stick packs.</p>
+                        <div class="format-icon">[Gel Icon]</div>
+                        <h3>Functional Gels</h3>
+                        <p>Honey gels with functional ingredients like creatine, protein, collagen, sleep blends, and more.</p>
                         <ul class="format-details">
-                            <li><strong>MOQ:</strong> 3,000–10,000 servings</li>
-                            <li><strong>Lead Time:</strong> 8–10 weeks</li>
-                            <li><strong>Best For:</strong> Sports nutrition, energy</li>
+                            <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
+                            <li><strong>Good For:</strong> Sports nutrition, on-the-go</li>
+                            <li><strong>Formats:</strong> Single-serve gels</li>
                         </ul>
-                        <a href="#" class="text-link">See Drink Specs →</a>
+                        <a href="/manufacturing/functional-gels" class="text-link">See Functional Gels →</a>
+                    </div>
+
+                    <div class="format-card">
+                        <div class="format-icon">[Powder Icon]</div>
+                        <h3>Powders</h3>
+                        <p>Functional blends for performance, recovery, wellness, and daily rituals.</p>
+                        <ul class="format-details">
+                            <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
+                            <li><strong>Good For:</strong> Pre-workout, hydration, greens</li>
+                            <li><strong>Formats:</strong> Tubs, sticks</li>
+                        </ul>
+                        <a href="/manufacturing/powders" class="text-link">See Powders →</a>
+                    </div>
+
+                    <div class="format-card">
+                        <div class="format-icon">[Spoon Icon]</div>
+                        <h3>Spoons</h3>
+                        <p>Functional honey spoons and coffee spoons with targeted active ingredients.</p>
+                        <ul class="format-details">
+                            <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
+                            <li><strong>Good For:</strong> Single-dose rituals</li>
+                            <li><strong>Options:</strong> Honey / Coffee</li>
+                        </ul>
+                        <a href="/manufacturing/spoons" class="text-link">See Spoons →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section D: How It Works -->
+        <!-- Gummies Detail (per doc) -->
         <section class="process-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>From Concept to Shelf in 5 Simple Steps</h2>
-                    <p class="section-subheadline">Our streamlined process takes the guesswork out of private label manufacturing. You'll know exactly what to expect—and when.</p>
+                    <h2>Gummies</h2>
+                    <p class="section-subheadline">Choose the path that fits your business—then dial in flavors, formats, and functional goals.</p>
                 </div>
 
                 <div class="timeline">
                     <div class="timeline-step">
                         <div class="step-number">1</div>
-                        <h3>Discovery & Formula Development</h3>
-                        <p>We discuss your goals and create or refine your supplement formula.</p>
-                        <div class="step-meta">
-                            <span class="step-timeline">Timeline: 1–2 weeks</span>
-                            <span class="step-role">Your Role: Share your vision</span>
-                        </div>
+                        <h3>Private Label</h3>
+                        <p>Custom formulations built around your goals, brand, and target consumer.</p>
                     </div>
 
                     <div class="timeline-step">
                         <div class="step-number">2</div>
-                        <h3>Compliance & Labeling Review</h3>
-                        <p>Our regulatory team ensures your formula meets FDA guidelines.</p>
-                        <div class="step-meta">
-                            <span class="step-timeline">Timeline: 1 week</span>
-                            <span class="step-role">Your Role: Approve label design</span>
-                        </div>
+                        <h3>White Label</h3>
+                        <p>Premade formulations ready to brand and bring to market faster.</p>
                     </div>
 
                     <div class="timeline-step">
                         <div class="step-number">3</div>
-                        <h3>Sample Production & Testing</h3>
-                        <p>We produce samples for your approval with third-party testing.</p>
-                        <div class="step-meta">
-                            <span class="step-timeline">Timeline: 2–3 weeks</span>
-                            <span class="step-role">Your Role: Test samples, request adjustments</span>
-                        </div>
+                        <h3>Contract Manufacturing</h3>
+                        <p>Bring your formula and requirements—we manufacture to spec with quality controls.</p>
                     </div>
 
                     <div class="timeline-step">
                         <div class="step-number">4</div>
-                        <h3>Full Production Run</h3>
-                        <p>We manufacture your full order with quality checks at every stage.</p>
-                        <div class="step-meta">
-                            <span class="step-timeline">Timeline: 4–8 weeks</span>
-                            <span class="step-role">Your Role: Minimal—we handle production</span>
-                        </div>
+                        <h3>Bulk Gummies</h3>
+                        <p>Bulk production options for brands that handle packaging or downstream fulfillment.</p>
                     </div>
 
                     <div class="timeline-step">
                         <div class="step-number">5</div>
-                        <h3>Packaging & Fulfillment</h3>
-                        <p>Products are bottled, labeled, and prepared for shipment.</p>
-                        <div class="step-meta">
-                            <span class="step-timeline">Timeline: 1–2 weeks</span>
-                            <span class="step-role">Your Role: Coordinate delivery logistics</span>
-                        </div>
+                        <h3>Types of Gummies We Can Offer</h3>
+                        <p>Flexible ingredient systems, textures, and formats tailored to your positioning.</p>
                     </div>
                 </div>
 
                 <div class="timeline-callout">
-                    <strong>Average Total Time:</strong> 60–75 days from kickoff to delivery
+                    <strong>Some examples:</strong>
+                    <a href="https://www.gummyworlds.com/" class="text-link">Gummy Worlds</a> ·
+                    <a href="https://www.makersnutrition.com/gummy-vitamin-manufacturer" class="text-link">Makers Nutrition</a> ·
+                    <a href="https://yourgummyvitamins.com/" class="text-link">Your Gummy Vitamins</a>
                 </div>
 
                 <div class="section-cta">
-                    <button class="btn-primary">Download Manufacturing Guide</button>
+                    <button class="btn-primary">Request a Gummies Quote</button>
                 </div>
             </div>
         </section>
@@ -369,37 +436,37 @@
                     <div class="diff-card">
                         <div class="diff-icon">[icon]</div>
                         <h4>Lower MOQs for Startups</h4>
-                        <p>Launch with 1,000–5,000 units, not 50,000. We work with first-time founders and growing brands alike.</p>
+                        <p>Launch with realistic minimums and scale as demand grows.</p>
                     </div>
 
                     <div class="diff-card">
                         <div class="diff-icon">[icon]</div>
                         <h4>Speed to Market</h4>
-                        <p>Our 60-day average turnaround beats industry standard by 30%. Get your product to customers faster.</p>
+                        <p>Streamlined timelines with clear milestones and reliable communication.</p>
                     </div>
 
                     <div class="diff-card">
                         <div class="diff-icon">[icon]</div>
                         <h4>Full Compliance Support</h4>
-                        <p>From FDA registration to label claims review, we handle regulatory complexity so you don't have to.</p>
+                        <p>We support regulatory readiness so you can ship confidently.</p>
                     </div>
 
                     <div class="diff-card">
                         <div class="diff-icon">[icon]</div>
                         <h4>Formula Customization</h4>
-                        <p>Don't settle for stock formulas. Our in-house formulators create custom blends tailored to your brand.</p>
+                        <p>Custom blends and formats designed around your brand positioning.</p>
                     </div>
 
                     <div class="diff-card">
                         <div class="diff-icon">[icon]</div>
                         <h4>Transparent Pricing</h4>
-                        <p>No hidden fees. No surprise upcharges. You'll know your exact cost per unit before production starts.</p>
+                        <p>Clear pricing, scoped deliverables, and no surprise fees.</p>
                     </div>
 
                     <div class="diff-card">
                         <div class="diff-icon">[icon]</div>
                         <h4>U.S.-Based Quality Control</h4>
-                        <p>Every batch tested in our FDA-registered, cGMP-certified facility. No overseas quality gambles.</p>
+                        <p>Quality checks built into every stage of production.</p>
                     </div>
                 </div>
             </div>
@@ -437,7 +504,7 @@
                             <strong>What You Get:</strong>
                             <ul>
                                 <li>Priority production scheduling</li>
-                                <li>Flexible MOQ scaling</li>
+                                <li>Flexible scaling</li>
                                 <li>Custom formulation options</li>
                                 <li>Dedicated account management</li>
                             </ul>
@@ -474,7 +541,7 @@
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
-                        <p class="quote-text">We launched our first gummy supplement in under 60 days. The team handled everything from formula tweaks to FDA compliance. We had zero experience in manufacturing, and they made it seamless.</p>
+                        <p class="quote-text">We launched our first gummy supplement in under 60 days. The team handled everything from formula tweaks to compliance. We had zero experience in manufacturing, and they made it seamless.</p>
                         <div class="attribution">
                             <div class="avatar">[SC]</div>
                             <div class="attribution-text">
@@ -519,13 +586,13 @@
             <div class="container">
                 <div class="lead-capture-grid">
                     <div class="lead-capture-content">
-                        <h2>Get the Private Label Manufacturing Starter Guide</h2>
-                        <p>Everything you need to know before launching your supplement brand—MOQ ranges, cost breakdowns, timeline expectations, and compliance checklists.</p>
-                        
+                        <h2>Get the Manufacturing Starter Guide</h2>
+                        <p>Everything you need to know before launching—MOQ ranges, cost breakdowns, timelines, and compliance checklists.</p>
+
                         <ul class="guide-benefits">
-                            <li>✓ MOQ & pricing ranges for each format</li>
+                            <li>✓ Capability overview (Gummies, Capsules, Soft Gels, Gels, Powders, Spoons)</li>
                             <li>✓ Step-by-step production timeline</li>
-                            <li>✓ FDA compliance checklist</li>
+                            <li>✓ Compliance checklist</li>
                             <li>✓ Ingredient sourcing guide</li>
                             <li>✓ Common pitfalls to avoid</li>
                         </ul>
@@ -551,8 +618,10 @@
                                     <option value="">Select format...</option>
                                     <option value="gummies">Gummies</option>
                                     <option value="capsules">Capsules</option>
-                                    <option value="honey">Honey Supplements</option>
-                                    <option value="drinks">Drinks/Powders</option>
+                                    <option value="soft-gels">Soft Gels</option>
+                                    <option value="functional-gels">Functional Gels</option>
+                                    <option value="powders">Powders</option>
+                                    <option value="spoons">Spoons</option>
                                     <option value="unsure">Not sure yet</option>
                                 </select>
                             </div>
@@ -571,7 +640,7 @@
             <div class="container">
                 <div class="final-cta-content">
                     <h2>Ready to Launch or Scale Your Supplement Brand?</h2>
-                    <p>Book a free 30-minute consultation with our manufacturing experts. We'll discuss your goals, review your formula ideas, and create a custom production plan—with zero obligation.</p>
+                    <p>Book a free 30-minute consultation with our manufacturing experts. We'll discuss your goals and map out the best path—private label, white label, or contract manufacturing.</p>
 
                     <div class="next-steps">
                         <div class="next-step">
@@ -589,7 +658,7 @@
                     </div>
 
                     <button class="btn-primary btn-large">Schedule Your Free Consultation</button>
-                    
+
                     <a href="#" class="alt-cta">Prefer email? Contact us here</a>
                 </div>
             </div>
@@ -614,10 +683,12 @@
                 <div class="footer-column">
                     <h4>Manufacturing</h4>
                     <ul>
-                        <li><a href="#">Gummies</a></li>
-                        <li><a href="#">Capsules</a></li>
-                        <li><a href="#">Honey Supplements</a></li>
-                        <li><a href="#">Functional Drinks</a></li>
+                        <li><a href="/manufacturing/gummies">Gummies</a></li>
+                        <li><a href="/manufacturing/capsules">Capsules</a></li>
+                        <li><a href="/manufacturing/soft-gels">Soft Gels</a></li>
+                        <li><a href="/manufacturing/functional-gels">Functional Gels</a></li>
+                        <li><a href="/manufacturing/powders">Powders</a></li>
+                        <li><a href="/manufacturing/spoons">Spoons</a></li>
                     </ul>
                 </div>
 
@@ -625,7 +696,7 @@
                     <h4>Resources</h4>
                     <ul>
                         <li><a href="#">Manufacturing Guide</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="/blog">Blog</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Case Studies</a></li>
                     </ul>
