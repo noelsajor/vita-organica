@@ -972,6 +972,39 @@ p {
 }
 
 /* ============================================
+   LUCIDE ICONS (SVG) — match existing icon sizing
+   ============================================ */
+
+.stat-icon svg,
+.diff-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.format-icon svg,
+.audience-icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+/* Keep icons aligned + inheriting the teal color */
+.stat-icon svg,
+.format-icon svg,
+.diff-icon svg,
+.audience-icon svg {
+  display: inline-block;
+  stroke: currentColor;
+}
+
+@media (max-width: 768px) {
+  .format-icon svg,
+  .audience-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ============================================
    TESTIMONIALS
    ============================================ */
 
