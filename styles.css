@@ -994,6 +994,7 @@ p {
 .audience-icon svg {
   display: inline-block;
   stroke: currentColor;
+  stroke-width: 2.5px; /* try 2, 2.25, 2.5, 3 */
 }
 
 @media (max-width: 768px) {
