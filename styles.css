@@ -554,6 +554,32 @@ p {
     margin-bottom: var(--spacing-xxl);
 }
 
+/* Trust stripe */
+.trust-badges {
+    display: flex;
+    gap: var(--spacing-l);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.badge-icon {
+    color: var(--color-accent-teal);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.badge-label {
+    font-size: var(--font-size-body-sm);
+    color: var(--color-charcoal);
+    font-weight: 500;
+}
+
 /* Hero Stats */
 .hero-stats {
     display: flex;
