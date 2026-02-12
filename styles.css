@@ -668,7 +668,7 @@ p {
     height: 64px;
     top: -10px;
     right: -10px;
-    background: linear-gradient(135deg, #87CEEB 0%, #4FC3F7 100%);
+    background: #A8CC37;
 }
 
 .hero-badge-1 svg {
@@ -676,6 +676,7 @@ p {
     height: 32px;
     stroke: white;
     stroke-width: 2.5;
+    display: none;
 }
 
 .hero-badge-2 {
@@ -684,7 +685,7 @@ p {
     bottom: 40px;
     left: -30px;
     border-radius: 32px;
-    background: linear-gradient(135deg, #D8BFD8 0%, #BA9FBA 100%);
+    background: #A8CC37;
 }
 
 .circles-pattern {
