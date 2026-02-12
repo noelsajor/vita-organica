@@ -686,6 +686,7 @@ p {
     left: -30px;
     border-radius: 32px;
     background: #A8CC37;
+    display: none;
 }
 
 .circles-pattern {
@@ -721,6 +722,7 @@ p {
 .hero-decor-1 {
     top: 15%;
     right: 20%;
+    display: none;
 }
 
 .hero-decor-2 {
@@ -732,6 +734,7 @@ p {
 .hero-decor-3 {
     bottom: 30%;
     right: -5%;
+    display: none;
 }
 
 .hero-decor-4 {
