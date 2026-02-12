@@ -512,12 +512,14 @@ p {
 
 
 /* ============================================
-   HERO SECTION
+   HERO SECTION - EDUFLEX STYLE
    ============================================ */
 
 .hero {
-    padding: 120px 0 100px;
+    padding: 80px 0 100px;
     background: var(--color-white);
+    position: relative;
+    overflow: visible;
 }
 
 .hero-grid {
@@ -527,99 +529,276 @@ p {
     align-items: center;
 }
 
-.hero h1 {
-    margin-bottom: var(--spacing-m);
+.hero-content {
     max-width: 600px;
 }
 
-.hero-subheadline {
-    font-size: var(--font-size-body-lg);
-    color: var(--color-dark-gray);
-    margin-bottom: var(--spacing-l);
-    max-width: 560px;
-    line-height: var(--line-height-normal);
-}
-
-.trust-badges {
-    display: flex;
-    gap: var(--spacing-l);
-    margin-bottom: var(--spacing-xl);
-    flex-wrap: wrap;
-}
-
-.badge {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
-
-.badge-icon {
-    color: var(--color-accent-teal);
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.badge-label {
-    font-size: var(--font-size-body-sm);
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.15;
+    margin-bottom: var(--spacing-m);
     color: var(--color-charcoal);
-    font-weight: 500;
+    font-weight: 700;
+}
+
+.hero-subheadline {
+    font-size: 18px;
+    color: var(--color-dark-gray);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
 }
 
 .cta-group {
     display: flex;
     gap: var(--spacing-s);
+    margin-bottom: var(--spacing-xxl);
 }
 
-.hero-visual {
+/* Hero Stats */
+.hero-stats {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: var(--spacing-l);
+    padding-top: var(--spacing-m);
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
-  display: block;
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-sm);
-  object-fit: cover;
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.media-placeholder {
-    background: var(--color-light-gray);
-    border: 2px dashed var(--color-border);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-xxxl);
-    text-align: center;
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 14px;
     color: var(--color-dark-gray);
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-border);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-charcoal);
+    margin-bottom: 4px;
+}
+
+.stat-icon svg {
     width: 100%;
-    aspect-ratio: 4/3;
+    height: 100%;
+}
+
+/* Hero Visual - Bento Grid Layout */
+.hero-visual {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Image containers */
+.hero-image {
+    position: relative;
+    border-radius: 24px;
+    overflow: visible;
+}
+
+.hero-image-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Grid positioning */
+.hero-image-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.hero-image-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.hero-image-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+/* Badges on images */
+.hero-badge {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 
+.hero-badge-1 {
+    width: 64px;
+    height: 64px;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #87CEEB 0%, #4FC3F7 100%);
+}
+
+.hero-badge-1 svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+    stroke-width: 2.5;
+}
+
+.hero-badge-2 {
+    width: 120px;
+    height: 64px;
+    bottom: 40px;
+    left: -30px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, #D8BFD8 0%, #BA9FBA 100%);
+}
+
+.circles-pattern {
+    display: flex;
+    gap: 6px;
+}
+
+.circles-pattern span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.9;
+}
+
+/* Decorative elements */
+.hero-decor {
+    position: absolute;
+    z-index: 5;
+}
+
+.hero-decor-sparkle {
+    font-size: 24px;
+    color: #A8CC37;
+}
+
+.hero-decor-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.hero-decor-1 {
+    top: 15%;
+    right: 20%;
+}
+
+.hero-decor-2 {
+    top: 10%;
+    right: 5%;
+    background: #87CEEB;
+}
+
+.hero-decor-3 {
+    bottom: 30%;
+    right: -5%;
+}
+
+.hero-decor-4 {
+    bottom: 20%;
+    left: -5%;
+    background: #D8BFD8;
+}
+
+/* Remove trust badges from hero */
+.hero .trust-badges {
+    display: none;
+}
+
+/* Mobile responsive */
 @media (max-width: 768px) {
     .hero {
-        padding: 80px 0 60px;
+        padding: 60px 0;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-l);
+        gap: var(--spacing-xl);
     }
 
-    .trust-badges {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-s);
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-visual {
+        height: 500px;
+        padding: 10px;
+        gap: 12px;
     }
 
     .cta-group {
         flex-direction: column;
     }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-m);
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .hero-badge-1 {
+        width: 48px;
+        height: 48px;
+    }
+
+    .hero-badge-1 svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero-badge-2 {
+        width: 90px;
+        height: 48px;
+    }
+
+    .circles-pattern span {
+        width: 10px;
+        height: 10px;
+    }
 }
+
 
 /* ============================================
    CREDIBILITY STRIP
