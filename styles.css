@@ -1079,11 +1079,11 @@ h4 {
 }
 
 .bento-tile:nth-child(3) {
-    grid-column: span 3;
+    grid-column: span 4;
 }
 
 .bento-tile:nth-child(4) {
-    grid-column: span 4;
+    grid-column: span 8;
 }
 
 .bento-tile:nth-child(5) {
