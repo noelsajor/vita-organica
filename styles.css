@@ -770,11 +770,6 @@ p {
     background: #A437CC;
 }
 
-/* Remove trust badges from hero */
-.hero .trust-badges {
-    display: none;
-}
-
 /* Mobile responsive */
 @media (max-width: 768px) {
     .hero {
