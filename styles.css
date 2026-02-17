@@ -920,6 +920,7 @@ p {
 .credibility-strip {
     padding: var(--section-padding-tight) 0;
     background: var(--color-light-gray);
+    display: none;
 }
 
 .stats-grid {
