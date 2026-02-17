@@ -827,6 +827,93 @@ p {
 
 
 /* ============================================
+   WHO WE HELP
+   ============================================ */
+
+.who-we-help-section {
+  padding: var(--section-padding) 0;
+  background: var(--color-light-gray);
+}
+
+.who-we-help-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-m);
+}
+
+.who-we-help-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-l);
+  transition: box-shadow 0.3s ease;
+}
+
+.who-we-help-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.who-we-help-icon {
+  font-size: 56px;
+  color: var(--color-accent-teal);
+  margin-bottom: var(--spacing-s);
+}
+
+.who-we-help-card h3 {
+  font-size: 20px;
+  margin-bottom: var(--spacing-s);
+  color: var(--color-charcoal);
+}
+
+.who-we-help-card p {
+  font-size: var(--font-size-body);
+  color: var(--color-dark-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 1024px) {
+  .who-we-help-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .who-we-help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .who-we-help-card {
+    padding: var(--spacing-m);
+  }
+
+  .who-we-help-icon {
+    font-size: 48px;
+  }
+
+  .who-we-help-card h3 {
+    font-size: 18px;
+  }
+}
+
+/* Ensure lucide SVGs match existing sizing system */
+.who-we-help-icon svg {
+  width: 56px;
+  height: 56px;
+  stroke: currentColor;
+  stroke-width: 1.5px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .who-we-help-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+
+
+/* ============================================
    CREDIBILITY STRIP
    ============================================ */
 
