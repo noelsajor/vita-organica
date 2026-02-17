@@ -848,6 +848,7 @@ p {
 
 .stat-card {
     text-align: center;
+    justify-items: center;
 }
 
 .stat-icon {
