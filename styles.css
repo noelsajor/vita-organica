@@ -1070,12 +1070,12 @@ h4 {
 }
 
 .bento-tile:nth-child(1) {
-    grid-column: span 6;
+    grid-column: span 8;
     background: var(--color-ink);
 }
 
 .bento-tile:nth-child(2) {
-    grid-column: span 6;
+    grid-column: span 4;
 }
 
 .bento-tile:nth-child(3) {
