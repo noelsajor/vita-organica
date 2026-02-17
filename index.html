@@ -7,233 +7,130 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- ═══════════════════════════════════════════════
+       HEADER — single row, glass effect, sticky
+       ═══════════════════════════════════════════════ -->
   <header class="site-header">
     <div class="container">
-      <div class="header-content">
-        <!-- Row 1: Logo -->
-        <div class="logo">
-          <a href="/" class="logo-link" aria-label="Vita Organica — Home">
-            <!-- Inline SVG Logo -->
-            <svg
-              class="site-logo"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1598.62 429.03"
-              role="img"
-              aria-label="Vita Organica"
-              focusable="false"
-            >
-              <style>
-                .cls-1 { fill: #97cc19; }
-                .cls-2 { fill: #bd34d0; }
-              </style>
+      <div class="header-inner">
 
-              <g>
-                <path class="cls-1" d="M129.91,17.34c-14.96,6.43-19.25,25.52-8.78,37.99,29.91,35.62,53.4,74.1,65.23,103.66.38-1.01.76-2.02,1.14-3.03,20.55-54.37,36.66-93.41,49.33-121.6C244.02,18.34,232.46.03,214.89,0c-.13,0-.25,0-.38,0-30.05,0-58.65,6.18-84.61,17.34Z"/>
-                <path class="cls-1" d="M157.8,192.26c-1.78-19.89-27.06-68.11-66.26-114.35-.92-1.08-1.84-2.16-2.76-3.22-9.73-11.26-27.2-11.32-36.9-.04C19.55,112.2,0,161.07,0,214.51c0,57.08,22.3,108.95,58.66,147.39,12.12,12.81,33.42,8.92,40.21-7.36,32.8-78.65,60.13-148.97,58.93-162.29Z"/>
-                <path class="cls-1" d="M199.52,291.67c52.85-12.97,130.55-17.67,194.16-2.31,11.71,2.83,23.7-3.93,27.02-15.51,5.42-18.85,8.33-38.76,8.33-59.35,0-84.17-48.48-157.01-119.03-192.14-12-5.97-26.55-1.05-32.24,11.09-26.61,56.84-63.56,153.98-94.09,240.59-3.55,10.08,5.47,20.17,15.85,17.62Z"/>
-                <path class="cls-1" d="M300.06,316.94c-60.62.62-113.62,13.06-129.83,24.73-6.59,4.74-17.27,20.33-30.44,43.03-7.92,13.64-1.07,31.16,14.05,35.62,19.24,5.66,39.6,8.7,60.67,8.7,61.82,0,117.53-26.16,156.67-68,13.6-14.54,5.1-38.24-14.64-40.88-17.34-2.32-36.29-3.42-56.49-3.21Z"/>
-                <circle class="cls-2" cx="401.92" cy="128.32" r="72.21"/>
-                <path class="cls-2" d="M564.52,284.3l-46.74-132.46h30.76l19.7,61.19c5.97,18.5,10.53,34.22,13.59,47.75h.38c2.71-12.36,7.88-28.55,14.18-47.32l20.66-61.61h29.22l-47.98,132.46h-33.78Z"/>
-                <path class="cls-2" d="M650.65,144.06h27.53v24.56h-27.53v-24.56ZM650.65,184.85h27.53v99.44h-27.53v-99.44Z"/>
-                <path class="cls-2" d="M686.12,184.85h15.33v-26.93h27.53v26.93h19.48v20.7h-19.48v49.08c0,7.55,2.31,10.48,10.51,10.48,1.53,0,4.21-.02,6.27-.31v18.94c-5.46,1.85-12.95,1.9-18.51,1.9-19.4,0-25.81-10.38-25.81-27.78v-52.31h-15.33v-20.7Z"/>
-                <path class="cls-2" d="M839.56,258.61c0,9.47.77,23.3,1.35,25.69h-26.3c-.77-1.97-1.34-7.21-1.39-9.72-3.6,5.59-10.37,12.03-27.96,12.03-23.98,0-34.09-15.76-34.09-31.19,0-22.66,18.19-33.11,47.35-33.11h14.19v-6.08c0-7.07-2.54-14.02-15.31-14.02-11.62,0-14.17,4.94-15.44,12.14h-26.18c1.49-17.67,12.42-31.97,42.65-31.8,26.64.17,41.13,10.58,41.13,34.25v41.81ZM812.72,239.03h-11.22c-16.59,0-22.74,5.06-22.74,14.65,0,7.2,4.42,13.26,14.31,13.26,17.49,0,19.65-12.16,19.65-25.3v-2.61Z"/>
-                <path class="cls-1" d="M981.56,217.62c0,36.86-22.13,68.6-65.15,68.6s-63.33-30.21-63.33-68.15,24.03-68.15,65.18-68.15c38.75,0,63.3,27.15,63.3,67.7ZM882.66,217.49c0,25.86,11.35,45.42,34.83,45.42,25.47,0,34.49-21.33,34.49-44.94,0-25.06-10.26-44.75-34.95-44.75s-34.37,18.48-34.37,44.27Z"/>
-                <path class="cls-1" d="M994.74,211.83c0-9.88-.02-18.66-.19-26.98h27c.36,2.23.72,12.1.72,17.46,4.39-11.37,14.99-19.67,31.91-19.77v26.27c-19.98-.52-31.91,4.86-31.91,32.12v43.36h-27.53v-72.47Z"/>
-                <path class="cls-1" d="M1151.5,272.19c0,31.92-11.78,52.12-49.45,52.12s-43.47-20.28-44.42-31.5h28.06c1.94,6.83,6.97,11.48,17.59,11.48,17.87,0,21.24-10.9,21.24-30.39v-4.75c-5.19,8.6-13.42,13.97-28.03,13.97-26.2,0-41.12-21.47-41.12-48.2,0-31.09,18.61-52.37,43.48-52.37,17.06,0,24.16,8.04,25.67,12.68.19-2.7.89-8.74,1.08-10.37h26.11c-.17,8.87-.21,18.98-.21,28.53v58.8ZM1083.65,233.68c0,17.11,8.55,27.21,20.74,27.21,16.57,0,21-11.38,21-28.07s-2.95-28.22-20.42-28.22c-11.95,0-21.31,9.21-21.31,29.08Z"/>
-                <path class="cls-1" d="M1249.36,258.61c0,9.47.77,23.3,1.34,25.69h-26.3c-.77-1.97-1.35-7.21-1.39-9.72-3.6,5.59-10.37,12.03-27.96,12.03-23.98,0-34.09-15.76-34.09-31.19,0-22.66,18.19-33.11,47.35-33.11h14.19v-6.08c0-7.07-2.54-14.02-15.31-14.02-11.62,0-14.17,4.94-15.44,12.14h-26.18c1.49-17.67,12.42-31.97,42.65-31.8,26.64.17,41.13,10.58,41.13,34.25v41.81ZM1222.52,239.03h-11.22c-16.59,0-22.74,5.06-22.74,14.65,0,7.2,4.42,13.26,14.31,13.26,17.5,0,19.65-12.16,19.65-25.3v-2.61Z"/>
-                <path class="cls-1" d="M1267.15,209.91c0-8.45,0-17.71-.19-25.05h26.67c.55,2.57.92,9.47,1.06,12.67,3.38-6.25,11.43-14.98,28.85-14.98,19.97,0,32.95,13.5,32.95,38.49v63.26h-27.53v-60.2c0-11.18-3.73-19.28-15.87-19.28s-18.39,6.5-18.39,24.06v55.42h-27.53v-74.39Z"/>
-                <path class="cls-1" d="M1373.6,144.06h27.53v24.56h-27.53v-24.56ZM1373.6,184.85h27.53v99.44h-27.53v-99.44Z"/>
-                <path class="cls-1" d="M1504.65,252.17c-3.43,16.57-15.08,34.44-44.71,34.44s-46.86-21.42-46.86-51.31,17.91-52.75,48.19-52.75c33.53,0,42.85,24.06,43.39,35.31h-26.88c-1.7-8.1-6.29-13.76-17.04-13.76-12.58,0-19.72,11.03-19.72,30.31,0,21.17,7.55,30.82,19.6,30.82,9.46,0,14.53-5.59,16.99-13.06h27.05Z"/>
-                <path class="cls-1" d="M1597.28,258.61c0,9.47.77,23.3,1.34,25.69h-26.3c-.77-1.97-1.35-7.21-1.39-9.72-3.6,5.59-10.37,12.03-27.96,12.03-23.98,0-34.09-15.76-34.09-31.19,0-22.66,18.19-33.11,47.35-33.11h14.19v-6.08c0-7.07-2.54-14.02-15.31-14.02-11.62,0-14.17,4.94-15.44,12.14h-26.18c1.49-17.67,12.42-31.97,42.65-31.8,26.64.17,41.13,10.58,41.13,34.25v41.81ZM1570.45,239.03h-11.22c-16.59,0-22.74,5.06-22.74,14.65,0,7.2,4.42,13.26,14.31,13.26,17.5,0,19.65-12.16,19.65-25.3v-2.61Z"/>
-              </g>
-            </svg>
-          </a>
-        </div>
+        <!-- Logo -->
+        <a href="/" class="logo-link" aria-label="Vita Organica — Home">
+          <svg class="site-logo" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 1598.62 429.03" role="img" aria-label="Vita Organica" focusable="false">
+            <g>
+              <path class="cls-1" d="M129.91,17.34c-14.96,6.43-19.25,25.52-8.78,37.99,29.91,35.62,53.4,74.1,65.23,103.66.38-1.01.76-2.02,1.14-3.03,20.55-54.37,36.66-93.41,49.33-121.6C244.02,18.34,232.46.03,214.89,0c-.13,0-.25,0-.38,0-30.05,0-58.65,6.18-84.61,17.34Z"/>
+              <path class="cls-1" d="M157.8,192.26c-1.78-19.89-27.06-68.11-66.26-114.35-.92-1.08-1.84-2.16-2.76-3.22-9.73-11.26-27.2-11.32-36.9-.04C19.55,112.2,0,161.07,0,214.51c0,57.08,22.3,108.95,58.66,147.39,12.12,12.81,33.42,8.92,40.21-7.36,32.8-78.65,60.13-148.97,58.93-162.29Z"/>
+              <path class="cls-1" d="M199.52,291.67c52.85-12.97,130.55-17.67,194.16-2.31,11.71,2.83,23.7-3.93,27.02-15.51,5.42-18.85,8.33-38.76,8.33-59.35,0-84.17-48.48-157.01-119.03-192.14-12-5.97-26.55-1.05-32.24,11.09-26.61,56.84-63.56,153.98-94.09,240.59-3.55,10.08,5.47,20.17,15.85,17.62Z"/>
+              <path class="cls-1" d="M300.06,316.94c-60.62.62-113.62,13.06-129.83,24.73-6.59,4.74-17.27,20.33-30.44,43.03-7.92,13.64-1.07,31.16,14.05,35.62,19.24,5.66,39.6,8.7,60.67,8.7,61.82,0,117.53-26.16,156.67-68,13.6-14.54,5.1-38.24-14.64-40.88-17.34-2.32-36.29-3.42-56.49-3.21Z"/>
+              <circle class="cls-2" cx="401.92" cy="128.32" r="72.21"/>
+              <path class="cls-2" d="M564.52,284.3l-46.74-132.46h30.76l19.7,61.19c5.97,18.5,10.53,34.22,13.59,47.75h.38c2.71-12.36,7.88-28.55,14.18-47.32l20.66-61.61h29.22l-47.98,132.46h-33.78Z"/>
+              <path class="cls-2" d="M650.65,144.06h27.53v24.56h-27.53v-24.56ZM650.65,184.85h27.53v99.44h-27.53v-99.44Z"/>
+              <path class="cls-2" d="M686.12,184.85h15.33v-26.93h27.53v26.93h19.48v20.7h-19.48v49.08c0,7.55,2.31,10.48,10.51,10.48,1.53,0,4.21-.02,6.27-.31v18.94c-5.46,1.85-12.95,1.9-18.51,1.9-19.4,0-25.81-10.38-25.81-27.78v-52.31h-15.33v-20.7Z"/>
+              <path class="cls-2" d="M839.56,258.61c0,9.47.77,23.3,1.35,25.69h-26.3c-.77-1.97-1.34-7.21-1.39-9.72-3.6,5.59-10.37,12.03-27.96,12.03-23.98,0-34.09-15.76-34.09-31.19,0-22.66,18.19-33.11,47.35-33.11h14.19v-6.08c0-7.07-2.54-14.02-15.31-14.02-11.62,0-14.17,4.94-15.44,12.14h-26.18c1.49-17.67,12.42-31.97,42.65-31.8,26.64.17,41.13,10.58,41.13,34.25v41.81ZM812.72,239.03h-11.22c-16.59,0-22.74,5.06-22.74,14.65,0,7.2,4.42,13.26,14.31,13.26,17.49,0,19.65-12.16,19.65-25.3v-2.61Z"/>
+              <path class="cls-1" d="M981.56,217.62c0,36.86-22.13,68.6-65.15,68.6s-63.33-30.21-63.33-68.15,24.03-68.15,65.18-68.15c38.75,0,63.3,27.15,63.3,67.7ZM882.66,217.49c0,25.86,11.35,45.42,34.83,45.42,25.47,0,34.49-21.33,34.49-44.94,0-25.06-10.26-44.75-34.95-44.75s-34.37,18.48-34.37,44.27Z"/>
+              <path class="cls-1" d="M994.74,211.83c0-9.88-.02-18.66-.19-26.98h27c.36,2.23.72,12.1.72,17.46,4.39-11.37,14.99-19.67,31.91-19.77v26.27c-19.98-.52-31.91,4.86-31.91,32.12v43.36h-27.53v-72.47Z"/>
+              <path class="cls-1" d="M1151.5,272.19c0,31.92-11.78,52.12-49.45,52.12s-43.47-20.28-44.42-31.5h28.06c1.94,6.83,6.97,11.48,17.59,11.48,17.87,0,21.24-10.9,21.24-30.39v-4.75c-5.19,8.6-13.42,13.97-28.03,13.97-26.2,0-41.12-21.47-41.12-48.2,0-31.09,18.61-52.37,43.48-52.37,17.06,0,24.16,8.04,25.67,12.68.19-2.7.89-8.74,1.08-10.37h26.11c-.17,8.87-.21,18.98-.21,28.53v58.8ZM1083.65,233.68c0,17.11,8.55,27.21,20.74,27.21,16.57,0,21-11.38,21-28.07s-2.95-28.22-20.42-28.22c-11.95,0-21.31,9.21-21.31,29.08Z"/>
+              <path class="cls-1" d="M1249.36,258.61c0,9.47.77,23.3,1.34,25.69h-26.3c-.77-1.97-1.35-7.21-1.39-9.72-3.6,5.59-10.37,12.03-27.96,12.03-23.98,0-34.09-15.76-34.09-31.19,0-22.66,18.19-33.11,47.35-33.11h14.19v-6.08c0-7.07-2.54-14.02-15.31-14.02-11.62,0-14.17,4.94-15.44,12.14h-26.18c1.49-17.67,12.42-31.97,42.65-31.8,26.64.17,41.13,10.58,41.13,34.25v41.81ZM1222.52,239.03h-11.22c-16.59,0-22.74,5.06-22.74,14.65,0,7.2,4.42,13.26,14.31,13.26,17.5,0,19.65-12.16,19.65-25.3v-2.61Z"/>
+              <path class="cls-1" d="M1267.15,209.91c0-8.45,0-17.71-.19-25.05h26.67c.55,2.57.92,9.47,1.06,12.67,3.38-6.25,11.43-14.98,28.85-14.98,19.97,0,32.95,13.5,32.95,38.49v63.26h-27.53v-60.2c0-11.18-3.73-19.28-15.87-19.28s-18.39,6.5-18.39,24.06v55.42h-27.53v-74.39Z"/>
+              <path class="cls-1" d="M1373.6,144.06h27.53v24.56h-27.53v-24.56ZM1373.6,184.85h27.53v99.44h-27.53v-99.44Z"/>
+              <path class="cls-1" d="M1504.65,252.17c-3.43,16.57-15.08,34.44-44.71,34.44s-46.86-21.42-46.86-51.31,17.91-52.75,48.19-52.75c33.53,0,42.85,24.06,43.39,35.31h-26.88c-1.7-8.1-6.29-13.76-17.04-13.76-12.58,0-19.72,11.03-19.72,30.31,0,21.17,7.55,30.82,19.6,30.82,9.46,0,14.53-5.59,16.99-13.06h27.05Z"/>
+              <path class="cls-1" d="M1597.28,258.61c0,9.47.77,23.3,1.34,25.69h-26.3c-.77-1.97-1.35-7.21-1.39-9.72-3.6,5.59-10.37,12.03-27.96,12.03-23.98,0-34.09-15.76-34.09-31.19,0-22.66,18.19-33.11,47.35-33.11h14.19v-6.08c0-7.07-2.54-14.02-15.31-14.02-11.62,0-14.17,4.94-15.44,12.14h-26.18c1.49-17.67,12.42-31.97,42.65-31.8,26.64.17,41.13,10.58,41.13,34.25v41.81ZM1570.45,239.03h-11.22c-16.59,0-22.74,5.06-22.74,14.65,0,7.2,4.42,13.26,14.31,13.26,17.5,0,19.65-12.16,19.65-25.3v-2.61Z"/>
+            </g>
+          </svg>
+        </a>
 
-        <!-- Row 2: Nav + Actions on same line -->
-        <div class="nav-row">
-          <nav class="main-nav" aria-label="Primary">
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-              </li>
+        <!-- Desktop Nav -->
+        <nav class="main-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/packaging">Packaging</a></li>
+            <li class="nav-item"><a class="nav-link" href="/design">Design</a></li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="/packaging">Packaging</a>
-              </li>
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="dd-mfg">
+                Manufacturing <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dd-mfg" role="menu">
+                <li><a role="menuitem" href="/manufacturing">All Capabilities</a></li>
+                <li><a role="menuitem" href="/manufacturing/gummies">Gummies</a></li>
+                <li><a role="menuitem" href="/manufacturing/capsules">Capsules</a></li>
+                <li><a role="menuitem" href="/manufacturing/soft-gels">Soft Gels</a></li>
+                <li><a role="menuitem" href="/manufacturing/functional-gels">Gels</a></li>
+                <li><a role="menuitem" href="/manufacturing/powders">Powders</a></li>
+                <li><a role="menuitem" href="/manufacturing/spoons">Spoons</a></li>
+              </ul>
+            </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="/design">Design</a>
-              </li>
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="dd-pl">
+                Private Label <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dd-pl" role="menu">
+                <li><a role="menuitem" href="/private-label">P.L. Services &amp; Custom Formulations</a></li>
+              </ul>
+            </li>
 
-              <!-- Manufacturing (Dropdown: capabilities) -->
-              <li class="nav-item has-dropdown">
-                <button
-                  class="nav-link dropdown-toggle"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="dropdown-manufacturing"
-                >
-                  Manufacturing
-                  <span class="chevron" aria-hidden="true">▾</span>
-                </button>
-                <ul class="dropdown-menu" id="dropdown-manufacturing" role="menu">
-                  <li><a role="menuitem" href="/manufacturing">Show All Capabilities</a></li>
-                  <li><a role="menuitem" href="/manufacturing/gummies">Gummies</a></li>
-                  <li><a role="menuitem" href="/manufacturing/capsules">Capsules</a></li>
-                  <li><a role="menuitem" href="/manufacturing/soft-gels">Soft Gels</a></li>
-                  <li><a role="menuitem" href="/manufacturing/functional-gels">Gels</a></li>
-                  <li><a role="menuitem" href="/manufacturing/powders">Powders</a></li>
-                  <li><a role="menuitem" href="/manufacturing/spoons">Spoons</a></li>
-                </ul>
-              </li>
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="dd-wl">
+                White Label <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dd-wl" role="menu">
+                <li><a role="menuitem" href="/white-label">White Label Services</a></li>
+              </ul>
+            </li>
 
-              <!-- Private Label (Dropdown) -->
-              <li class="nav-item has-dropdown">
-                <button
-                  class="nav-link dropdown-toggle"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="dropdown-private-label"
-                >
-                  Private Label
-                  <span class="chevron" aria-hidden="true">▾</span>
-                </button>
-                <ul class="dropdown-menu" id="dropdown-private-label" role="menu">
-                  <li><a role="menuitem" href="/private-label">More About our P.L. services &amp; custom formulations</a></li>
-                </ul>
-              </li>
+            <li class="nav-item has-dropdown">
+              <button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="dd-cm">
+                Contract Mfg <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <ul class="dropdown-menu" id="dd-cm" role="menu">
+                <li><a role="menuitem" href="/contract-manufacturing">Contract Manufacturing</a></li>
+              </ul>
+            </li>
 
-              <!-- White Label (Dropdown) -->
-              <li class="nav-item has-dropdown">
-                <button
-                  class="nav-link dropdown-toggle"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="dropdown-white-label"
-                >
-                  White Label
-                  <span class="chevron" aria-hidden="true">▾</span>
-                </button>
-                <ul class="dropdown-menu" id="dropdown-white-label" role="menu">
-                  <li><a role="menuitem" href="/white-label">More About our W.L. services</a></li>
-                </ul>
-              </li>
+            <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+          </ul>
+        </nav>
 
-              <!-- Contract Manufacturing (Dropdown) -->
-              <li class="nav-item has-dropdown">
-                <button
-                  class="nav-link dropdown-toggle"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="dropdown-contract-manufacturing"
-                >
-                  Contract Manufacturing
-                  <span class="chevron" aria-hidden="true">▾</span>
-                </button>
-                <ul class="dropdown-menu" id="dropdown-contract-manufacturing" role="menu">
-                  <li><a role="menuitem" href="/contract-manufacturing">More About our Contract Manufacturing services</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About Us</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="/blog">Blog</a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Actions (same row as nav) -->
-          <div class="header-actions">
-            <a class="nav-utility-link" href="/pricing">View MOQs</a>
-            <a class="btn-primary header-cta" href="/request-quote">Request a Quote</a>
-
-            <button
-              class="mobile-menu-toggle"
-              type="button"
-              aria-label="Open menu"
-              aria-expanded="false"
-              aria-controls="mobile-nav"
-            >
-              [☰]
-            </button>
-          </div>
+        <!-- Actions -->
+        <div class="header-actions">
+          <a class="nav-utility-link" href="/pricing">View MOQs</a>
+          <a class="btn btn-primary header-cta" href="/request-quote">Request a Quote</a>
+          <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
         </div>
       </div>
 
-      <!-- Mobile Nav Panel -->
-      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile primary navigation">
+      <!-- Mobile Nav -->
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
         <ul class="mobile-nav-list">
           <li><a href="/">Home</a></li>
           <li><a href="/packaging">Packaging</a></li>
           <li><a href="/design">Design</a></li>
 
           <li class="mobile-dropdown">
-            <button
-              class="mobile-dropdown-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="mobile-manufacturing"
-            >
-              Manufacturing <span class="chevron" aria-hidden="true">▾</span>
+            <button class="mobile-dropdown-toggle" type="button" aria-expanded="false" aria-controls="mob-mfg">
+              Manufacturing <span class="chevron">▾</span>
             </button>
-            <ul class="mobile-submenu" id="mobile-manufacturing">
-              <li><a href="/manufacturing">Show All Capabilities</a></li>
+            <ul class="mobile-submenu" id="mob-mfg">
+              <li><a href="/manufacturing">All Capabilities</a></li>
               <li><a href="/manufacturing/gummies">Gummies</a></li>
               <li><a href="/manufacturing/capsules">Capsules</a></li>
               <li><a href="/manufacturing/soft-gels">Soft Gels</a></li>
               <li><a href="/manufacturing/functional-gels">Gels</a></li>
               <li><a href="/manufacturing/powders">Powders</a></li>
-              <li><a href="/manufacturing/spoons">Spoons</a></li>
             </ul>
           </li>
 
           <li class="mobile-dropdown">
-            <button
-              class="mobile-dropdown-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="mobile-private-label"
-            >
-              Private Label <span class="chevron" aria-hidden="true">▾</span>
+            <button class="mobile-dropdown-toggle" type="button" aria-expanded="false" aria-controls="mob-pl">
+              Private Label <span class="chevron">▾</span>
             </button>
-            <ul class="mobile-submenu" id="mobile-private-label">
-              <li><a href="/private-label">More About our P.L. services &amp; custom formulations</a></li>
-            </ul>
-          </li>
-
-          <li class="mobile-dropdown">
-            <button
-              class="mobile-dropdown-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="mobile-white-label"
-            >
-              White Label <span class="chevron" aria-hidden="true">▾</span>
-            </button>
-            <ul class="mobile-submenu" id="mobile-white-label">
-              <li><a href="/white-label">More About our W.L. services</a></li>
-            </ul>
-          </li>
-
-          <li class="mobile-dropdown">
-            <button
-              class="mobile-dropdown-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="mobile-contract-manufacturing"
-            >
-              Contract Manufacturing <span class="chevron" aria-hidden="true">▾</span>
-            </button>
-            <ul class="mobile-submenu" id="mobile-contract-manufacturing">
-              <li><a href="/contract-manufacturing">More About our Contract Manufacturing services</a></li>
+            <ul class="mobile-submenu" id="mob-pl">
+              <li><a href="/private-label">P.L. Services &amp; Custom Formulations</a></li>
             </ul>
           </li>
 
@@ -241,595 +138,717 @@
           <li><a href="/blog">Blog</a></li>
 
           <li class="mobile-cta-group">
-            <a class="btn-secondary" href="/pricing">View MOQs</a>
-            <a class="btn-primary" href="/request-quote">Request a Quote</a>
+            <a class="btn btn-secondary" href="/pricing">View MOQs</a>
+            <a class="btn btn-primary" href="/request-quote">Request a Quote</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-    <!-- Section A: Hero -->
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════════
+         HERO — Bold heading, asymmetric photo, floating stats
+         ═══════════════════════════════════════════════ -->
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
-          <div class="hero-content">
-            <h1>Launch Your Supplement Brand in 60 Days — Without Guesswork.</h1>
-            <p class="hero-subheadline">
-              Private Label & Contract Supplement Manufacturing in the USA <br> We help founders, eCommerce brands, influencers, and retailers create high-quality, compliant, and scalable supplement products — from formulation to fulfillment.
-            </p>
-            <div class="trust-badges">
-              <div class="badge">
-                <span class="badge-icon">✓</span>
-                <span class="badge-label">FDA Registered Facility</span>
-              </div>
-              <div class="badge">
-                <span class="badge-icon">✓</span>
-                <span class="badge-label">cGMP Certified</span>
-              </div>
-              <div class="badge">
-                <span class="badge-icon">✓</span>
-                <span class="badge-label">Third-Party Tested</span>
-              </div>
-              <div class="badge">
-                <span class="badge-icon">✓</span>
-                <span class="badge-label">Made in the USA</span>
-              </div>
-            </div>    
-            <div class="cta-group">
-              <button class="btn-primary">Request a Quote</button>
-              <button class="btn-secondary">View Capabilities</button>
+
+          <div class="hero-content" data-reveal>
+            <div class="hero-tag">
+              <span class="dot"></span>
+              USA Manufacturing · FDA Registered
             </div>
-    
-            <div class="hero-stats">
-              <div class="stat-item">
-                <div class="stat-value">150M+</div>
-                <div class="stat-label">Active students</div>
+
+            <h1>Launch Your Supplement Brand in <span class="highlight">60 Days</span> — Without Guesswork.</h1>
+
+            <p class="hero-subhead">
+              Private Label &amp; Contract Supplement Manufacturing in the USA. We help founders, eCommerce brands, influencers, and retailers create high-quality, compliant, and scalable supplement products — from formulation to fulfillment.
+            </p>
+
+            <!-- Trust strip -->
+            <div class="trust-strip">
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                FDA Registered Facility
               </div>
-              <div class="stat-divider"></div>
-              <div class="stat-item">
-                <div class="stat-value">500+</div>
-                <div class="stat-label">Tutors</div>
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                cGMP Certified
               </div>
-              <div class="stat-divider"></div>
-              <div class="stat-item">
-                <div class="stat-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <circle cx="12" cy="12" r="6"/>
-                    <circle cx="12" cy="12" r="2"/>
-                  </svg>
-                </div>
-                <div class="stat-label">Resources</div>
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Third-Party Tested
               </div>
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Made in the USA
+              </div>
+            </div>
+
+            <div class="cta-row">
+              <a href="/request-quote" class="btn btn-primary btn-lg">Request a Quote</a>
+              <a href="/manufacturing" class="btn btn-secondary">View Capabilities</a>
             </div>
           </div>
-    
+
+          <!-- Visual block -->
           <div class="hero-visual">
-            <!-- Decorative elements -->
-            <div class="hero-decor hero-decor-sparkle hero-decor-1">✦</div>
-            <div class="hero-decor hero-decor-circle hero-decor-2"></div>
-            <div class="hero-decor hero-decor-sparkle hero-decor-3">✦</div>
-            <div class="hero-decor hero-decor-circle hero-decor-4"></div>
-    
-            <!-- Top right - student with tablet -->
-            <div class="hero-image hero-image-1">
-              <div class="hero-image-inner" style="background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);">
-                <img src="images/hero_img_2.png" alt="Student with tablet" />
-              </div>
-              <div class="hero-badge hero-badge-1">
+            <!-- Floating stat — top left -->
+            <div class="hero-stat-pill">
+              <div class="pill-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
                 </svg>
               </div>
-            </div>
-    
-            <!-- Right - student with backpack -->
-            <div class="hero-image hero-image-2">
-              <div class="hero-image-inner" style="background: linear-gradient(135deg, #D8BFD8 0%, #E6D7E6 100%);">
-                <img src="images/hero_img_2.png" alt="Student with backpack" />
-              </div>
-              <div class="hero-badge hero-badge-2">
-                <div class="circles-pattern">
-                  <span></span><span></span><span></span><span></span>
-                </div>
+              <div>
+                <div class="pill-num">500+</div>
+                <div class="pill-label">Brands Launched</div>
               </div>
             </div>
-    
-            <!-- Bottom left - student with megaphone -->
-            <div class="hero-image hero-image-3">
-              <div class="hero-image-inner" style="background: linear-gradient(135deg, #9ACD32 0%, #B5D655 100%);">
-                <img src="images/hero_img_2.png" alt="Student with megaphone" />
+
+            <!-- Main image -->
+            <div class="hero-img-main">
+              <div class="hero-img-placeholder">
+                <div class="factory-visual">🏭</div>
+                <p>Your hero image here</p>
+              </div>
+            </div>
+
+            <!-- Secondary image -->
+            <div class="hero-img-secondary">
+              <div class="hero-img-placeholder">
+                <div style="font-size:40px">💊</div>
+              </div>
+            </div>
+
+            <!-- Floating stat — bottom right -->
+            <div class="hero-stat-pill-2">
+              <div>
+                <div class="pill-num">60</div>
+                <div class="pill-label">Days to Market</div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- WHO WE HELP -->
-    <section class="who-we-help-section" aria-labelledby="who-we-help-title">
-        <div class="container">
-            <div class="section-header">
-            <h2 id="who-we-help-title">Who We Help</h2>
-            <p class="section-subheadline">Built for Founders Who Want to Move Fast</p>
-            </div>
 
-            <div class="who-we-help-grid" role="list" aria-label="Who we help benefits">
-            <div class="who-we-help-card" role="listitem">
-                <div class="who-we-help-icon">
-                <i data-lucide="badge-percent" aria-hidden="true"></i>
-                </div>
-                <h3>Low MOQs for Emerging Brands</h3>
-                <p>Start with realistic minimums, validate demand, and scale up smoothly.</p>
-            </div>
-
-            <div class="who-we-help-card" role="listitem">
-                <div class="who-we-help-icon">
-                <i data-lucide="flask-conical" aria-hidden="true"></i>
-                </div>
-                <h3>Custom Formulations for Unique Positioning</h3>
-                <p>Dial in ingredients, formats, and functional goals that match your brand.</p>
-            </div>
-
-            <div class="who-we-help-card" role="listitem">
-                <div class="who-we-help-icon">
-                <i data-lucide="zap" aria-hidden="true"></i>
-                </div>
-                <h3>White Label Options for Rapid Launches</h3>
-                <p>Choose proven SKUs and get to market faster with streamlined production.</p>
-            </div>
-
-            <div class="who-we-help-card" role="listitem">
-                <div class="who-we-help-icon">
-                <i data-lucide="shield-check" aria-hidden="true"></i>
-                </div>
-                <h3>Full Regulatory &amp; Compliance Support</h3>
-                <p>Label guidance, documentation, and readiness support so you can ship confidently.</p>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section B: Credibility Strip -->
-    <section class="credibility-strip">
+    <!-- ═══════════════════════════════════════════════
+         STATS BAND — Dark, high-contrast numbers
+         ═══════════════════════════════════════════════ -->
+    <section class="stats-band" aria-label="Key statistics">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-icon"><i data-lucide="factory" aria-hidden="true"></i></div>
-            <div class="stat-number">150M+</div>
-            <div class="stat-label">Units Produced Annually</div>
+        <div class="stats-band-grid" data-reveal-stagger>
+          <div class="stat-cell">
+            <div class="stat-num">150M<span class="stat-unit">+</span></div>
+            <div class="stat-label-band">Units Produced Annually</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i data-lucide="rocket" aria-hidden="true"></i></div>
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Brands Launched</div>
+          <div class="stat-cell">
+            <div class="stat-num">500<span class="stat-unit">+</span></div>
+            <div class="stat-label-band">Brands Launched</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i data-lucide="layers" aria-hidden="true"></i></div>
-            <div class="stat-number">6</div>
-            <div class="stat-label">Manufacturing Capabilities</div>
+          <div class="stat-cell">
+            <div class="stat-num">6</div>
+            <div class="stat-label-band">Manufacturing Capabilities</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-icon"><i data-lucide="clock" aria-hidden="true"></i></div>
-            <div class="stat-number">60-Day</div>
-            <div class="stat-label">Average Time to Market</div>
+          <div class="stat-cell">
+            <div class="stat-num">60<span class="stat-unit">-Day</span></div>
+            <div class="stat-label-band">Average Time to Market</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section C: Capabilities -->
+
+    <!-- ═══════════════════════════════════════════════
+         WHO WE HELP — 4-col cards with top accent
+         ═══════════════════════════════════════════════ -->
+    <section class="who-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-eyebrow">Who We Help</span>
+          <h2>Built for Every Stage of Your Brand</h2>
+          <p class="section-subhead">Whether you're a first-time founder or scaling to your 10th SKU, we have the infrastructure to support you.</p>
+        </div>
+
+        <div class="who-grid" data-reveal-stagger>
+          <div class="who-card">
+            <div class="who-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Startup Founders</h3>
+            <p>Launching your first product with low MOQs, dedicated support, and zero manufacturing guesswork.</p>
+          </div>
+          <div class="who-card">
+            <div class="who-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            </div>
+            <h3>eCommerce Brands</h3>
+            <p>Scale your product line with reliable fulfillment, flexible volumes, and fast reorder cycles.</p>
+          </div>
+          <div class="who-card">
+            <div class="who-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>Influencers &amp; Creators</h3>
+            <p>Turn your audience into customers with white-label products that carry your unique brand identity.</p>
+          </div>
+          <div class="who-card">
+            <div class="who-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <h3>Retailers &amp; Distributors</h3>
+            <p>Private label programs designed for shelf-ready products with your branding at competitive margins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         CAPABILITIES — Bento grid layout
+         Replaces plain 2-col equal card grid
+         ═══════════════════════════════════════════════ -->
     <section class="manufacturing-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-reveal>
+          <span class="section-eyebrow">What We Make</span>
           <h2>Our Manufacturing Capabilities</h2>
-          <p class="section-subheadline">
-            Full-Service Supplement Manufacturing <br> We specialize in:
-          </p>
+          <p class="section-subhead">Full-service supplement manufacturing — from formulation to finished product.</p>
         </div>
 
-        <div class="format-grid">
-          <div class="format-card">
-            <div class="format-icon"><i data-lucide="candy" aria-hidden="true"></i></div>
+        <div class="bento-grid">
+
+          <!-- Featured tile — dark -->
+          <div class="bento-tile">
+            <div class="tile-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M8.5 8.5c-1 1-1.5 2.2-1.5 3.5s.5 2.5 1.5 3.5M15.5 8.5c1 1 1.5 2.2 1.5 3.5s-.5 2.5-1.5 3.5M5 5c-2 2-3 4.5-3 7s1 5 3 7M19 5c2 2 3 4.5 3 7s-1 5-3 7"/></svg>
+            </div>
             <h3>Gummies</h3>
-            <p>Flavor-forward, functional, and consumer-friendly.</p>
-            <!--
-            <ul class="format-details">
-              <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
-              <li><strong>Also:</strong> Bulk Gummies</li>
-              <li><strong>Good For:</strong> Wellness, beauty, daily essentials</li>
-            </ul>
-            -->
+            <p>Flavor-forward, functional, and consumer-friendly. Our best-selling format for wellness brands.</p>
             <a href="/manufacturing/gummies" class="text-link">See Gummies →</a>
           </div>
 
-          <div class="format-card">
-            <div class="format-icon"><i data-lucide="pill" aria-hidden="true"></i></div>
+          <div class="bento-tile">
+            <div class="tile-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.5 2.3A10 10 0 0012 2a10 10 0 100 20 10 10 0 000-20"/><path d="M8 12l4 4 4-4M12 8v8"/></svg>
+            </div>
             <h3>Capsules</h3>
-            <p>Clean-label, high-potency formulas.</p>
-            <!--
-            <ul class="format-details">
-              <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
-              <li><strong>Good For:</strong> Herbal blends, daily protocols</li>
-              <li><strong>Options:</strong> Multiple capsule sizes</li>
-            </ul>
-            -->
+            <p>Clean-label, high-potency formulas. Ideal for herbal blends and daily health protocols.</p>
             <a href="/manufacturing/capsules" class="text-link">See Capsules →</a>
           </div>
 
-          <div class="format-card">
-            <div class="format-icon"><i data-lucide="droplet" aria-hidden="true"></i></div>
+          <div class="bento-tile">
+            <div class="tile-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
             <h3>Soft Gels</h3>
-            <p>Oil-based vitamins and specialty blends.</p>
-            <!--
-            <ul class="format-details">
-              <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
-              <li><strong>Good For:</strong> Omega blends, beauty oils</li>
-              <li><strong>Options:</strong> Shapes &amp; finishes</li>
-            </ul>
-            -->
+            <p>Oil-based vitamins and specialty omega blends with multiple shape and finish options.</p>
             <a href="/manufacturing/soft-gels" class="text-link">See Soft Gels →</a>
           </div>
 
-          <div class="format-card">
-            <div class="format-icon"><i data-lucide="flask-conical" aria-hidden="true"></i></div>
-            <h3>Functional Formats</h3>
-            <p>Sachets, sticks, and specialty delivery systems.</p>
-            <!--
-            <ul class="format-details">
-              <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
-              <li><strong>Good For:</strong> Sports nutrition, on-the-go</li>
-              <li><strong>Formats:</strong> Single-serve gels</li>
-            </ul>
-            -->
+          <div class="bento-tile">
+            <div class="tile-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            </div>
+            <h3>Powders</h3>
+            <p>Pre-workout, greens, proteins, and hydration blends. Available in tubs and single-serve sticks.</p>
+            <a href="/manufacturing/powders" class="text-link">See Powders →</a>
+          </div>
+
+          <!-- Wide tile — teal tinted -->
+          <div class="bento-tile">
+            <div class="tile-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 2v6a3 3 0 006 0V2"/><path d="M4 14h16a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4a2 2 0 012-2z"/></svg>
+            </div>
+            <h3>Functional Formats &amp; Spoons</h3>
+            <p>Sachets, sticks, single-serve gels, and innovative spoon formats for on-the-go nutrition. The perfect solution for sports nutrition and convenience-first product lines.</p>
             <a href="/manufacturing/functional-gels" class="text-link">See Functional Formats →</a>
           </div>
 
-          <div class="format-card">
-            <div class="format-icon"><i data-lucide="beaker" aria-hidden="true"></i></div>
-            <h3>Powders</h3>
-            <p>Pre-workout, greens, proteins, hydration, and more.</p>
-            <!--
-            <ul class="format-details">
-              <li><strong>Paths:</strong> Private Label / White Label / Contract Manufacturing</li>
-              <li><strong>Good For:</strong> Pre-workout, hydration, greens</li>
-              <li><strong>Formats:</strong> Tubs, sticks</li>
-            </ul>
-            -->
-            <a href="/manufacturing/powders" class="text-link">See Powders →</a>
+        </div>
+
+        <div class="section-cta" data-reveal>
+          <a href="/manufacturing" class="btn btn-secondary">Explore All Capabilities</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         HOW IT WORKS — Split sticky layout
+         Replaces cramped 5-column horizontal layout
+         ═══════════════════════════════════════════════ -->
+    <section class="process-section" aria-labelledby="how-it-works-title">
+      <div class="container">
+        <div class="process-grid">
+
+          <!-- Left: sticky heading -->
+          <div class="process-sticky">
+            <span class="section-eyebrow">The Process</span>
+            <h2 id="how-it-works-title">From Concept to Production — Simplified</h2>
+            <p>We've built a streamlined process so you can focus on your brand while we handle the complexity of manufacturing.</p>
+            <a href="/request-quote" class="btn btn-primary">Request a Quote</a>
+          </div>
+
+          <!-- Right: scrollable steps -->
+          <div class="process-steps" role="list" aria-label="How it works steps" data-reveal-stagger>
+
+            <div class="process-step" role="listitem">
+              <div class="step-track">
+                <div class="step-num" aria-hidden="true">1</div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-body">
+                <h3>Consultation &amp; Strategy</h3>
+                <p>Define your goals, target audience, and budget. We'll help you choose the right format and formulation path.</p>
+                <span class="step-duration">Week 1</span>
+              </div>
+            </div>
+
+            <div class="process-step" role="listitem">
+              <div class="step-track">
+                <div class="step-num" aria-hidden="true">2</div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-body">
+                <h3>Formulation &amp; Sampling</h3>
+                <p>Develop a custom formula or choose from white label SKUs. You'll receive physical samples for approval.</p>
+                <span class="step-duration">Weeks 2–3</span>
+              </div>
+            </div>
+
+            <div class="process-step" role="listitem">
+              <div class="step-track">
+                <div class="step-num" aria-hidden="true">3</div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-body">
+                <h3>Design &amp; Compliance Review</h3>
+                <p>FDA-compliant labeling and full regulatory review. Our team catches issues before they become problems.</p>
+                <span class="step-duration">Weeks 3–4</span>
+              </div>
+            </div>
+
+            <div class="process-step" role="listitem">
+              <div class="step-track">
+                <div class="step-num" aria-hidden="true">4</div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-body">
+                <h3>Production &amp; Quality Testing</h3>
+                <p>Manufactured in our cGMP facility with rigorous QA protocols and third-party testing at every batch.</p>
+                <span class="step-duration">Weeks 4–7</span>
+              </div>
+            </div>
+
+            <div class="process-step" role="listitem">
+              <div class="step-track">
+                <div class="step-num" aria-hidden="true">5</div>
+                <div class="step-line"></div>
+              </div>
+              <div class="step-body">
+                <h3>Delivery &amp; Ongoing Scaling</h3>
+                <p>Receive your finished products. We stay on as your manufacturing partner for reorders and new SKU growth.</p>
+                <span class="step-duration">Week 8+</span>
+              </div>
+            </div>
+
           </div>
         </div>
-
-        <div class="section-cta">
-        <button class="btn-secondary" type="button">Explore Manufacturing Options</button>
-        </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS (per doc) -->
-    <section class="process-section" aria-labelledby="how-it-works-title">
-    <div class="container">
-        <div class="section-header">
-        <h2 id="how-it-works-title">How It Works</h2>
-        <p class="section-subheadline">From Concept to Production — Simplified</p>
-        </div>
 
-        <div class="timeline" role="list" aria-label="How it works steps">
-        <div class="timeline-step" role="listitem">
-            <div class="step-number" aria-hidden="true">1</div>
-            <h3>Consultation &amp; Strategy</h3>
-            <p>Define your goals, target audience, and budget.</p>
-        </div>
-
-        <div class="timeline-step" role="listitem">
-            <div class="step-number" aria-hidden="true">2</div>
-            <h3>Formulation &amp; Sampling</h3>
-            <p>Develop a custom formula or choose from white label SKUs.</p>
-        </div>
-
-        <div class="timeline-step" role="listitem">
-            <div class="step-number" aria-hidden="true">3</div>
-            <h3>Design &amp; Compliance Review</h3>
-            <p>Ensure FDA-compliant labeling and regulatory review.</p>
-        </div>
-
-        <div class="timeline-step" role="listitem">
-            <div class="step-number" aria-hidden="true">4</div>
-            <h3>Production &amp; Quality Testing</h3>
-            <p>Manufactured in our cGMP facility with strict QA protocols.</p>
-        </div>
-
-        <div class="timeline-step" role="listitem">
-            <div class="step-number" aria-hidden="true">5</div>
-            <h3>Delivery &amp; Ongoing Scaling</h3>
-            <p>Reorders, inventory support, and growth planning.</p>
-        </div>
-        </div>
-
-        <div class="section-cta">
-        <button class="btn-primary" type="button">Request a Quote</button>
-        </div>
-    </div>
-    </section>
-
-    <!-- Section E: Why Choose Us -->
-    <section class="differentiation-section">
+    <!-- ═══════════════════════════════════════════════
+         WHY VITA ORGANICA — Split with image + list
+         Replaces 3-col equal card grid
+         ═══════════════════════════════════════════════ -->
+    <section class="why-section">
       <div class="container">
-        <div class="section-header">
-          <h2>Why Vita Organica?</h2>
-          <p class="section-subheadline">We're not just a factory—we're your manufacturing partner. Here's what sets us apart.</p>
-        </div>
+        <div class="why-grid">
 
-        <div class="diff-grid" role="list" aria-label="Why Vita Organica">
-        <div class="diff-card" role="listitem">
-            <div class="diff-icon">
-            <i data-lucide="handshake" aria-hidden="true"></i>
+          <!-- Image side -->
+          <div class="why-image-block" data-reveal>
+            <div class="why-image-main">
+              <div class="why-img-placeholder">
+                <div class="big-icon">🔬</div>
+                <p style="font-size:14px;text-align:center;max-width:200px;color:rgba(255,255,255,.45)">Your facility/team image here</p>
+              </div>
             </div>
-            <h4>Not Just a Manufacturer — A Growth Partner</h4>
-            <p>Strategic support to help you launch, iterate, and scale with confidence.</p>
-        </div>
 
-        <div class="diff-card" role="listitem">
-            <div class="diff-icon">
-            <i data-lucide="receipt" aria-hidden="true"></i>
+            <!-- Floating cert badge -->
+            <div class="why-cert-badge">
+              <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <div>
+                <div class="cert-title">cGMP Certified<br>FDA Registered</div>
+                <div class="cert-sub">US-Based Facility</div>
+              </div>
             </div>
-            <h4>Transparent Pricing and Timelines</h4>
-            <p>Clear scope, clear milestones, and no surprise fees.</p>
-        </div>
+          </div>
 
-        <div class="diff-card" role="listitem">
-            <div class="diff-icon">
-            <i data-lucide="map-pin" aria-hidden="true"></i>
-            </div>
-            <h4>U.S.-Based Production</h4>
-            <p>Domestic manufacturing for tighter oversight and smoother logistics.</p>
-        </div>
+          <!-- Content side -->
+          <div class="why-content" data-reveal>
+            <span class="section-eyebrow">Why Choose Us</span>
+            <h2>We're Not Just a Factory — We're Your Manufacturing Partner</h2>
+            <p>Here's what sets Vita Organica apart from every other supplement manufacturer you've talked to.</p>
 
-        <div class="diff-card" role="listitem">
-            <div class="diff-icon">
-            <i data-lucide="search-check" aria-hidden="true"></i>
-            </div>
-            <h4>Ingredient Sourcing Transparency</h4>
-            <p>Visibility into sourcing decisions so you can build trust with customers.</p>
-        </div>
+            <div class="why-list" data-reveal-stagger>
 
-        <div class="diff-card" role="listitem">
-            <div class="diff-icon">
-            <i data-lucide="timer" aria-hidden="true"></i>
-            </div>
-            <h4>Fast Turnaround Times</h4>
-            <p>Efficient workflows designed to get you to market sooner.</p>
-        </div>
+              <div class="why-item">
+                <div class="why-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div class="why-item-text">
+                  <h4>Not Just a Manufacturer — A Growth Partner</h4>
+                  <p>Strategic support to help you launch, iterate, and scale with confidence at every stage.</p>
+                </div>
+              </div>
 
-        <div class="diff-card" role="listitem">
-            <div class="diff-icon">
-            <i data-lucide="user-check" aria-hidden="true"></i>
+              <div class="why-item">
+                <div class="why-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                </div>
+                <div class="why-item-text">
+                  <h4>Transparent Pricing and Timelines</h4>
+                  <p>Clear scope, clear milestones, no surprise fees. You always know exactly what you're paying for.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </div>
+                <div class="why-item-text">
+                  <h4>U.S.-Based Production</h4>
+                  <p>Domestic manufacturing for tighter oversight, faster shipping, and smoother regulatory compliance.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><polyline points="11 8 11 11 13 13"/></svg>
+                </div>
+                <div class="why-item-text">
+                  <h4>Ingredient Sourcing Transparency</h4>
+                  <p>Full visibility into sourcing decisions so you can build genuine trust with your customers.</p>
+                </div>
+              </div>
+
+              <div class="why-item">
+                <div class="why-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="why-item-text">
+                  <h4>Fast Turnaround &amp; Dedicated Account Management</h4>
+                  <p>60-day average time-to-market with a single point of contact keeping your project moving.</p>
+                </div>
+              </div>
+
             </div>
-            <h4>Dedicated Account Management</h4>
-            <p>A single point of contact to keep projects moving and communication clear.</p>
-        </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Section F: Audience Segmentation -->
+
+    <!-- ═══════════════════════════════════════════════
+         AUDIENCE SEGMENTATION — Tabbed interface
+         Replaces 3 equal full-height cards
+         ═══════════════════════════════════════════════ -->
     <section class="audience-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-reveal>
+          <span class="section-eyebrow">Who We Serve</span>
           <h2>Whether You're Launching or Scaling, We're Built for Your Stage</h2>
+          <p class="section-subhead">Select your stage to see exactly how we can help.</p>
         </div>
 
-        <div class="audience-grid">
-          <div class="audience-card">
-            <div class="audience-icon"><i data-lucide="sparkles" aria-hidden="true"></i></div>
+        <!-- Tab nav -->
+        <div class="audience-tabs" role="tablist" aria-label="Audience stages">
+          <button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="tab-launch"  id="btn-launch">🚀 First Launch</button>
+          <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-scale"   id="btn-scale">📈 Scaling Up</button>
+          <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-partner" id="btn-partner">🤝 Agency / Partner</button>
+        </div>
+
+        <!-- Tab 1 -->
+        <div class="tab-panel active" id="tab-launch" role="tabpanel" aria-labelledby="btn-launch">
+          <div class="tab-content">
             <h3>Launch Your First Product Without the Overwhelm</h3>
-            <p>You have a vision but need guidance. We'll walk you through formula development, compliance, and production.</p>
-            <div class="benefits-list">
-              <strong>What You Get:</strong>
-              <ul>
-                <li>Dedicated project manager</li>
-                <li>Formula development support</li>
-                <li>Label compliance review</li>
-                <li>Low minimum orders</li>
-              </ul>
-            </div>
-            <button class="btn-primary btn-audience">Request a Quote</button>
+            <p>You have a vision but need guidance. We'll walk you through every step — formula development, compliance, and production — so you can launch with confidence.</p>
+            <ul class="tab-benefits">
+              <li>Dedicated project manager from day one</li>
+              <li>Formula development &amp; sample review</li>
+              <li>Label compliance review &amp; FDA guidance</li>
+              <li>Low minimum order quantities</li>
+              <li>60-day average time to market</li>
+            </ul>
+            <a href="/request-quote" class="btn btn-primary">Request a Quote</a>
           </div>
-
-          <div class="audience-card">
-            <div class="audience-icon"><i data-lucide="trending-up" aria-hidden="true"></i></div>
-            <h3>Expand Your Product Line with Confidence</h3>
-            <p>You know the game. You need a manufacturing partner who can keep up with your growth and maintain quality.</p>
-            <div class="benefits-list">
-              <strong>What You Get:</strong>
-              <ul>
-                <li>Priority production scheduling</li>
-                <li>Flexible scaling</li>
-                <li>Custom formulation options</li>
-                <li>Dedicated account management</li>
-              </ul>
-            </div>
-            <button class="btn-secondary btn-audience">Request a Custom Quote</button>
-          </div>
-
-          <div class="audience-card">
-            <div class="audience-icon"><i data-lucide="handshake" aria-hidden="true"></i></div>
-            <h3>White-Label Solutions for Your Clients</h3>
-            <p>You bring the clients, we bring the manufacturing expertise. Partner with us to offer private label services.</p>
-            <div class="benefits-list">
-              <strong>What You Get:</strong>
-              <ul>
-                <li>Partner pricing structures</li>
-                <li>Multi-client management</li>
-                <li>Co-branding options</li>
-                <li>Streamlined ordering process</li>
-              </ul>
-            </div>
-            <button class="btn-secondary btn-audience">Explore Partnership Options</button>
-          </div>
+          <div class="tab-visual" aria-hidden="true">🚀</div>
         </div>
+
+        <!-- Tab 2 -->
+        <div class="tab-panel" id="tab-scale" role="tabpanel" aria-labelledby="btn-scale">
+          <div class="tab-content">
+            <h3>Expand Your Product Line with Confidence</h3>
+            <p>You know the game. You need a manufacturing partner who can keep pace with your growth while maintaining the quality your customers expect.</p>
+            <ul class="tab-benefits">
+              <li>Priority production scheduling</li>
+              <li>Flexible scaling — MOQ grows with you</li>
+              <li>Custom formulation options</li>
+              <li>Dedicated account management</li>
+              <li>Multi-SKU coordination</li>
+            </ul>
+            <a href="/request-quote" class="btn btn-primary">Request a Custom Quote</a>
+          </div>
+          <div class="tab-visual" aria-hidden="true">📈</div>
+        </div>
+
+        <!-- Tab 3 -->
+        <div class="tab-panel" id="tab-partner" role="tabpanel" aria-labelledby="btn-partner">
+          <div class="tab-content">
+            <h3>White-Label Solutions for Your Clients</h3>
+            <p>You bring the clients; we bring the manufacturing expertise. Partner with Vita Organica to offer private label services under your brand as a seamless extension of your agency.</p>
+            <ul class="tab-benefits">
+              <li>Partner pricing structures</li>
+              <li>Multi-client project management</li>
+              <li>Co-branding &amp; white-label options</li>
+              <li>Streamlined ordering portal</li>
+              <li>Revenue share program available</li>
+            </ul>
+            <a href="/request-quote" class="btn btn-primary">Explore Partnership Options</a>
+          </div>
+          <div class="tab-visual" aria-hidden="true">🤝</div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Section G: Testimonials -->
+
+    <!-- ═══════════════════════════════════════════════
+         TESTIMONIALS — Asymmetric layout
+         Replaces 3 equal flat cards
+         ═══════════════════════════════════════════════ -->
     <section class="testimonials-section">
       <div class="container">
-        <div class="section-header">
-          <h2>Trusted by Brands That Demand Quality</h2>
-        </div>
+        <div class="testimonials-layout">
 
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <div class="quote-icon">"</div>
-            <p class="quote-text">
-              We launched our first gummy supplement in under 60 days. The team handled everything from formula tweaks to
-              compliance. We had zero experience in manufacturing, and they made it seamless.
-            </p>
-            <div class="attribution">
-              <div class="avatar">[SC]</div>
-              <div class="attribution-text">
-                <strong>Sarah Chen</strong>
-                <span>Founder &amp; CEO, VitaFlow Wellness</span>
-              </div>
+          <!-- Aside: intro + social proof -->
+          <div class="testimonials-aside" data-reveal>
+            <span class="section-eyebrow">Social Proof</span>
+            <h2>Trusted by Brands That Demand Quality</h2>
+            <p>Don't take our word for it. Here's what founders and brand operators say after partnering with us.</p>
+
+            <div class="rating-row">
+              <span class="stars">★★★★★</span>
+              <span class="rating-text">4.9 / 5 average rating</span>
             </div>
-            <div class="result-tag">Launched in 58 days</div>
+
+            <div class="avatar-stack">
+              <div class="avatar-mini">SC</div>
+              <div class="avatar-mini">MR</div>
+              <div class="avatar-mini">JP</div>
+              <div class="avatar-mini">+</div>
+              <span class="avatar-stack-label">500+ satisfied brands</span>
+            </div>
           </div>
 
-          <div class="testimonial-card">
-            <div class="quote-icon">"</div>
-            <p class="quote-text">
-              After working with two overseas manufacturers who couldn't meet our quality standards, we switched here. The
-              difference in communication, transparency, and product quality was night and day.
-            </p>
-            <div class="attribution">
-              <div class="avatar">[MR]</div>
-              <div class="attribution-text">
-                <strong>Marcus Rodriguez</strong>
-                <span>Head of Product, Bloom Nutrition</span>
-              </div>
-            </div>
-            <div class="result-tag">3 SKUs launched in 6 months</div>
-          </div>
+          <!-- Main testimonials -->
+          <div class="testimonials-main" data-reveal>
 
-          <div class="testimonial-card">
-            <div class="quote-icon">"</div>
-            <p class="quote-text">
-              As an agency managing multiple supplement brands, we needed a manufacturing partner who could handle variable
-              MOQs and tight timelines. They've become an extension of our team.
-            </p>
-            <div class="attribution">
-              <div class="avatar">[JP]</div>
-              <div class="attribution-text">
-                <strong>Jennifer Park</strong>
-                <span>Operations Director, BrandLab Collective</span>
+            <!-- Featured quote -->
+            <div class="testimonial-feature">
+              <p class="t-quote">
+                "We launched our first gummy supplement in under 60 days. The team handled everything from formula tweaks to compliance. We had zero experience in manufacturing, and they made it completely seamless."
+              </p>
+              <div class="t-attribution">
+                <div class="t-person">
+                  <div class="t-avatar">SC</div>
+                  <div>
+                    <div class="t-name">Sarah Chen</div>
+                    <div class="t-role">Founder &amp; CEO, VitaFlow Wellness</div>
+                  </div>
+                </div>
+                <div class="t-result">Launched in 58 days</div>
               </div>
             </div>
-            <div class="result-tag">12 client brands supported</div>
+
+            <!-- Two mini cards -->
+            <div class="testimonial-mini-row">
+              <div class="testimonial-mini">
+                <p class="mini-quote">"After working with two overseas manufacturers who couldn't meet our quality standards, we switched here. The difference in communication and product quality was night and day."</p>
+                <div class="mini-person">Marcus Rodriguez</div>
+                <div class="mini-role">Head of Product, Bloom Nutrition</div>
+                <div class="mini-result">3 SKUs in 6 months</div>
+              </div>
+              <div class="testimonial-mini">
+                <p class="mini-quote">"As an agency managing multiple supplement brands, we needed a partner who could handle variable MOQs and tight timelines. They've become an extension of our team."</p>
+                <div class="mini-person">Jennifer Park</div>
+                <div class="mini-role">Operations Director, BrandLab Collective</div>
+                <div class="mini-result">12 client brands supported</div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section H: Lead Capture -->
+
+    <!-- ═══════════════════════════════════════════════
+         LEAD CAPTURE
+         ═══════════════════════════════════════════════ -->
     <section class="lead-capture-section">
       <div class="container">
-        <div class="lead-capture-grid">
-          <div class="lead-capture-content">
-            <h2>Get the Manufacturing Starter Guide</h2>
-            <p>Everything you need to know before launching—MOQ ranges, cost breakdowns, timelines, and compliance checklists.</p>
+        <div class="lead-grid">
 
-            <ul class="guide-benefits">
-              <li>✓ Capability overview (Gummies, Capsules, Soft Gels, Gels, Powders, Spoons)</li>
-              <li>✓ Step-by-step production timeline</li>
-              <li>✓ Compliance checklist</li>
-              <li>✓ Ingredient sourcing guide</li>
-              <li>✓ Common pitfalls to avoid</li>
+          <div class="lead-content" data-reveal>
+            <span class="section-eyebrow">Free Resource</span>
+            <h2>Get the Manufacturing Starter Guide</h2>
+            <p>Everything you need to know before launching — MOQ ranges, cost breakdowns, timelines, and compliance checklists.</p>
+
+            <ul class="guide-checklist">
+              <li><span class="check-icon"></span> Capability overview (Gummies, Capsules, Soft Gels, Gels, Powders)</li>
+              <li><span class="check-icon"></span> Step-by-step production timeline</li>
+              <li><span class="check-icon"></span> Compliance checklist &amp; FDA guidance</li>
+              <li><span class="check-icon"></span> Ingredient sourcing guide</li>
+              <li><span class="check-icon"></span> Common pitfalls to avoid</li>
             </ul>
 
-            <div class="guide-mockup">[Guide Cover]</div>
+            <div class="guide-mockup-block">
+              <div class="guide-thumb"></div>
+              <div>
+                <div class="guide-meta-title">Manufacturing Starter Guide</div>
+                <div class="guide-meta-sub">Free PDF · 24 pages</div>
+              </div>
+            </div>
           </div>
 
-          <div class="lead-capture-form">
+          <!-- Form card -->
+          <div class="lead-form-card" data-reveal>
+            <h3>Download Free Guide</h3>
+            <p>Instant access. No spam — just helpful manufacturing insights.</p>
+
             <form>
               <div class="form-group">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" required />
+                <input type="text" id="first-name" name="first-name" placeholder="Your first name" required />
               </div>
-
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="email" placeholder="you@brand.com" required />
               </div>
-
               <div class="form-group">
-                <label for="interest">I'm interested in:</label>
+                <label for="interest">I'm most interested in:</label>
                 <select id="interest" name="interest">
-                  <option value="">Select format...</option>
+                  <option value="">Select a format…</option>
                   <option value="gummies">Gummies</option>
                   <option value="capsules">Capsules</option>
                   <option value="soft-gels">Soft Gels</option>
                   <option value="functional-gels">Functional Gels</option>
                   <option value="powders">Powders</option>
-                  <option value="spoons">Spoons</option>
                   <option value="unsure">Not sure yet</option>
                 </select>
               </div>
-
-              <button type="submit" class="btn-primary btn-full">Download Free Guide</button>
-
-              <p class="privacy-note">We respect your inbox. No spam, just helpful manufacturing insights.</p>
+              <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px">Download Free Guide</button>
+              <p class="privacy-note">We respect your inbox. Unsubscribe anytime.</p>
             </form>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Section I: Final CTA -->
+
+    <!-- ═══════════════════════════════════════════════
+         FINAL CTA
+         ═══════════════════════════════════════════════ -->
     <section class="final-cta-section">
       <div class="container">
-        <div class="final-cta-content">
+        <div class="final-cta-inner">
           <h2>Ready to Launch?</h2>
-          <p>
-            Get a detailed quote within 24–48 hours.
-          </p>
+          <p>Get a detailed quote within 24–48 hours. Our team is standing by.</p>
 
-          <div class="next-steps">
-            <div class="next-step">
-              <span class="step-badge">1</span>
+          <div class="cta-steps">
+            <div class="cta-step">
+              <span class="cta-step-num">1</span>
               <span>Book Your Call</span>
             </div>
-            <div class="next-step">
-              <span class="step-badge">2</span>
+            <span class="cta-arrow">→</span>
+            <div class="cta-step">
+              <span class="cta-step-num">2</span>
               <span>Discuss Your Vision</span>
             </div>
-            <div class="next-step">
-              <span class="step-badge">3</span>
+            <span class="cta-arrow">→</span>
+            <div class="cta-step">
+              <span class="cta-step-num">3</span>
               <span>Get a Custom Plan</span>
             </div>
           </div>
 
-          <button class="btn-primary btn-large">Request a Quote</button>
+          <div class="cta-btn-row">
+            <a href="/request-quote" class="btn btn-primary btn-lg">Request a Quote</a>
+            <a href="/manufacturing" class="btn btn-ghost">View Capabilities</a>
+          </div>
+
+          <p class="cta-sub-note">No commitment required. We'll respond within one business day.</p>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-column">
+
+      <div class="footer-top">
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1598.62 429.03" role="img" aria-label="Vita Organica" focusable="false">
+            <g>
+              <path class="cls-1" d="M129.91,17.34c-14.96,6.43-19.25,25.52-8.78,37.99,29.91,35.62,53.4,74.1,65.23,103.66.38-1.01.76-2.02,1.14-3.03,20.55-54.37,36.66-93.41,49.33-121.6C244.02,18.34,232.46.03,214.89,0c-.13,0-.25,0-.38,0-30.05,0-58.65,6.18-84.61,17.34Z"/>
+              <path class="cls-1" d="M157.8,192.26c-1.78-19.89-27.06-68.11-66.26-114.35-.92-1.08-1.84-2.16-2.76-3.22-9.73-11.26-27.2-11.32-36.9-.04C19.55,112.2,0,161.07,0,214.51c0,57.08,22.3,108.95,58.66,147.39,12.12,12.81,33.42,8.92,40.21-7.36,32.8-78.65,60.13-148.97,58.93-162.29Z"/>
+              <path class="cls-1" d="M199.52,291.67c52.85-12.97,130.55-17.67,194.16-2.31,11.71,2.83,23.7-3.93,27.02-15.51,5.42-18.85,8.33-38.76,8.33-59.35,0-84.17-48.48-157.01-119.03-192.14-12-5.97-26.55-1.05-32.24,11.09-26.61,56.84-63.56,153.98-94.09,240.59-3.55,10.08,5.47,20.17,15.85,17.62Z"/>
+              <path class="cls-1" d="M300.06,316.94c-60.62.62-113.62,13.06-129.83,24.73-6.59,4.74-17.27,20.33-30.44,43.03-7.92,13.64-1.07,31.16,14.05,35.62,19.24,5.66,39.6,8.7,60.67,8.7,61.82,0,117.53-26.16,156.67-68,13.6-14.54,5.1-38.24-14.64-40.88-17.34-2.32-36.29-3.42-56.49-3.21Z"/>
+              <circle class="cls-2" cx="401.92" cy="128.32" r="72.21"/>
+              <path class="cls-2" d="M564.52,284.3l-46.74-132.46h30.76l19.7,61.19c5.97,18.5,10.53,34.22,13.59,47.75h.38c2.71-12.36,7.88-28.55,14.18-47.32l20.66-61.61h29.22l-47.98,132.46h-33.78Z"/>
+              <path class="cls-1" d="M981.56,217.62c0,36.86-22.13,68.6-65.15,68.6s-63.33-30.21-63.33-68.15,24.03-68.15,65.18-68.15c38.75,0,63.3,27.15,63.3,67.7ZM882.66,217.49c0,25.86,11.35,45.42,34.83,45.42,25.47,0,34.49-21.33,34.49-44.94,0-25.06-10.26-44.75-34.95-44.75s-34.37,18.48-34.37,44.27Z"/>
+            </g>
+          </svg>
+
+          <p>Private Label &amp; Contract Supplement Manufacturing. Helping brands launch in 60 days — since 2015.</p>
+
+          <div class="footer-cert-row">
+            <span class="footer-cert">FDA Registered</span>
+            <span class="footer-cert">cGMP Certified</span>
+            <span class="footer-cert">Made in USA</span>
+          </div>
+        </div>
+
+        <!-- Link columns -->
+        <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
+            <li><a href="/about">About Us</a></li>
             <li><a href="#">Our Facility</a></li>
             <li><a href="#">Certifications</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
 
-        <div class="footer-column">
+        <div class="footer-col">
           <h4>Manufacturing</h4>
           <ul>
             <li><a href="/manufacturing/gummies">Gummies</a></li>
@@ -841,120 +860,115 @@
           </ul>
         </div>
 
-        <div class="footer-column">
+        <div class="footer-col">
           <h4>Resources</h4>
           <ul>
             <li><a href="#">Manufacturing Guide</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">Case Studies</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">FDA Disclaimer</a></li>
+            <li><a href="#">Pricing &amp; MOQs</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Vita Organica. FDA Registered Facility | cGMP Certified | Made in USA</p>
+        <p>© 2026 Vita Organica. FDA Registered Facility · cGMP Certified · Made in USA</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">FDA Disclaimer</a>
+        </div>
       </div>
+
     </div>
   </footer>
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- ═══════════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════════ -->
   <script>
-    // Mobile menu toggle
-    (function () {
-      const menuBtn = document.querySelector('.mobile-menu-toggle');
-      const mobileNav = document.getElementById('mobile-nav');
+  (function() {
 
-      if (menuBtn && mobileNav) {
-        menuBtn.addEventListener('click', () => {
-          const isOpen = mobileNav.classList.toggle('is-open');
-          menuBtn.setAttribute('aria-expanded', String(isOpen));
-          menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-        });
-      }
+    /* ── Sticky header shadow ── */
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
 
-      // Desktop dropdown aria-expanded sync (for a11y)
-      const desktopToggles = document.querySelectorAll('.main-nav .dropdown-toggle');
-      desktopToggles.forEach((btn) => {
-        const parent = btn.closest('.has-dropdown');
-        const menuId = btn.getAttribute('aria-controls');
-        const menu = menuId ? document.getElementById(menuId) : null;
-
-        const setExpanded = (val) => btn.setAttribute('aria-expanded', String(val));
-
-        // Toggle on click (useful for touch laptops)
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const expanded = btn.getAttribute('aria-expanded') === 'true';
-          setExpanded(!expanded);
-          if (parent) parent.classList.toggle('open', !expanded);
-        });
-
-        // Close when focus leaves
-        parent?.addEventListener('focusout', (e) => {
-          if (!parent.contains(e.relatedTarget)) {
-            parent.classList.remove('open');
-            setExpanded(false);
-          }
-        });
-
-        // Close on Escape
-        btn.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') {
-            parent?.classList.remove('open');
-            setExpanded(false);
-            btn.blur();
-          }
-        });
-
-        // Close if clicking outside
-        document.addEventListener('click', (e) => {
-          if (parent && !parent.contains(e.target)) {
-            parent.classList.remove('open');
-            setExpanded(false);
-          }
-        });
-
-        // If menu exists, ensure it's not focus-trapping
-        if (menu) {
-          menu.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-              parent?.classList.remove('open');
-              setExpanded(false);
-              btn.focus();
-            }
-          });
-        }
+    /* ── Mobile menu ── */
+    const menuBtn = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('is-open');
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
       });
+    }
 
-      // Mobile dropdown toggles
-      const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-      mobileDropdownToggles.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const expanded = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!expanded));
-          const controls = btn.getAttribute('aria-controls');
-          const submenu = controls ? document.getElementById(controls) : null;
-          submenu?.classList.toggle('is-open', !expanded);
-        });
+    /* ── Desktop dropdowns ── */
+    document.querySelectorAll('.main-nav .dropdown-toggle').forEach(btn => {
+      const parent = btn.closest('.has-dropdown');
+      const setExp = v => btn.setAttribute('aria-expanded', String(v));
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        setExp(!open);
+        parent.classList.toggle('open', !open);
       });
+      parent.addEventListener('focusout', e => {
+        if (!parent.contains(e.relatedTarget)) { parent.classList.remove('open'); setExp(false); }
+      });
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { parent.classList.remove('open'); setExp(false); btn.blur(); }
+      });
+      document.addEventListener('click', e => {
+        if (!parent.contains(e.target)) { parent.classList.remove('open'); setExp(false); }
+      });
+    });
 
-      // Init lucide icons (turns <i data-lucide="..."> into inline SVG)
-      if (window.lucide && typeof window.lucide.createIcons === 'function') {
-        window.lucide.createIcons();
-      }
-    })();
+    /* ── Mobile submenus ── */
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        const id = btn.getAttribute('aria-controls');
+        document.getElementById(id)?.classList.toggle('is-open', !open);
+      });
+    });
+
+    /* ── Audience tabs ── */
+    const tabBtns   = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        tabPanels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
+        document.getElementById(btn.getAttribute('aria-controls'))?.classList.add('active');
+      });
+    });
+
+    /* ── Scroll reveal ── */
+    const revealEls = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('revealed'));
+    }
+
+  })();
   </script>
+
 </body>
 </html>
