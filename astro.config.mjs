@@ -6,7 +6,6 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://vita-organica.com', // Replace with actual production URL
-    integrations: [sitemap(), react()],
+    integrations: [react(), sitemap()],
     output: 'static',
-    adapter: undefined, // SSG by default
 });
