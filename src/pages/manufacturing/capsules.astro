@@ -1,0 +1,136 @@
+---
+import FormatTemplate from '../../components/manufacturing/FormatTemplate.astro';
+
+const benefits = [
+  {
+    title: "Flexible Capsule Platforms",
+    description: "Support for a wide range of sizes (000 to 4) and materials, including HPMC (Vegetarian/Vegan), Gelatin, and Pullulan.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20L12 2z"/></svg>`
+  },
+  {
+    title: "High-Potency Loading",
+    description: "Optimized powder blending and high-density filling allow for maximum active ingredient concentration per capsule.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`
+  },
+  {
+    title: "Advanced Bioavailability",
+    description: "Utilizing delayed-release technology and precision particle engineering to ensure ingredients are absorbed efficiently.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
+  },
+  {
+    title: "Clean Formulation Strategy",
+    description: "We eliminate unnecessary magnesium stearate and synthetic fillers, catering to the trend for minimal-ingredient supplements.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+  },
+  {
+    title: "Scalable MOQ Options",
+    description: "Our facility is equipped to handle both boutique market entries and high-volume retail distributions without quality loss.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l5-5m0 0l5 5m-5-5v12"/></svg>`
+  },
+  {
+    title: "Rapid Lead Times",
+    description: "Streamlined supply chain and automated encapsulation lines ensure your product moves from raw material to retail-ready fast.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`
+  }
+];
+
+const capabilities = [
+  {
+    title: "Complex Botanical Blending",
+    description: "Homogeneous mixing of diverse herbal extracts for consistent cross-batch potency."
+  },
+  {
+    title: "Micro-Dosage Precision",
+    description: "Specialized equipment for accurate measurement of ultra-low dose active ingredients."
+  },
+  {
+    title: "Beads-in-Capsule (DR)",
+    description: "Delayed-release beadlet technology for multi-phase nutrient delivery systems."
+  },
+  {
+    title: "Odor & Taste Masking",
+    description: "Techniques to neutralize pungent raw materials for a better consumer experience."
+  },
+  {
+    title: "Powder Stability Auditing",
+    description: "Rigorous testing of ingredient interactions to prevent degradation over the product's shelf life."
+  },
+  {
+    title: "Proprietary Color Matching",
+    description: "Custom capsule color and printing services to align with your brand's specific visual guidelines."
+  }
+];
+
+const packagingOptions = [
+  {
+    title: "Bottle Solutions",
+    items: ["Glass & Plastic Jars", "UV-Protective Tints", "Tamper-Evident Lidding", "Premium Soft-Touch Labels"]
+  },
+  {
+    title: "Unit-Dose Blistering",
+    items: ["Cold-Form Foil", "PVC/PVDC Blisters", "Perforated Compliance Packs", "Child-Resistant Push-Through"]
+  },
+  {
+    title: "Bulk Supply",
+    items: ["Poly-Lined Drums", "Industrial Vacuum Bags", "Quality COA Documentation", "Standardized Pallet Loading"]
+  },
+  {
+    title: "Subscription Boxes",
+    items: ["D2C Mailing Solutions", "Custom Printed Mailers", "Instructional Insert Kitting", "Lightweight Eco-Fulfillment"]
+  }
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Technical Review",
+    description: "Analysis of ingredient compatibility and capacity.",
+    duration: "1 Week"
+  },
+  {
+    step: "02",
+    title: "Bulk Blending",
+    description: "Precision mixing in climate-controlled environments.",
+    duration: "1 Week"
+  },
+  {
+    step: "03",
+    title: "Encapsulation",
+    description: "High-speed filling with automated quality check.",
+    duration: "2 Weeks"
+  },
+  {
+    step: "04",
+    title: "Analytical Testing",
+    description: "Comprehensive lab verification for purity and dose.",
+    duration: "1 Week"
+  },
+  {
+    step: "05",
+    title: "Secondary Packaging",
+    description: "Bottling or blistering and final logistics prep.",
+    duration: "1 Week"
+  }
+];
+
+const proofStats = [
+  { num: "1B+", label: "Capsules Manufactured" },
+  { num: "99.9%", label: "Dosing Accuracy" },
+  { num: "24Hr", label: "QA Lab Turnaround" },
+  { num: "CGMP", label: "Certified Environment" }
+];
+---
+
+<FormatTemplate
+  formatName="Capsule"
+  heroTitle="Precision Capsule Manufacturing"
+  heroDescription="Leverage pharmaceutical-grade encapsulation technology to power your supplement brand. Our diverse material options and advanced powder engineering ensure consistent dose delivery and maximum ingredient stability for clinical and retail success."
+  canonical="https://vitaorganica.com/manufacturing/capsules"
+  showMockupTeaser={true}
+  mockupHref="/mockup?format=capsules"
+  benefits={benefits}
+  capabilities={capabilities}
+  packagingOptions={packagingOptions}
+  processSteps={processSteps}
+  proofStats={proofStats}
+/>

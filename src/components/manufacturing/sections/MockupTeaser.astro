@@ -1,0 +1,26 @@
+---
+import MockupGenerator from '../../MockupGenerator';
+
+interface Props {
+  href?: string; // Kept for API safety, but overridden in UI
+}
+
+const { href = "/mockup" } = Astro.props;
+---
+
+<section class="mockup-teaser" aria-labelledby="mockup-teaser-heading" style="padding: 60px 0; background: var(--color-surface); text-align: center; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+  <div class="container">
+    <div class="teaser-content" style="max-width: 900px; margin: 0 auto;">
+      <span class="section-eyebrow">Visual Strategy</span>
+      <h2 id="mockup-teaser-heading" style="margin-top: 0.5rem;">See Your Brand in <span class="highlight">Action</span></h2>
+      <p style="margin: 1rem auto 2.5rem; color: var(--color-ink-soft);">
+        Visualize your product before production. Use our interactive mockup generator below to see how your branding looks on our premium packaging formats.
+      </p>
+      
+      {/* Inline Generator Embed */}
+      <div class="mockup-embed-wrapper" style="margin-top: 2rem; text-align: left;">
+        <MockupGenerator client:visible />
+      </div>
+    </div>
+  </div>
+</section>

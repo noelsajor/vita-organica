@@ -1,0 +1,35 @@
+---
+interface Benefit {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+interface Props {
+  formatName: string;
+  benefits: Benefit[];
+}
+
+const { formatName, benefits } = Astro.props;
+---
+
+<section class="who-section" aria-labelledby="benefits-heading">
+  <div class="container">
+    <header class="section-header">
+      <span class="section-eyebrow">Key Benefits</span>
+      <h2 id="benefits-heading">Why Partner With Us for {formatName}?</h2>
+    </header>
+
+    <ul class="who-grid" role="list">
+      {benefits.map((benefit) => (
+        <li class="who-card">
+          <div class="who-icon" aria-hidden="true">
+            <Fragment set:html={benefit.icon || '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>'} />
+          </div>
+          <h3>{benefit.title}</h3>
+          <p>{benefit.description}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

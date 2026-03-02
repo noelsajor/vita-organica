@@ -1,0 +1,136 @@
+---
+import FormatTemplate from '../../components/manufacturing/FormatTemplate.astro';
+
+const benefits = [
+  {
+    title: "High-Viscosity Delivery",
+    description: "Optimized for thick, nutrient-dense pastes and gels that traditional liquid lines cannot handle.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
+  },
+  {
+    title: "Rapid Palatability",
+    description: "Our flavor technicians create smooth, palatable textures that make clinical dosages easy to consume on-the-go.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`
+  },
+  {
+    title: "Portable & Single-Serve",
+    description: "Perfect for sports performance and clinical wellness, providing exact doses in a convenient, mess-free format.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`
+  },
+  {
+    title: "Superior Bio-Adhesion",
+    description: "Designed for improved mucosal contact, enhancing the absorption profile of botanical and anti-inflammatory compounds.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>`
+  },
+  {
+    title: "Shelf-Stable Emulsions",
+    description: "Advanced stabilization prevents separation of oils and water-soluble actives over the product lifecycle.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
+  },
+  {
+    title: "Clean Ingredient Profile",
+    description: "Formulated without synthetic gums or carrageenan, emphasizing natural thickeners and plant-based stabilizers.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
+  }
+];
+
+const capabilities = [
+  {
+    title: "Performance Energy Gels",
+    description: "Rapid-release carbohydrate and electrolyte complexes for endurance athletes."
+  },
+  {
+    title: "Liposomal Gels",
+    description: "Advanced nutrient delivery utilizing phospholipid bilayers for maximum bioavailability."
+  },
+  {
+    title: "Botanical Paste Infusions",
+    description: "High-density Turmeric, CBD, and adaptogenic blends with precise active loading."
+  },
+  {
+    title: "Clinical Oral Suspensions",
+    description: "Medically-focused delivery systems for high-dose vitamins and mineral complexes."
+  },
+  {
+    title: "Mouth-Coating CBD/CBG",
+    description: "Optimized sublingual contact for improved cannabinoid absorption patterns."
+  },
+  {
+    title: "Custom Viscosity Tuning",
+    description: "Engineering the perfect 'squeeze' and mouthfeel for your specific branding."
+  }
+];
+
+const packagingOptions = [
+  {
+    title: "Portable Sachet Packs",
+    items: ["Easy-Tear Tab Notches", "High-Barrier Foil Laminates", "Anti-Leaking Heat Seals", "Matte or Gloss Finishes"]
+  },
+  {
+    title: "Multi-Pack Shippers",
+    items: ["Perforated Gravity Feeders", "Retail Display Master Boxes", "Inventory Palletization", "Dynamic QR Tracking"]
+  },
+  {
+    title: "Subscription Kitting",
+    items: ["Lightweight Postal Solutions", "Custom Printed Inserts", "3PL Fulfillment Integration", "Eco-Friendly Overwraps"]
+  },
+  {
+    title: "Industrial Bulk Supply",
+    items: ["FDA-Approved Pail Filling", "Sanitary Tote Loading", "Batch COA Documentation", "Global Freight Coordination"]
+  }
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Emulsion Design",
+    description: "Engineering the formula stability and viscosity.",
+    duration: "2 Weeks"
+  },
+  {
+    step: "02",
+    title: "High-Sheer Blending",
+    description: "Mixing active components for total homogeneity.",
+    duration: "1 Week"
+  },
+  {
+    step: "03",
+    title: "Precision Filling",
+    description: "Automated sachet loading with zero-leak seals.",
+    duration: "2 Weeks"
+  },
+  {
+    step: "04",
+    title: "Stress Testing",
+    description: "Incubation and burst testing for pack integrity.",
+    duration: "1 Week"
+  },
+  {
+    step: "05",
+    title: "Packaging Distribution",
+    description: "Final kitting and logistics dispatch.",
+    duration: "1 Week"
+  }
+];
+
+const proofStats = [
+  { num: "10M+", label: "Gel Packs Produced" },
+  { num: "100%", label: "Leak-Free Guarantee" },
+  { num: "FDA", label: "Registered Facility" },
+  { num: "48hr", label: "Rapid Lab Testing" }
+];
+---
+
+<FormatTemplate
+  formatName="Specialty Gel"
+  heroTitle="High-Performance Gel Delivery Systems"
+  heroDescription="Innovate your product line with advanced gel delivery technology. From endurance performance to clinical liposomal suspensions, we provide the industrial capacity to produce stable, easy-to-consume, and highly bioavailable gel formats."
+  canonical="https://vitaorganica.com/manufacturing/gel"
+  showMockupTeaser={true}
+  mockupHref="/mockup?format=gel"
+  benefits={benefits}
+  capabilities={capabilities}
+  packagingOptions={packagingOptions}
+  processSteps={processSteps}
+  proofStats={proofStats}
+/>

@@ -1,0 +1,136 @@
+---
+import FormatTemplate from '../../components/manufacturing/FormatTemplate.astro';
+
+const benefits = [
+  {
+    title: "Ultimate Consumer Convenience",
+    description: "Single-serve delivery systems that fit perfectly into a modern, active lifestyle—no measuring required.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`
+  },
+  {
+    title: "High-Barrier Protection",
+    description: "Our medical-grade foil laminates protect sensitive ingredients from light, oxygen, and moisture better than standard jars.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
+  },
+  {
+    title: "Zero-Leak Technology",
+    description: "Specialized heat-seal parameters ensure 100% leak-proof integrity for both liquid shots and fine powders.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+  },
+  {
+    title: "Precision Unit Dosing",
+    description: "Automated filling lines ensure consistent active ingredient concentrations in every single stick pack.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`
+  },
+  {
+    title: "Rapid Market Entry",
+    description: "Highly scalable production lines allow for efficient market testing with multi-flavor variety packs.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l5-5m0 0l5 5m-5-5v12"/></svg>`
+  },
+  {
+    title: "Easy-Tear Accessibility",
+    description: "Laser-perforated notches provide a consistent, frustration-free opening experience for consumers every time.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20L12 2z"/></svg>`
+  }
+];
+
+const capabilities = [
+  {
+    title: "Hydration & Electrolytes",
+    description: "High-speed filling of rapid-dissolve mineral and carbohydrate complexes."
+  },
+  {
+    title: "Liquid Wellness Shots",
+    description: "Filling of high-viscosity gels and sublingual liquid vitamins with zero-drip technology."
+  },
+  {
+    title: "Probiotic Stick Packs",
+    description: "Low-humidity processing to maintain microbial viability throughout the packaging cycle."
+  },
+  {
+    title: "Collagen & Beauty Shots",
+    description: "Ideal for daily-dose collagen peptides and beauty-focused liquid infusions."
+  },
+  {
+    title: "Performance Nooptropics",
+    description: "Portable focus and energy formulas designed for professional and athletic use."
+  },
+  {
+    title: "Multi-Flavor Variety Runs",
+    description: "Efficient change-over capability for creating multi-flavor subscription boxes."
+  }
+];
+
+const packagingOptions = [
+  {
+    title: "Retail Cartoning",
+    items: ["Perforated Counter Displays", "Hanging Hook Slotted Boxes", "Custom Matte/UV Finishes", "Dynamic Lot Serialization"]
+  },
+  {
+    title: "Flexible Sizing",
+    items: ["Slim Stick Packs", "Wide Square Sachets", "Contoured Liquid Pouches", "Large Volume Packets"]
+  },
+  {
+    title: "Secondary Logicstics",
+    items: ["Master Shipper Palletization", "Amazon Transparency Labels", "Dynamic QR Code Printing", "Quality COA Documentation"]
+  },
+  {
+    title: "Sustainable Substrates",
+    items: ["Recyclable Mono-Materials", "Compostable Paper Foils", "Reduced Plastic Thickness", "Soy-Based Ink Printing"]
+  }
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Product Blending",
+    description: "Technical mixing of liquid or powder actives.",
+    duration: "1 Week"
+  },
+  {
+    step: "02",
+    title: "Barrier Selection",
+    description: "Choosing the optimal foil for stability.",
+    duration: "3 Days"
+  },
+  {
+    step: "03",
+    title: "Formation & Fill",
+    description: "High-speed vertical form-fill-seal (VFFS).",
+    duration: "2 Weeks"
+  },
+  {
+    step: "04",
+    title: "Integrity Audit",
+    description: "Burst and seal testing in our clean labs.",
+    duration: "1 Week"
+  },
+  {
+    step: "05",
+    title: "Retail Kitting",
+    description: "Loading into cartons and secondary shipment.",
+    duration: "1 Week"
+  }
+];
+
+const proofStats = [
+  { num: "100M+", label: "Stick Packs Shipped" },
+  { num: "Zero", label: "Leakage Claims" },
+  { num: "48Hr", label: "QA Release Cycle" },
+  { num: "FDA", label: "Registered Facility" }
+];
+---
+
+<FormatTemplate
+  formatName="Stick Pack"
+  heroTitle="Stick Pack & Sachet Manufacturing"
+  heroDescription="Revolutionize your product delivery with high-speed, medical-grade stick pack and sachet solutions. Perfect for portable hydration, single-serve proteins, and specialty liquid wellness shots, our single-dose formats provide ultimate convenience with zero compromises."
+  canonical="https://vitaorganica.com/manufacturing/spoons"
+  showMockupTeaser={true}
+  mockupHref="/mockup?format=spoons"
+  benefits={benefits}
+  capabilities={capabilities}
+  packagingOptions={packagingOptions}
+  processSteps={processSteps}
+  proofStats={proofStats}
+/>

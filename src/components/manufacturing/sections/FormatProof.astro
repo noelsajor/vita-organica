@@ -1,0 +1,28 @@
+---
+interface ProofStat {
+  num: string;
+  label: string;
+}
+
+interface Props {
+  formatName: string;
+  proofStats: ProofStat[];
+}
+
+const { formatName, proofStats } = Astro.props;
+---
+
+{proofStats && proofStats.length > 0 && (
+  <section class="stats-band" aria-label={`${formatName} statistics`}>
+    <div class="container">
+      <ul class="stats-band-grid" role="list">
+        {proofStats.map((stat) => (
+          <li class="stat-cell">
+            <div class="stat-num">{stat.num}</div>
+            <div class="stat-label-band">{stat.label}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}

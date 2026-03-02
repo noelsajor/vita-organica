@@ -1,0 +1,136 @@
+---
+import FormatTemplate from '../../components/manufacturing/FormatTemplate.astro';
+
+const benefits = [
+  {
+    title: "Industrial-Scale Homogeneity",
+    description: "Our multi-stage blending facility utilizes high-precision V-blenders and ribbon mixers to ensure perfect ingredient distribution in every scoop.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
+  },
+  {
+    title: "Advanced Flavor Engineering",
+    description: "From decadent plant proteins to crisp, refreshing pre-workouts, our flavorists develop profiles that excel in diverse liquid bases.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`
+  },
+  {
+    title: "Proprietary Agglomeration",
+    description: "We optimize particle size to ensure instant mixability and prevent clumping, creating a premium experience for your end-users.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
+  },
+  {
+    title: "Clean Ingredient Sourcing",
+    description: "Access to high-purity raw materials including non-GMO proteins, organic superfoods, and clinical-grade amino acids.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
+  },
+  {
+    title: "High-Speed Automated Filling",
+    description: "Our lines handle everything from massive tubs to precision-weighed pouches with industrial speed and accuracy.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`
+  },
+  {
+    title: "Probiotic Stability Control",
+    description: "Specialized low-humidity blending environments specifically designed to preserve the viability of sensitive probiotic strains.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
+  }
+];
+
+const capabilities = [
+  {
+    title: "Plant & Whey Proteins",
+    description: "Advanced protein processing with custom amino acid spiking and digestive enzyme integration."
+  },
+  {
+    title: "Performance Pre-Workouts",
+    description: "High-stimulant or caffeine-free complexes with optimized pump and endurance additives."
+  },
+  {
+    title: "Daily Greens & Superfoods",
+    description: "Cold-milled botanical processing to preserve phytonutrients and natural antioxidants."
+  },
+  {
+    title: "Collagen & Beauty Blends",
+    description: "Hyaluronic acid and collagen peptide integration with targeted skin and joint support."
+  },
+  {
+    title: "Electrolyte Hydration",
+    description: "Rapid-dissolve mineral complexes for optimized athletic recovery and daily wellness."
+  },
+  {
+    title: "Micro-Dose Ingredient Blending",
+    description: "Precision distribution of trace elements and vitamins across large production volumes."
+  }
+];
+
+const packagingOptions = [
+  {
+    title: "Tub & Jar Filling",
+    items: ["1lb to 10lb Capacities", "Induction Heat Sealing", "Desiccant Pack Integration", "Inside-Scoop Insertion"]
+  },
+  {
+    title: "Stand-Up Pouches",
+    items: ["High-Barrier Resealable Foil", "Digital or Flexo Printing", "Matte/Soft-Touch Options", "Tear-Notch Closures"]
+  },
+  {
+    title: "Industrial Bulk Bagging",
+    items: ["25kg Multi-Wall Sacks", "Poly-Lined LTL Shipping", "Custom Pallet Configuration", "Quality COA Documentation"]
+  },
+  {
+    title: "Retail Box Kitting",
+    items: ["Display Shipper Design", "Dynamic QR Barcoding", "Multi-Flavor Bundle Packs", "Amazon FBA Ready Prep"]
+  }
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Ingredient Sourcing",
+    description: "Procuring high-purity, verified raw materials.",
+    duration: "2 Weeks"
+  },
+  {
+    step: "02",
+    title: "Precision Blending",
+    description: "High-shear mixing for absolute homogeneity.",
+    duration: "1 Week"
+  },
+  {
+    step: "03",
+    title: "Automated Filling",
+    description: "Precision weight-monitored tub or pouch loading.",
+    duration: "2 Weeks"
+  },
+  {
+    step: "04",
+    title: "Lab Verification",
+    description: "Microbial and potency testing for batch release.",
+    duration: "1 Week"
+  },
+  {
+    step: "05",
+    title: "Logistics Dispatch",
+    description: "Final palletization and warehouse shipment.",
+    duration: "1 Week"
+  }
+];
+
+const proofStats = [
+  { num: "10,000lb", label: "Daily Blending Capacity" },
+  { num: "100%", label: "Ingredient Transparency" },
+  { num: "CGMP", label: "Certified Facility" },
+  { num: "Zero", label: "Settling Claims" }
+];
+---
+
+<FormatTemplate
+  formatName="Powder"
+  heroTitle="Scalable Powder Supplement Manufacturing"
+  heroDescription="Scale your brand with industrial-grade powder supplement manufacturing. From high-performance athletic pre-workouts to premium botanical proteins, our advanced blending and filling technology ensures absolute ingredient consistency and rapid market scalability."
+  canonical="https://vitaorganica.com/manufacturing/powders"
+  showMockupTeaser={true}
+  mockupHref="/mockup?format=powders"
+  benefits={benefits}
+  capabilities={capabilities}
+  packagingOptions={packagingOptions}
+  processSteps={processSteps}
+  proofStats={proofStats}
+/>

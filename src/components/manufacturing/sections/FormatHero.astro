@@ -1,0 +1,25 @@
+---
+interface Props {
+  formatName: string;
+  heroTitle: string;
+  heroDescription: string;
+}
+
+const { formatName, heroTitle, heroDescription } = Astro.props;
+---
+
+<section class="hero format-hero" aria-labelledby="hero-title" style="padding: 120px 0 80px; text-align: center;">
+  <div class="container">
+    <div class="hero-content" style="max-width: 800px; margin: 0 auto; float: none;">
+      <span class="section-eyebrow">{formatName} Capability</span>
+      <h1 id="hero-title" style="margin-top: 1rem;">{heroTitle}</h1>
+      <p class="hero-subhead" style="margin: 1.5rem auto;">
+        {heroDescription}
+      </p>
+      <nav class="cta-row" aria-label="Hero navigation" style="justify-content: center;">
+        <a href="/request-quote" class="btn btn-primary btn-lg">Request a Quote</a>
+        <a href="/manufacturing" class="btn btn-secondary">All Formats</a>
+      </nav>
+    </div>
+  </div>
+</section>
