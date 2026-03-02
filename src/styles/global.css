@@ -1947,6 +1947,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .guide-thumb::after {
