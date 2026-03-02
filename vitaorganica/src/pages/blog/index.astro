@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { client, isSanityConfigured } from '../../lib/sanity/client';
+import { allPostsQuery } from '../../lib/sanity/queries';
+
+let posts = [];
+let error = null;
+
+if (isSanityConfigured) {
+  try {
+    posts = await client.fetch(allPostsQuery);
+  } catch (e) {
+    error = "Failed to load posts.";
+  }
+}
+---
+
+<Layout title="Insights | Vita Organica Blog">
+  <section class="section-padding" style="padding-top: 160px;">
+    <div class="container">
+      <div class="section-header">
+        <h1>Wellness Insights</h1>
+        <p>Expert advice on supplement manufacturing, market trends, and brand building.</p>
+      </div>
+
+      {!isSanityConfigured ? (
+        <div style="padding: var(--sp-12); background: var(--color-surface); border-radius: 12px; text-align: center;">
+          <p><strong>Dev Note:</strong> Sanity environment variables are missing. Please configure <code>.env</code> to see live posts.</p>
+        </div>
+      ) : (
+        <div class="feature-grid">
+          {posts.map((post: any) => (
+            <a href={`/blog/${post.slug.current}`} class="feature-card">
+              <div style="aspect-ratio: 16/9; background: #eee; border-radius: 12px; margin-bottom: 20px;"></div>
+              <h3>{post.title}</h3>
+              <p>{post.excerpt}</p>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

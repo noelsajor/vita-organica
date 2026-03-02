@@ -1,0 +1,59 @@
+<section class="audiences section-padding" id="solutions">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2>Built for Your Business</h2>
+      <p>Whether you're a scaling startup or an established retailer, we adapt to your needs.</p>
+    </div>
+
+    <div class="tab-container" data-reveal>
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="influencers">Influencers</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="gyms">Gyms & Clinics</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="retail">Retailers</button>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-panel active" id="influencers" role="tabpanel">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: var(--sp-12); align-items: center;">
+            <div>
+              <h3 style="font-size: 2rem; margin-bottom: var(--sp-4);">Monetize Your Influence</h3>
+              <p style="color: var(--color-ink-soft); margin-bottom: var(--sp-6);">Turn your community into a sustainable brand with custom formulations that reflect your values. Low MOQs and premium packaging included.</p>
+              <ul style="display: grid; gap: var(--sp-3);">
+                <li>✓ Custom Flavor Profiles</li>
+                <li>✓ Social-Ready Packaging</li>
+                <li>✓ Rapid Prototyping</li>
+              </ul>
+            </div>
+            <div style="height: 300px; background: var(--color-surface-alt); border-radius: 24px;"></div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="gyms" role="tabpanel">
+           </div>
+
+        <div class="tab-panel" id="retail" role="tabpanel">
+           </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => { 
+        b.classList.remove('active'); 
+        b.setAttribute('aria-selected','false'); 
+      });
+      tabPanels.forEach(p => p.classList.remove('active'));
+      
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      const id = btn.getAttribute('aria-controls');
+      if(id) document.getElementById(id)?.classList.add('active');
+    });
+  });
+</script>

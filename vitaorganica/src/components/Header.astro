@@ -1,0 +1,40 @@
+---
+---
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo-link" aria-label="Vita Organica — Home">
+        <svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1598.62 429.03" role="img" aria-label="Vita Organica">
+          <g>
+            <path fill="currentColor" d="M129.91,17.34c-14.96,6.43-19.25,25.52-8.78,37.99,29.91,35.62,53.4,74.1,65.23,103.66.38-1.01.76-2.02,1.14-3.03C174.58,118,144.87,31,129.91,17.34Z"/>
+            </g>
+        </svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="/blog" class="nav-link">Insights</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary">Start Your Brand</a>
+        <button class="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.querySelector('.mobile-toggle');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    // Implementation for actual mobile menu overlay would go here
+  });
+</script>
