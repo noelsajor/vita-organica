@@ -4,9 +4,15 @@ import { client, isConfigured } from '../../lib/sanity/client';
 import { postBySlugQuery, allSlugsQuery } from '../../lib/sanity/queries';
 
 export async function getStaticPaths() {
-  if (!isConfigured) return [];
+  if (!isConfigured) {
+    return [{ params: { slug: 'example-post' } }];
+  }
   
   const slugs = await client.fetch(allSlugsQuery);
+  if (!slugs || slugs.length === 0) {
+    return [{ params: { slug: 'example-post' } }];
+  }
+
   return slugs.map((slug) => ({
     params: { slug },
   }));
