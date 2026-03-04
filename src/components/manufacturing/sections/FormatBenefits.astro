@@ -1,0 +1,183 @@
+---
+interface Benefit {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+interface Props {
+  formatName: string;
+  benefits: Benefit[];
+}
+
+const { formatName, benefits } = Astro.props;
+
+// Bento styling logic
+const getBentoClass = (index: number) => {
+  const patterns = ['large', 'medium', 'medium', 'small', 'small', 'small'];
+  return patterns[index % patterns.length];
+};
+---
+
+<section class="manufacturing-section" aria-labelledby="benefits-heading" style="background: var(--color-surface-alt); padding: 120px 0;">
+  <div class="container">
+    <header class="section-header" style="margin-bottom: 5rem;">
+      <span class="section-eyebrow">Key Benefits</span>
+      <h2 id="benefits-heading" style="font-size: 3rem;">Why Partner With Us?</h2>
+    </header>
+
+    <div class="bento-grid-container">
+      {benefits.map((benefit, index) => {
+        const bentoClass = getBentoClass(index);
+        return (
+          <div class={`bento-item ${bentoClass}`}>
+            <div class="bento-icon">
+              <Fragment set:html={benefit.icon || '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>'} />
+            </div>
+            <div class="bento-content">
+              <h3>{benefit.title}</h3>
+              <p>{benefit.description}</p>
+            </div>
+            <div class="bento-bg"></div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  .bento-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    gap: 1.5rem;
+  }
+
+  .bento-item {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--color-white);
+    border: 1px solid var(--color-border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .bento-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-teal);
+  }
+
+  .bento-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--color-green);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bento-icon :global(svg) {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Bento Spans */
+  .large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: var(--color-ink);
+    color: var(--color-white);
+    padding: 3.5rem;
+  }
+
+  .large .bento-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-green);
+  }
+
+  .large h3 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .large p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .medium {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .small {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .large .bento-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(143, 194, 20, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .bento-content {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+  }
+
+  h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+  }
+
+  .large h3 {
+    color: var(--color-white);
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--color-ink-soft);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .large p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  @media (max-width: 1024px) {
+    .bento-grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(220px, auto);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid-container {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+    .large, .medium, .small {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    .bento-item {
+      padding: 2rem;
+    }
+  }
+</style>

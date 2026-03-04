@@ -1,0 +1,187 @@
+---
+// src/components/manufacturing/FormatTemplate.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormatHero from './sections/FormatHero.astro';
+import FormatProof from './sections/FormatProof.astro';
+import FormatProductNav from './sections/FormatProductNav.astro';
+import FormatCustomization from './sections/FormatCustomization.astro';
+import FormatCapabilities from './sections/FormatCapabilities.astro';
+import FormatPackaging from './sections/FormatPackaging.astro';
+import EmbeddedMockup from './EmbeddedMockup.astro';
+import FormatFunnelSlot from './sections/FormatFunnelSlot.astro';
+import FormatProcess from './sections/FormatProcess.astro';
+import FormatQuality from './sections/FormatQuality.astro';
+import FormatFAQ from './sections/FormatFAQ.astro';
+
+interface Benefit {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+interface Capability {
+  title: string;
+  description: string;
+}
+
+interface PackagingOption {
+  title: string;
+  items: string[];
+}
+
+interface ProcessStep {
+  step: string;
+  title: string;
+  description: string;
+  duration: string;
+}
+
+interface ProofStat {
+  num: string;
+  label: string;
+}
+
+interface CustomOption {
+  title: string;
+  description: string;
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  formatName: string;
+  heroTitle: string;
+  heroDescription: string;
+  benefits: Benefit[];
+  capabilities: Capability[];
+  packagingOptions: PackagingOption[];
+  processSteps: ProcessStep[];
+  proofStats: ProofStat[];
+  customizationOptions: CustomOption[];
+  faqs: FAQ[];
+  canonical?: string;
+}
+
+const {
+  formatName,
+  heroTitle,
+  heroDescription,
+  capabilities,
+  packagingOptions,
+  processSteps,
+  proofStats,
+  customizationOptions,
+  faqs,
+  canonical
+} = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `${formatName} Manufacturing`,
+  "description": heroDescription,
+  "provider": {
+    "@type": "Organization",
+    "name": "Vita Organica"
+  },
+  "serviceType": "Supplement Manufacturing",
+  "areaServed": "US",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Manufacturing Formats",
+    "itemListElement": capabilities.map(cap => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": cap.title,
+        "description": cap.description
+      }
+    }))
+  }
+};
+---
+
+<BaseLayout 
+  title={`${formatName} Manufacturing | Vita Organica`} 
+  description={heroDescription}
+  canonical={canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <main id="main-content">
+    <article class="format-detail">
+      
+      {/* 1) HERO */}
+      <FormatHero 
+        formatName={formatName} 
+        heroTitle={heroTitle} 
+        heroDescription={heroDescription} 
+      />
+
+      {/* 2) TRUST / PROOF BAR */}
+      <FormatProof 
+        formatName={formatName} 
+        proofStats={proofStats} 
+      />
+
+      {/* 3) PRODUCT OVERVIEW NAV */}
+      <FormatProductNav currentFormat={formatName} />
+
+      {/* 4) CUSTOMIZATION OPTIONS */}
+      <FormatCustomization 
+        formatName={formatName} 
+        options={customizationOptions} 
+      />
+
+      {/* 5) CAPABILITIES */}
+      <FormatCapabilities 
+        formatName={formatName} 
+        capabilities={capabilities} 
+      />
+
+      {/* 6) PACKAGING / RETAIL READY */}
+      <FormatPackaging 
+        packagingOptions={packagingOptions} 
+      />
+
+      {/* 7) MOCKUP GENERATOR INLINE */}
+      <EmbeddedMockup formatName={formatName} />
+
+      {/* 8) QUOTE FORM / LEAD FUNNEL */}
+      <div id="consultation" style="padding-top: 40px; background: var(--color-white); text-align: center;">
+        <p style="font-size: 0.9rem; color: var(--color-ink-muted); margin-bottom: 0;">Get a custom quote within 1 business day.</p>
+        <FormatFunnelSlot formatName={formatName} />
+      </div>
+
+      {/* 9) MANUFACTURING PROCESS */}
+      <FormatProcess 
+        processSteps={processSteps} 
+      />
+
+      {/* 10) QUALITY & COMPLIANCE */}
+      <FormatQuality />
+
+      {/* 11) FAQ */}
+      <FormatFAQ faqs={faqs} />
+
+      {/* 12) FINAL CTA */}
+      <footer class="final-cta-section" style="padding: 100px 0; background: var(--color-surface); text-align: center;">
+        <div class="container">
+          <h2>Ready to Scale Your {formatName} Brand?</h2>
+          <p style="margin: 1.5rem 0 2rem; color: var(--color-ink-soft);">Join 500+ brands that trust Vita Organica for premium manufacturing.</p>
+          <a href="/request-quote" class="btn btn-primary btn-lg">Request a Custom Quote</a>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .format-detail {
+    display: block;
+    width: 100%;
+  }
+</style>

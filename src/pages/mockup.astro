@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MockupGenerator from '../components/MockupGenerator';
+
+const title = "Mockup Generator | Vita Organica";
+const description = "Visualize your supplement branding on our premium packaging formats. Use our interactive tool to see your product come to life.";
+const canonical = "https://vitaorganica.com/mockup";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <section class="mockup-hero" style="padding: 120px 0 60px; text-align: center;">
+    <div class="container">
+      <div class="hero-content" style="max-width: 800px; margin: 0 auto; float: none;">
+        <span class="section-eyebrow">Visual Sandbox</span>
+        <h1 style="margin-top: 1rem;">Brand <span class="highlight">Visualizer</span></h1>
+        <p class="hero-subhead" style="margin: 1.5rem auto; color: var(--color-ink-soft);">
+          Ensure your labels and logos align perfectly with our manufacturing formats. Select a package, upload your branding, and visualize the final product in high-fidelity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mockup-generator-interface" style="padding-bottom: 120px;">
+    <div class="container">
+      <MockupGenerator client:visible />
+    </div>
+  </section>
+</BaseLayout>

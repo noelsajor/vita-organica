@@ -1,0 +1,95 @@
+---
+import FormatTemplate from '../../components/manufacturing/FormatTemplate.astro';
+
+const benefits = [
+  {
+    title: "Industrial-Scale Homogeneity",
+    description: "Our multi-stage blending facility utilizes high-precision V-blenders and ribbon mixers to ensure perfect ingredient distribution in every scoop.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
+  },
+  {
+    title: "Advanced Flavor Engineering",
+    description: "From decadent plant proteins to crisp, refreshing pre-workouts, our flavorists develop profiles that excel in diverse liquid bases.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`
+  },
+  {
+    title: "Proprietary Agglomeration",
+    description: "We optimize particle size to ensure instant mixability and prevent clumping, creating a premium experience for your end-users.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
+  }
+];
+
+const customizationOptions = [
+  { title: "Flavor Systems", description: "Natural, organic-compliant, and traditional masking options." },
+  { title: "Sweetening Profiles", description: "Stevia, Monk Fruit, Allulose, and traditional options." },
+  { title: "Performance Actives", description: "Amino acids, Creatine, Citrulline, and custom blends." },
+  { title: "Superfood Blends", description: "Greens, Reds, and Mushroom botanical integrations." },
+  { title: "Serving Precision", description: "Optimized scoop sizing and bulk density control." },
+  { title: "Texture Engineering", description: "Agglomeration and instantization for superior mixability." }
+];
+
+const capabilities = [
+  {
+    title: "Plant & Whey Proteins",
+    description: "Advanced protein processing with custom amino acid spiking and digestive enzyme integration."
+  },
+  {
+    title: "Performance Pre-Workouts",
+    description: "High-stimulant or caffeine-free complexes with optimized pump and endurance additives."
+  },
+  {
+    title: "Daily Greens & Superfoods",
+    description: "Cold-milled botanical processing to preserve phytonutrients and natural antioxidants."
+  }
+];
+
+const packagingOptions = [
+  {
+    title: "Tub & Jar Filling",
+    items: ["1lb to 10lb Capacities", "Induction Heat Sealing", "Desiccant Pack Integration"]
+  },
+  {
+    title: "Stand-Up Pouches",
+    items: ["High-Barrier Foil Laminates", "Digital or Flexo Printing", "Tear-Notch Closures"]
+  }
+];
+
+const processSteps = [
+  { step: "01", title: "Ingredient Sourcing", description: "Procuring high-purity, verified raw materials.", duration: "2 Weeks" },
+  { step: "02", title: "Precision Blending", description: "High-shear mixing for absolute homogeneity.", duration: "1 Week" },
+  { step: "03", title: "Automated Filling", description: "Precision weight-monitored tub or pouch loading.", duration: "2 Weeks" },
+  { step: "04", title: "Lab Verification", description: "Microbial and potency testing for batch release.", duration: "1 Week" }
+];
+
+const proofStats = [
+  { num: "10,000lb", label: "Daily Blending Capacity" },
+  { num: "100%", label: "Ingredient Visibility" },
+  { num: "CGMP", label: "Certified Facility" },
+  { num: "Zero", label: "Settling Claims" }
+];
+
+const faqs = [
+  { question: "What are the MOQs for powder manufacturing?", answer: "Our powder runs typically start at 1,500 - 2,500 units depending on the tub size and formulation complexity." },
+  { question: "Can you assist with flavor development?", answer: "Yes, our in-house flavorists specialize in creating premium taste profiles for everything from proteins to pre-workouts." },
+  { question: "Do you offer vegan protein options?", answer: "Absolutely. We work with pea, rice, hemp, and custom plant-based protein blends." },
+  { question: "How do you ensure batch homogeneity?", answer: "We utilize industrial V-blenders and rigorous testing to ensure every scoop contains the exact same nutrient profile." },
+  { question: "What packaging formats are available?", answer: "We offer tubs (PET/HDPE), stand-up pouches, and industrial-scale bulk bagging." },
+  { question: "Can you add probiotics to powders?", answer: "Yes, we have environmental controls to maintain probiotic viability during the blending and filling process." },
+  { question: "Do you provide third-party lab results?", answer: "Every production run comes with a Certificate of Analysis (COA) from accredited laboratories." },
+  { question: "What is the typical lead time?", answer: "Standard lead times are 6-9 weeks from the time of raw material arrival." }
+];
+---
+
+<FormatTemplate
+  formatName="Powder"
+  heroTitle="Scalable Powder Supplement Manufacturing"
+  heroDescription="Scale your brand with industrial-grade powder supplement manufacturing. From high-performance athletic pre-workouts to premium botanical proteins, our advanced blending and filling technology ensures absolute ingredient consistency and rapid market scalability."
+  canonical="https://vitaorganica.com/manufacturing/powders"
+  benefits={benefits}
+  capabilities={capabilities}
+  packagingOptions={packagingOptions}
+  processSteps={processSteps}
+  proofStats={proofStats}
+  customizationOptions={customizationOptions}
+  faqs={faqs}
+/>

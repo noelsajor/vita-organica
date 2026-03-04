@@ -1,0 +1,30 @@
+---
+import LeadFunnel from '../../LeadFunnel.astro';
+
+interface Props {
+  formatName: string;
+}
+
+const { formatName } = Astro.props;
+---
+
+<section class="funnel-integration" aria-labelledby="funnel-heading" style="padding: 80px 0; background: var(--color-white);">
+  <div class="container">
+    <h2 id="funnel-heading" class="sr-only">Request a Custom Quote</h2>
+    <LeadFunnel format={formatName.toLowerCase()} />
+  </div>
+</section>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>

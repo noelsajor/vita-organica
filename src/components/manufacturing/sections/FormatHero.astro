@@ -1,0 +1,32 @@
+---
+interface Props {
+  formatName: string;
+  heroTitle: string;
+  heroDescription: string;
+}
+
+const { formatName, heroTitle, heroDescription } = Astro.props;
+---
+
+<section class="hero format-hero" aria-labelledby="hero-title" style="padding: 120px 0 80px; text-align: center;">
+  <div class="container">
+    <div class="hero-content" style="max-width: 800px; margin: 0 auto; float: none;">
+      <span class="section-eyebrow">{formatName} Capability</span>
+      <h1 id="hero-title" style="margin-top: 1rem;">{heroTitle}</h1>
+      <p class="hero-subhead" style="margin: 1.5rem auto;">
+        {heroDescription}
+      </p>
+
+      <ul class="hero-proof-bullets" style="display: flex; gap: 2rem; justify-content: center; list-style: none; padding: 0; margin-bottom: 2rem; font-size: 0.9rem; color: var(--color-ink-soft); font-weight: 500;">
+        <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--color-green);">•</span> Flexible MOQs</li>
+        <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--color-green);">•</span> Quality-first production</li>
+        <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--color-green);">•</span> Retail-ready packaging</li>
+      </ul>
+
+      <nav class="cta-row" aria-label="Hero navigation" style="justify-content: center; gap: 1rem;">
+        <a href="/request-quote" class="btn btn-primary btn-lg">Get a Custom Quote</a>
+        <a href="#consultation" class="btn btn-secondary">Book a Consultation</a>
+      </nav>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { client, isConfigured } from '../../lib/sanity/client';
+import { postBySlugQuery, allSlugsQuery } from '../../lib/sanity/queries';
+
+export async function getStaticPaths() {
+  if (!isConfigured) {
+    return [{ params: { slug: 'example-post' } }];
+  }
+  
+  const slugs = await client.fetch(allSlugsQuery);
+  if (!slugs || slugs.length === 0) {
+    return [{ params: { slug: 'example-post' } }];
+  }
+
+  return slugs.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+let post = null;
+let error = null;
+
+if (isConfigured) {
+  try {
+    post = await client.fetch(postBySlugQuery, { slug });
+  } catch (e) {
+    error = "Failed to fetch post.";
+  }
+} else {
+  error = "Sanity is not configured.";
+}
+
+if (!post && !error) {
+  return Astro.redirect('/404');
+}
+
+// JSON-LD for BlogPosting
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post?.title,
+  "image": post?.mainImage?.asset?._ref, // In real app, resolve URL
+  "author": {
+    "@type": "Person",
+    "name": post?.author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vita Organica"
+  },
+  "datePublished": post?.publishedAt,
+  "description": post?.excerpt
+};
+---
+
+<BaseLayout title={post?.seo?.title || post?.title} description={post?.seo?.description || post?.excerpt}>
+  <article class="blog-post-page" style="padding: var(--sp-20) 0;">
+    <div class="container" style="max-width: 800px;">
+      {error && (
+        <div class="dev-message" style="padding: 2rem; background: var(--color-green-light); border-radius: var(--radius-lg); text-align: center;">
+          <p style="color: var(--color-ink); font-weight: 600;">{error}</p>
+        </div>
+      )}
+
+      {post && (
+        <>
+          <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+          
+          <header class="post-header" style="margin-bottom: var(--sp-12); text-align: center;">
+            <div class="post-meta" style="color: var(--color-teal); font-weight: 600; margin-bottom: var(--sp-4);">
+              <time datetime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString()}</time>
+              {post.categories && <span> • {post.categories.join(', ')}</span>}
+            </div>
+            <h1>{post.title}</h1>
+            <div class="post-author" style="margin-top: var(--sp-4); color: var(--color-ink-soft);">
+              By {post.author}
+            </div>
+          </header>
+
+          {post.mainImage && (
+            <img src={post.mainImage.asset._ref} alt={post.mainImage.alt || ""} style="width: 100%; border-radius: var(--radius-xl); margin-bottom: var(--sp-12);" />
+          )}
+
+          <div class="post-content" style="font-size: var(--text-lg); line-height: 1.8;">
+            {/* In a real implementation, use a PortableText component here */}
+            {/* For now, just a placeholder for the block content */}
+            <p>Body content from Sanity goes here.</p>
+          </div>
+        </>
+      )}
+    </div>
+  </article>
+</BaseLayout>
