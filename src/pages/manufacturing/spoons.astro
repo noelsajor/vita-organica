@@ -16,22 +16,16 @@ const benefits = [
     title: "Zero-Leak Technology",
     description: "Specialized heat-seal parameters ensure 100% leak-proof integrity for both liquid shots and fine powders.",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
-  },
-  {
-    title: "Precision Unit Dosing",
-    description: "Automated filling lines ensure consistent active ingredient concentrations in every single stick pack.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`
-  },
-  {
-    title: "Rapid Market Entry",
-    description: "Highly scalable production lines allow for efficient market testing with multi-flavor variety packs.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l5-5m0 0l5 5m-5-5v12"/></svg>`
-  },
-  {
-    title: "Easy-Tear Accessibility",
-    description: "Laser-perforated notches provide a consistent, frustration-free opening experience for consumers every time.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20L12 2z"/></svg>`
   }
+];
+
+const customizationOptions = [
+  { title: "Foil Substrates", description: "Selection of matte, gloss, and metallic medical-grade foils." },
+  { title: "Custom Sizing", description: "Stick packs ranging from 2g to 30g fill weights." },
+  { title: "Liquid or Powder", description: "Dual-capability lines for both dry and fluid delivery." },
+  { title: "Easy-Tear Notches", description: "Laser-perforated options for effortless consumer opening." },
+  { title: "Variety Packing", description: "Automated collation for multi-flavor retail kits." },
+  { title: "Eco-Friendly Foils", description: "Compostable and recyclable barrier options." }
 ];
 
 const capabilities = [
@@ -46,78 +40,43 @@ const capabilities = [
   {
     title: "Probiotic Stick Packs",
     description: "Low-humidity processing to maintain microbial viability throughout the packaging cycle."
-  },
-  {
-    title: "Collagen & Beauty Shots",
-    description: "Ideal for daily-dose collagen peptides and beauty-focused liquid infusions."
-  },
-  {
-    title: "Performance Nooptropics",
-    description: "Portable focus and energy formulas designed for professional and athletic use."
-  },
-  {
-    title: "Multi-Flavor Variety Runs",
-    description: "Efficient change-over capability for creating multi-flavor subscription boxes."
   }
 ];
 
 const packagingOptions = [
   {
     title: "Retail Cartoning",
-    items: ["Perforated Counter Displays", "Hanging Hook Slotted Boxes", "Custom Matte/UV Finishes", "Dynamic Lot Serialization"]
+    items: ["Perforated Counter Displays", "Hanging Hook Boxes", "Custom Finishes"]
   },
   {
-    title: "Flexible Sizing",
-    items: ["Slim Stick Packs", "Wide Square Sachets", "Contoured Liquid Pouches", "Large Volume Packets"]
-  },
-  {
-    title: "Secondary Logicstics",
-    items: ["Master Shipper Palletization", "Amazon Transparency Labels", "Dynamic QR Code Printing", "Quality COA Documentation"]
-  },
-  {
-    title: "Sustainable Substrates",
-    items: ["Recyclable Mono-Materials", "Compostable Paper Foils", "Reduced Plastic Thickness", "Soy-Based Ink Printing"]
+    title: "Secondary Logistics",
+    items: ["Master Shipper Palletization", "Amazon Transparency Labels", "Dynamic QR Printing"]
   }
 ];
 
 const processSteps = [
-  {
-    step: "01",
-    title: "Product Blending",
-    description: "Technical mixing of liquid or powder actives.",
-    duration: "1 Week"
-  },
-  {
-    step: "02",
-    title: "Barrier Selection",
-    description: "Choosing the optimal foil for stability.",
-    duration: "3 Days"
-  },
-  {
-    step: "03",
-    title: "Formation & Fill",
-    description: "High-speed vertical form-fill-seal (VFFS).",
-    duration: "2 Weeks"
-  },
-  {
-    step: "04",
-    title: "Integrity Audit",
-    description: "Burst and seal testing in our clean labs.",
-    duration: "1 Week"
-  },
-  {
-    step: "05",
-    title: "Retail Kitting",
-    description: "Loading into cartons and secondary shipment.",
-    duration: "1 Week"
-  }
+  { step: "01", title: "Barrier Selection", description: "Choosing the optimal foil for stability.", duration: "3 Days" },
+  { step: "02", title: "Formation & Fill", description: "High-speed vertical form-fill-seal (VFFS).", duration: "2 Weeks" },
+  { step: "03", title: "Integrity Audit", description: "Burst and seal testing in our clean labs.", duration: "1 Week" },
+  { step: "04", title: "Retail Kitting", description: "Loading into cartons and secondary shipment.", duration: "1 Week" }
 ];
 
 const proofStats = [
-  { num: "100M+", label: "Stick Packs Shipped" },
+  { num: "100M+", label: "Packs Shipped" },
   { num: "Zero", label: "Leakage Claims" },
   { num: "48Hr", label: "QA Release Cycle" },
   { num: "FDA", label: "Registered Facility" }
+];
+
+const faqs = [
+  { question: "What is the MOQ for stick pack manufacturing?", answer: "MOQs generally start at 25,000 - 50,000 units depending on the size and quantity of flavors." },
+  { question: "Can you handle both powders and liquids?", answer: "Yes, we have specialized lines for dry powders and viscous liquids/gels." },
+  { question: "Are your foils recyclable?", answer: "We offer both traditional high-barrier foils and newer recyclable/compostable alternatives." },
+  { question: "How accurate is the dose in each stick?", answer: "Our VFFS lines utilize precision auger or piston fillers with ±1% tolerance." },
+  { question: "Do you offer custom printing on the film?", answer: "Yes, we provide full-color flexographic or digital printing for vibrant, retail-ready branding." },
+  { question: "Can you kit stick packs into retail boxes?", answer: "Absolutely. We offer automated cartoning for various counts (7ct, 14ct, 30ct, etc.)." },
+  { question: "What is the shelf life of ingredients in sachets?", answer: "Because of the high-barrier foil, stick packs often extend shelf life up to 24 months." },
+  { question: "Can you manufacture variety packs?", answer: "Yes, we can collate multiple flavors into a single retail unit or subscription box." }
 ];
 ---
 
@@ -126,11 +85,11 @@ const proofStats = [
   heroTitle="Stick Pack & Sachet Manufacturing"
   heroDescription="Revolutionize your product delivery with high-speed, medical-grade stick pack and sachet solutions. Perfect for portable hydration, single-serve proteins, and specialty liquid wellness shots, our single-dose formats provide ultimate convenience with zero compromises."
   canonical="https://vitaorganica.com/manufacturing/spoons"
-  showMockupTeaser={true}
-  mockupHref="/mockup?format=spoons"
   benefits={benefits}
   capabilities={capabilities}
   packagingOptions={packagingOptions}
   processSteps={processSteps}
   proofStats={proofStats}
+  customizationOptions={customizationOptions}
+  faqs={faqs}
 />

@@ -16,9 +16,16 @@ const { formatName, heroTitle, heroDescription } = Astro.props;
       <p class="hero-subhead" style="margin: 1.5rem auto;">
         {heroDescription}
       </p>
-      <nav class="cta-row" aria-label="Hero navigation" style="justify-content: center;">
-        <a href="/request-quote" class="btn btn-primary btn-lg">Request a Quote</a>
-        <a href="/manufacturing" class="btn btn-secondary">All Formats</a>
+
+      <ul class="hero-proof-bullets" style="display: flex; gap: 2rem; justify-content: center; list-style: none; padding: 0; margin-bottom: 2rem; font-size: 0.9rem; color: var(--color-ink-soft); font-weight: 500;">
+        <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--color-green);">•</span> Flexible MOQs</li>
+        <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--color-green);">•</span> Quality-first production</li>
+        <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--color-green);">•</span> Retail-ready packaging</li>
+      </ul>
+
+      <nav class="cta-row" aria-label="Hero navigation" style="justify-content: center; gap: 1rem;">
+        <a href="/request-quote" class="btn btn-primary btn-lg">Get a Custom Quote</a>
+        <a href="#consultation" class="btn btn-secondary">Book a Consultation</a>
       </nav>
     </div>
   </div>

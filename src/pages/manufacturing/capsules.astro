@@ -16,22 +16,16 @@ const benefits = [
     title: "Advanced Bioavailability",
     description: "Utilizing delayed-release technology and precision particle engineering to ensure ingredients are absorbed efficiently.",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
-  },
-  {
-    title: "Clean Formulation Strategy",
-    description: "We eliminate unnecessary magnesium stearate and synthetic fillers, catering to the trend for minimal-ingredient supplements.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
-  },
-  {
-    title: "Scalable MOQ Options",
-    description: "Our facility is equipped to handle both boutique market entries and high-volume retail distributions without quality loss.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l5-5m0 0l5 5m-5-5v12"/></svg>`
-  },
-  {
-    title: "Rapid Lead Times",
-    description: "Streamlined supply chain and automated encapsulation lines ensure your product moves from raw material to retail-ready fast.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`
   }
+];
+
+const customizationOptions = [
+  { title: "Shell Material", description: "HPMC (Vegan), Bovine Gelatin, or Premium Pullulan options." },
+  { title: "Standard Sizing", description: "Complete range from 000 (largest) down to size 4 (smallest)." },
+  { title: "Color Matching", description: "Custom translucent or opaque non-GMO color patterns." },
+  { title: "Delayed Release", description: "Acid-resistant shells for targeted intestinal ingredient delivery." },
+  { title: "Band Sealing", description: "Added security and oxygen barrier with liquid-tight sealing." },
+  { title: "Custom Printing", description: "Edible-ink branding or dosage identifiers on the shell." }
 ];
 
 const capabilities = [
@@ -46,71 +40,25 @@ const capabilities = [
   {
     title: "Beads-in-Capsule (DR)",
     description: "Delayed-release beadlet technology for multi-phase nutrient delivery systems."
-  },
-  {
-    title: "Odor & Taste Masking",
-    description: "Techniques to neutralize pungent raw materials for a better consumer experience."
-  },
-  {
-    title: "Powder Stability Auditing",
-    description: "Rigorous testing of ingredient interactions to prevent degradation over the product's shelf life."
-  },
-  {
-    title: "Proprietary Color Matching",
-    description: "Custom capsule color and printing services to align with your brand's specific visual guidelines."
   }
 ];
 
 const packagingOptions = [
   {
     title: "Bottle Solutions",
-    items: ["Glass & Plastic Jars", "UV-Protective Tints", "Tamper-Evident Lidding", "Premium Soft-Touch Labels"]
+    items: ["Glass & Plastic Jars", "UV-Protective Tints", "Tamper-Evident Lidding"]
   },
   {
     title: "Unit-Dose Blistering",
-    items: ["Cold-Form Foil", "PVC/PVDC Blisters", "Perforated Compliance Packs", "Child-Resistant Push-Through"]
-  },
-  {
-    title: "Bulk Supply",
-    items: ["Poly-Lined Drums", "Industrial Vacuum Bags", "Quality COA Documentation", "Standardized Pallet Loading"]
-  },
-  {
-    title: "Subscription Boxes",
-    items: ["D2C Mailing Solutions", "Custom Printed Mailers", "Instructional Insert Kitting", "Lightweight Eco-Fulfillment"]
+    items: ["Cold-Form Foil", "PVC/PVDC Blisters", "Child-Resistant Packaging"]
   }
 ];
 
 const processSteps = [
-  {
-    step: "01",
-    title: "Technical Review",
-    description: "Analysis of ingredient compatibility and capacity.",
-    duration: "1 Week"
-  },
-  {
-    step: "02",
-    title: "Bulk Blending",
-    description: "Precision mixing in climate-controlled environments.",
-    duration: "1 Week"
-  },
-  {
-    step: "03",
-    title: "Encapsulation",
-    description: "High-speed filling with automated quality check.",
-    duration: "2 Weeks"
-  },
-  {
-    step: "04",
-    title: "Analytical Testing",
-    description: "Comprehensive lab verification for purity and dose.",
-    duration: "1 Week"
-  },
-  {
-    step: "05",
-    title: "Secondary Packaging",
-    description: "Bottling or blistering and final logistics prep.",
-    duration: "1 Week"
-  }
+  { step: "01", title: "Technical Review", description: "Analysis of ingredient compatibility and capacity.", duration: "1 Week" },
+  { step: "02", title: "Bulk Blending", description: "Precision mixing in climate-controlled environments.", duration: "1 Week" },
+  { step: "03", title: "Encapsulation", description: "High-speed filling with automated quality check.", duration: "2 Weeks" },
+  { step: "04", title: "Analytical Testing", description: "Comprehensive lab verification for purity and dose.", duration: "1 Week" }
 ];
 
 const proofStats = [
@@ -119,6 +67,17 @@ const proofStats = [
   { num: "24Hr", label: "QA Lab Turnaround" },
   { num: "CGMP", label: "Certified Environment" }
 ];
+
+const faqs = [
+  { question: "What is the MOQ for capsule manufacturing?", answer: "Standard MOQs for capsules start at 50,000 - 100,000 units per run." },
+  { question: "Do you offer vegetarian capsule options?", answer: "Yes, we prioritize HPMC vegetarian capsules for clean-label brands." },
+  { question: "What capsule sizes do you support?", answer: "We support all standard industry sizes, including 000, 00, 0, 1, 2, 3, and 4." },
+  { question: "Can you manufacture delayed-release capsules?", answer: "Yes, we utilize acid-resistant shell technology to ensure delivery to the small intestine." },
+  { question: "What is the typical fill weight for a size 00 capsule?", answer: "Typically, a size 00 capsule holds between 540mg and 1090mg depending on powder density." },
+  { question: "Do you offer custom capsule colors?", answer: "Yes, we can provide custom colors and even two-tone capsule shells to match your branding." },
+  { question: "Can you assist with complex formulations?", answer: "Our R&D team can help optimize blends for flowability and potency within the capsule shell." },
+  { question: "What is the turnaround time for a capsule production run?", answer: "Standard lead times are 7-10 weeks from the receipt of raw materials." }
+];
 ---
 
 <FormatTemplate
@@ -126,11 +85,11 @@ const proofStats = [
   heroTitle="Precision Capsule Manufacturing"
   heroDescription="Leverage pharmaceutical-grade encapsulation technology to power your supplement brand. Our diverse material options and advanced powder engineering ensure consistent dose delivery and maximum ingredient stability for clinical and retail success."
   canonical="https://vitaorganica.com/manufacturing/capsules"
-  showMockupTeaser={true}
-  mockupHref="/mockup?format=capsules"
   benefits={benefits}
   capabilities={capabilities}
   packagingOptions={packagingOptions}
   processSteps={processSteps}
   proofStats={proofStats}
+  customizationOptions={customizationOptions}
+  faqs={faqs}
 />

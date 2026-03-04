@@ -1,0 +1,81 @@
+---
+// src/components/manufacturing/sections/FormatProductNav.astro
+const products = [
+  { label: "Gummies", href: "/manufacturing/gummies", active: true },
+  { label: "Powders", href: "/manufacturing/powders", active: true },
+  { label: "Spoons", href: "/manufacturing/spoons", active: true },
+  { label: "Gels", href: "/manufacturing/gel", active: true },
+  { label: "Soft Gels", href: "/manufacturing/soft-gels", active: true },
+  { label: "Capsules", href: "/manufacturing/capsules", active: true },
+  { label: "Sachets", href: "#", active: false }
+];
+
+const { currentFormat } = Astro.props;
+
+// Better matching logic: check if currentFormat (singular) is contained in label (plural) 
+// or if they are both "Stick Pack"/"Spoons" or "Specialty Gel"/"Gels"
+const isMatch = (current: string, label: string) => {
+  const c = current.toLowerCase();
+  const l = label.toLowerCase();
+  if (c === "stick pack" && l === "spoons") return true;
+  if (c === "specialty gel" && l === "gels") return true;
+  return l.includes(c) || c.includes(l);
+};
+---
+
+<section class="manufacturing-section" style="padding: 60px 0; background: var(--color-surface-alt);">
+  <div class="container">
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+      <span class="section-eyebrow">Product Types</span>
+      <h2>Specialized Delivery Systems</h2>
+    </div>
+    <div style="display: flex; gap: 0.75rem; overflow-x: auto; padding-bottom: 1rem; justify-content: center; -webkit-overflow-scrolling: touch; flex-wrap: wrap;">
+      {products.map(product => {
+        const activeState = isMatch(currentFormat, product.label);
+        
+        return product.active ? (
+          <a 
+            href={product.href} 
+            class={`nav-nav-pill ${activeState ? 'active' : ''}`} 
+            style={`
+              flex: 0 0 auto;
+              min-width: 120px;
+              text-align: center; 
+              text-decoration: none; 
+              padding: 0.75rem 1.5rem; 
+              border-radius: var(--radius-pill);
+              border: 1px solid ${activeState ? 'var(--color-ink)' : 'var(--color-border)'};
+              background: ${activeState ? 'var(--color-ink)' : 'var(--color-white)'};
+              transition: all 0.2s ease;
+            `}
+          >
+            <span style={`
+              margin: 0; 
+              font-size: 0.95rem; 
+              font-weight: 600;
+              color: ${activeState ? 'var(--color-white)' : 'var(--color-ink-soft)'};
+            `}>
+              {product.label}
+            </span>
+          </a>
+        ) : (
+          <div 
+            class="nav-nav-pill-disabled" 
+            style={`
+              flex: 0 0 auto;
+              min-width: 120px;
+              text-align: center; 
+              opacity: 0.4; 
+              padding: 0.75rem 1.5rem; 
+              background: var(--color-surface); 
+              border: 1px dashed var(--color-border);
+              border-radius: var(--radius-pill);
+            `}
+          >
+            <span style="margin:0; font-size:0.95rem; font-weight: 600; color: var(--color-ink-muted);">{product.label}</span>
+          </div>
+        )
+      })}
+    </div>
+  </div>
+</section>

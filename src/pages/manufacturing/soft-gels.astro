@@ -16,22 +16,16 @@ const benefits = [
     title: "Enhanced Absorption",
     description: "Liquid-filled soft gels offer superior bioavailability for fat-soluble nutrients compared to traditional compressed tablets.",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
-  },
-  {
-    title: "Odor & Aftertaste Control",
-    description: "Advanced encapsulation techniques effectively mask the pungent odors and reflux associated with marine and botanical oils.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg>`
-  },
-  {
-    title: "Diverse Sizing Options",
-    description: "Available in Oval, Oblong, and Round shapes across a wide range of fill weights to suit your specific dosing needs.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2" ry="2"/></svg>`
-  },
-  {
-    title: "Scalable Production",
-    description: "High-speed rotary die encapsulation ensures consistent quality whether you are running a test batch or millions of units.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`
   }
+];
+
+const customizationOptions = [
+  { title: "Shell Substrate", description: "Pharmaceutical gelatin or plant-based vegan (Tapioca) options." },
+  { title: "Shape & Size", description: "Oval, Oblong, and Round configurations in all standard sizes." },
+  { title: "Color Profiles", description: "Custom opaque, transparent, and pearlescent shell finishes." },
+  { title: "Fill Complexity", description: "Stable integration of oils, suspensions, and high-viscosity pastes." },
+  { title: "Release Technology", description: "Enteric coating or standard immediate-release shell engineering." },
+  { title: "Shell Hardness", description: "Customizable 'bite' and texture based on specific ingredient needs." }
 ];
 
 const capabilities = [
@@ -46,78 +40,43 @@ const capabilities = [
   {
     title: "Custom Lipid Blends",
     description: "Formulation of proprietary multi-ingredient liquid complexes for cognitive and heart health."
-  },
-  {
-    title: "Enteric Coating",
-    description: "Targeted release technology that bypasses the stomach for improved intestinal absorption."
-  },
-  {
-    title: "Vegetarian Soft Gels",
-    description: "Plant-based Tapioca or Carrageenan shell options for vegan-focused supplement lines."
-  },
-  {
-    title: "Complex Suspensions",
-    description: "Successfully suspending active powders within oil matrices without settling or shell degradation."
   }
 ];
 
 const packagingOptions = [
   {
     title: "Bottling Services",
-    items: ["Amber & Cobalt UV Protection", "Child-Resistant Closures", "Full Wrap Labeling", "Induction Heat Sealing"]
+    items: ["Amber & Cobalt UV Protection", "Child-Resistant Closures", "Full Wrap Labeling"]
   },
   {
     title: "Blister Packaging",
-    items: ["High-Barrier Aluminum Foil", "PVC/Aclar Clarity Packs", "Unit-Dose Serialization", "Compliance Display Boxes"]
-  },
-  {
-    title: "Bulk Distribution",
-    items: ["Climate-Controlled Storage", "Poly-Lined Shipping Totes", "Oxygen-Scavenger Integration", "International Freight Prep"]
-  },
-  {
-    title: "Sample Kitting",
-    items: ["Travel-Size Sachet Packs", "Professional Sales Demo Kits", "Retail Counter Displays", "Branded Fulfillment Mailers"]
+    items: ["High-Barrier Aluminum Foil", "PVC/Aclar Clarity Packs", "Unit-Dose Serialization"]
   }
 ];
 
 const processSteps = [
-  {
-    step: "01",
-    title: "Lipid Formulation",
-    description: "Precisely blending active oils and stabilizers.",
-    duration: "1 Week"
-  },
-  {
-    step: "02",
-    title: "Gel Mass Prep",
-    description: "Creating the proprietary shell material and color.",
-    duration: "2 Days"
-  },
-  {
-    step: "03",
-    title: "Encapsulation",
-    description: "Rotary die filling and seal verification.",
-    duration: "2 Weeks"
-  },
-  {
-    step: "04",
-    title: "Controlled Drying",
-    description: "Tumble and tunnel drying for perfect hardness.",
-    duration: "1 Week"
-  },
-  {
-    step: "05",
-    title: "Fulfillment Prep",
-    description: "Inspection, bottling, and final logistics.",
-    duration: "1 Week"
-  }
+  { step: "01", title: "Lipid Formulation", description: "Precisely blending active oils and stabilizers.", duration: "1 Week" },
+  { step: "02", title: "Gel Mass Prep", description: "Creating the proprietary shell material and color.", duration: "2 Days" },
+  { step: "03", title: "Encapsulation", description: "Rotary die filling and seal verification.", duration: "2 Weeks" },
+  { step: "04", title: "Controlled Drying", description: "Tumble and tunnel drying for perfect hardness.", duration: "1 Week" }
 ];
 
 const proofStats = [
-  { num: "500M+", label: "Soft Gels Produced" },
+  { num: "500M+", label: "Produced Annually" },
   { num: "99.9%", label: "Seal Integrity" },
   { num: "CGMP", label: "Certified Facility" },
   { num: "Zero", label: "Oxidation Record" }
+];
+
+const faqs = [
+  { question: "What is the MOQ for soft gel manufacturing?", answer: "Our standard MOQs for soft gels typically start at 150,000 - 300,000 units per run." },
+  { question: "Do you offer vegan/vegetarian soft gels?", answer: "Yes, we provide advanced starch-based and tapioca-based vegan shell options." },
+  { question: "Can you encapsulate high-viscosity pastes?", answer: "Absolutely. Our rotary die equipment is optimized for both thin lipids and thick suspensions." },
+  { question: "How do you prevent 'leakers'?", answer: "We utilize laser-monitored seal verification and rigorous integrity testing on every batch." },
+  { question: "What shapes are available for soft gels?", answer: "The most common shapes are Oval, Oblong, and Round, available in multiple sizes (3, 5, 7.5, 10, 20, etc.)." },
+  { question: "Do you offer enteric-coated soft gels?", answer: "Yes, we can apply enteric coatings for targeted intestinal release and to prevent fishy aftertaste." },
+  { question: "How do you ensure oil stability?", answer: "We use a cold-fill nitrogen-blanketing process to prevent oxidation of sensitive marine and botanical oils." },
+  { question: "What is the typical drying time for soft gels?", answer: "Standard drying takes 2-4 days in climate-controlled rooms to reach optimal hardness." }
 ];
 ---
 
@@ -126,11 +85,11 @@ const proofStats = [
   heroTitle="Advanced Soft Gel Manufacturing"
   heroDescription="Optimize your liquid supplements with industry-leading rotary die encapsulation. From high-purity Omega-3s to complex botanical suspensions, our cold-fill technology and specialized shell engineering deliver superior stability and consumer bioavailability."
   canonical="https://vitaorganica.com/manufacturing/soft-gels"
-  showMockupTeaser={true}
-  mockupHref="/mockup?format=soft-gels"
   benefits={benefits}
   capabilities={capabilities}
   packagingOptions={packagingOptions}
   processSteps={processSteps}
   proofStats={proofStats}
+  customizationOptions={customizationOptions}
+  faqs={faqs}
 />

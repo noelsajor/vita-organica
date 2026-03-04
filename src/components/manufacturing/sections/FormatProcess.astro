@@ -13,31 +13,107 @@ interface Props {
 const { processSteps } = Astro.props;
 ---
 
-<section class="process-section" aria-labelledby="process-heading" style="background: var(--color-ink); color: var(--color-white); padding: 80px 0;">
+<section class="process-section" aria-labelledby="process-heading" style="background: var(--color-ink); color: var(--color-white); padding: 120px 0;">
   <div class="container">
-    <header class="section-header">
-      <span class="section-eyebrow" style="color: var(--color-green);">Production Timeline</span>
-      <h2 id="process-heading" style="color: var(--color-white);">Manufacturing Process</h2>
-    </header>
+    <div class="process-grid">
+      
+      <!-- Left side: Sticky content -->
+      <div class="process-sticky">
+        <span class="section-eyebrow" style="color: var(--color-green);">Production Timeline</span>
+        <h2 id="process-heading" style="color: var(--color-white); font-size: 3rem; margin-bottom: 1.5rem;">From Concept to Production Simplified</h2>
+        <p style="color: rgba(255, 255, 255, 0.7); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+          We handle the technical complexity so you can focus on building your brand. Our streamlined manufacturing process ensures quality at every milestone.
+        </p>
+        <a href="#consultation" class="btn btn-primary">Book a Consultation</a>
+      </div>
 
-    <ol class="process-list" role="list" style="margin-top: 4rem;">
-      {processSteps.map((step) => (
-        <li class="process-step">
-          <div class="step-header">
-            <span class="step-num">{step.step}</span>
+      <!-- Right side: Steps -->
+      <div class="process-steps" role="list">
+        {processSteps.map((step) => (
+          <div class="process-step" role="listitem">
+            <div class="step-track">
+              <div class="step-num" style="background: var(--color-green); color: var(--color-ink); font-weight: 800;">{step.step}</div>
+              <div class="step-line" style="background: rgba(255, 255, 255, 0.1);"></div>
+            </div>
+            <div class="step-body">
+              <h3 style="color: var(--color-white); font-size: 1.5rem; margin-bottom: 0.75rem;">{step.title}</h3>
+              <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 1rem;">{step.description}</p>
+              <span class="step-duration" style="background: rgba(143, 194, 20, 0.1); color: var(--color-green); border: 1px solid rgba(143, 194, 20, 0.2); font-size: 0.8rem; padding: 4px 12px; border-radius: var(--radius-pill);">
+                {step.duration}
+              </span>
+            </div>
           </div>
-          <div class="step-body">
-            <h3 style="color: var(--color-white);">{step.title}</h3>
-            <p style="color: var(--color-ink-muted);">{step.description}</p>
-            <span class="step-duration" style="background: var(--color-ink-soft);">{step.duration}</span>
-          </div>
-        </li>
-      ))}
-    </ol>
+        ))}
+      </div>
+
+    </div>
   </div>
 </section>
 
 <style>
-  .process-step { border-left: 1px solid var(--color-ink-soft); }
-  .step-num { background: var(--color-green); color: var(--color-ink); }
+  /* Match the homepage process grid structure */
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .process-sticky {
+    position: sticky;
+    top: 120px;
+  }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-step {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .process-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .step-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    z-index: 2;
+  }
+
+  .step-line {
+    width: 2px;
+    flex-grow: 1;
+    margin-top: 0.5rem;
+  }
+
+  .process-step:last-child .step-line {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .process-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .process-sticky {
+      position: static;
+    }
+  }
 </style>

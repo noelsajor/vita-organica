@@ -1,13 +1,17 @@
 ---
+// src/components/manufacturing/FormatTemplate.astro
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FormatHero from './sections/FormatHero.astro';
 import FormatProof from './sections/FormatProof.astro';
-import FormatFunnelSlot from './sections/FormatFunnelSlot.astro';
-import FormatBenefits from './sections/FormatBenefits.astro';
+import FormatProductNav from './sections/FormatProductNav.astro';
+import FormatCustomization from './sections/FormatCustomization.astro';
 import FormatCapabilities from './sections/FormatCapabilities.astro';
 import FormatPackaging from './sections/FormatPackaging.astro';
+import EmbeddedMockup from './EmbeddedMockup.astro';
+import FormatFunnelSlot from './sections/FormatFunnelSlot.astro';
 import FormatProcess from './sections/FormatProcess.astro';
-import MockupTeaser from './sections/MockupTeaser.astro';
+import FormatQuality from './sections/FormatQuality.astro';
+import FormatFAQ from './sections/FormatFAQ.astro';
 
 interface Benefit {
   title: string;
@@ -37,6 +41,16 @@ interface ProofStat {
   label: string;
 }
 
+interface CustomOption {
+  title: string;
+  description: string;
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 interface Props {
   formatName: string;
   heroTitle: string;
@@ -46,23 +60,22 @@ interface Props {
   packagingOptions: PackagingOption[];
   processSteps: ProcessStep[];
   proofStats: ProofStat[];
+  customizationOptions: CustomOption[];
+  faqs: FAQ[];
   canonical?: string;
-  showMockupTeaser?: boolean;
-  mockupHref?: string;
 }
 
 const {
   formatName,
   heroTitle,
   heroDescription,
-  benefits,
   capabilities,
   packagingOptions,
   processSteps,
   proofStats,
-  canonical,
-  showMockupTeaser = false,
-  mockupHref = "/mockup"
+  customizationOptions,
+  faqs,
+  canonical
 } = Astro.props;
 
 const jsonLd = {
@@ -100,56 +113,60 @@ const jsonLd = {
   <main id="main-content">
     <article class="format-detail">
       
+      {/* 1) HERO */}
       <FormatHero 
         formatName={formatName} 
         heroTitle={heroTitle} 
         heroDescription={heroDescription} 
       />
 
+      {/* 2) TRUST / PROOF BAR */}
       <FormatProof 
         formatName={formatName} 
         proofStats={proofStats} 
       />
 
-      <FormatFunnelSlot 
+      {/* 3) PRODUCT OVERVIEW NAV */}
+      <FormatProductNav currentFormat={formatName} />
+
+      {/* 4) CUSTOMIZATION OPTIONS */}
+      <FormatCustomization 
         formatName={formatName} 
+        options={customizationOptions} 
       />
 
-      <FormatBenefits 
-        formatName={formatName} 
-        benefits={benefits} 
-      />
-
+      {/* 5) CAPABILITIES */}
       <FormatCapabilities 
         formatName={formatName} 
         capabilities={capabilities} 
       />
 
+      {/* 6) PACKAGING / RETAIL READY */}
       <FormatPackaging 
         packagingOptions={packagingOptions} 
       />
 
-      {showMockupTeaser && (
-        <MockupTeaser href={mockupHref} />
-      )}
+      {/* 7) MOCKUP GENERATOR INLINE */}
+      <EmbeddedMockup formatName={formatName} />
 
+      {/* 8) QUOTE FORM / LEAD FUNNEL */}
+      <div id="consultation" style="padding-top: 40px; background: var(--color-white); text-align: center;">
+        <p style="font-size: 0.9rem; color: var(--color-ink-muted); margin-bottom: 0;">Get a custom quote within 1 business day.</p>
+        <FormatFunnelSlot formatName={formatName} />
+      </div>
+
+      {/* 9) MANUFACTURING PROCESS */}
       <FormatProcess 
         processSteps={processSteps} 
       />
 
-      {/* ── RELATED FORMATS SLOT ── */}
-      <section class="related-formats-section" aria-labelledby="related-heading" style="padding: 80px 0; background: var(--color-white);">
-        <div class="container">
-          <slot name="related-formats">
-            <div style="text-align: center; border: 1px dashed var(--color-border); padding: 40px; border-radius: var(--radius-lg);">
-              <h2 id="related-heading" class="sr-only">Related Manufacturing Formats</h2>
-              <p style="color: var(--color-ink-muted);">Explore other manufacturing delivery systems to diversify your product line.</p>
-              <a href="/manufacturing" class="text-link" style="margin-top: 1rem; display: inline-block;">View All Capabilities →</a>
-            </div>
-          </slot>
-        </div>
-      </section>
+      {/* 10) QUALITY & COMPLIANCE */}
+      <FormatQuality />
 
+      {/* 11) FAQ */}
+      <FormatFAQ faqs={faqs} />
+
+      {/* 12) FINAL CTA */}
       <footer class="final-cta-section" style="padding: 100px 0; background: var(--color-surface); text-align: center;">
         <div class="container">
           <h2>Ready to Scale Your {formatName} Brand?</h2>
@@ -166,17 +183,5 @@ const jsonLd = {
   .format-detail {
     display: block;
     width: 100%;
-  }
-  
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
   }
 </style>

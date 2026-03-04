@@ -16,22 +16,16 @@ const benefits = [
     title: "Portable & Single-Serve",
     description: "Perfect for sports performance and clinical wellness, providing exact doses in a convenient, mess-free format.",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`
-  },
-  {
-    title: "Superior Bio-Adhesion",
-    description: "Designed for improved mucosal contact, enhancing the absorption profile of botanical and anti-inflammatory compounds.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>`
-  },
-  {
-    title: "Shelf-Stable Emulsions",
-    description: "Advanced stabilization prevents separation of oils and water-soluble actives over the product lifecycle.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
-  },
-  {
-    title: "Clean Ingredient Profile",
-    description: "Formulated without synthetic gums or carrageenan, emphasizing natural thickeners and plant-based stabilizers.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
   }
+];
+
+const customizationOptions = [
+  { title: "Viscosity Control", description: "Ranging from thin syrups to high-density structured gels." },
+  { title: "Mouthfeel Engineering", description: "Optimizing for smoothness and clean finish after consumption." },
+  { title: "Functional Base", description: "Water, honey, agave, or lipid-based suspension systems." },
+  { title: "Ingredient Loading", description: "High-potency active integration with minimal fillers." },
+  { title: "Flavor Masking", description: "Advanced systems for bitter or metallic active ingredients." },
+  { title: "Shelf Stabilization", description: "Natural preservative systems and pH balancing." }
 ];
 
 const capabilities = [
@@ -46,71 +40,25 @@ const capabilities = [
   {
     title: "Botanical Paste Infusions",
     description: "High-density Turmeric, CBD, and adaptogenic blends with precise active loading."
-  },
-  {
-    title: "Clinical Oral Suspensions",
-    description: "Medically-focused delivery systems for high-dose vitamins and mineral complexes."
-  },
-  {
-    title: "Mouth-Coating CBD/CBG",
-    description: "Optimized sublingual contact for improved cannabinoid absorption patterns."
-  },
-  {
-    title: "Custom Viscosity Tuning",
-    description: "Engineering the perfect 'squeeze' and mouthfeel for your specific branding."
   }
 ];
 
 const packagingOptions = [
   {
     title: "Portable Sachet Packs",
-    items: ["Easy-Tear Tab Notches", "High-Barrier Foil Laminates", "Anti-Leaking Heat Seals", "Matte or Gloss Finishes"]
+    items: ["Easy-Tear Tab Notches", "High-Barrier Foil Laminates", "Anti-Leaking Heat Seals"]
   },
   {
     title: "Multi-Pack Shippers",
-    items: ["Perforated Gravity Feeders", "Retail Display Master Boxes", "Inventory Palletization", "Dynamic QR Tracking"]
-  },
-  {
-    title: "Subscription Kitting",
-    items: ["Lightweight Postal Solutions", "Custom Printed Inserts", "3PL Fulfillment Integration", "Eco-Friendly Overwraps"]
-  },
-  {
-    title: "Industrial Bulk Supply",
-    items: ["FDA-Approved Pail Filling", "Sanitary Tote Loading", "Batch COA Documentation", "Global Freight Coordination"]
+    items: ["Perforated Gravity Feeders", "Retail Display Master Boxes", "Inventory Palletization"]
   }
 ];
 
 const processSteps = [
-  {
-    step: "01",
-    title: "Emulsion Design",
-    description: "Engineering the formula stability and viscosity.",
-    duration: "2 Weeks"
-  },
-  {
-    step: "02",
-    title: "High-Sheer Blending",
-    description: "Mixing active components for total homogeneity.",
-    duration: "1 Week"
-  },
-  {
-    step: "03",
-    title: "Precision Filling",
-    description: "Automated sachet loading with zero-leak seals.",
-    duration: "2 Weeks"
-  },
-  {
-    step: "04",
-    title: "Stress Testing",
-    description: "Incubation and burst testing for pack integrity.",
-    duration: "1 Week"
-  },
-  {
-    step: "05",
-    title: "Packaging Distribution",
-    description: "Final kitting and logistics dispatch.",
-    duration: "1 Week"
-  }
+  { step: "01", title: "Emulsion Design", description: "Engineering the formula stability and viscosity.", duration: "2 Weeks" },
+  { step: "02", title: "High-Sheer Blending", description: "Mixing active components for total homogeneity.", duration: "1 Week" },
+  { step: "03", title: "Precision Filling", description: "Automated sachet loading with zero-leak seals.", duration: "2 Weeks" },
+  { step: "04", title: "Stress Testing", description: "Incubation and burst testing for pack integrity.", duration: "1 Week" }
 ];
 
 const proofStats = [
@@ -119,6 +67,17 @@ const proofStats = [
   { num: "FDA", label: "Registered Facility" },
   { num: "48hr", label: "Rapid Lab Testing" }
 ];
+
+const faqs = [
+  { question: "What is the difference between a gel and a liquid shot?", answer: "Gels have a higher viscosity designed for sustained release and easy on-the-go consumption without spills." },
+  { question: "Can you manufacture liposomal gel products?", answer: "Yes, we have specialized high-shear equipment required for liposomal encapsulation and stabilization." },
+  { question: "What is the MOQ for specialty gels?", answer: "MOQs for custom gel formulations typically start at 15,000 - 20,000 sachets." },
+  { question: "Can you mask the taste of botanical extracts?", answer: "Our flavor technicians are experts at masking high concentrations of botanicals like valerian root or ashwagandha." },
+  { question: "Do your gels require refrigeration?", answer: "Most of our gel formulations are shelf-stable and do not require refrigeration due to controlled water activity and pH." },
+  { question: "What ingredients are used as thickeners?", answer: "We primarily use natural thickeners like pectin, xanthan gum, or plant-based cellulose." },
+  { question: "How do you ensure zero leaks in packaging?", answer: "We use high-barrier foils and perform burst-pressure testing on every production lot." },
+  { question: "What is the total lead time for a new gel product?", answer: "From R&D to final shipment, allow 9-12 weeks for a first-time custom formulation." }
+];
 ---
 
 <FormatTemplate
@@ -126,11 +85,11 @@ const proofStats = [
   heroTitle="High-Performance Gel Delivery Systems"
   heroDescription="Innovate your product line with advanced gel delivery technology. From endurance performance to clinical liposomal suspensions, we provide the industrial capacity to produce stable, easy-to-consume, and highly bioavailable gel formats."
   canonical="https://vitaorganica.com/manufacturing/gel"
-  showMockupTeaser={true}
-  mockupHref="/mockup?format=gel"
   benefits={benefits}
   capabilities={capabilities}
   packagingOptions={packagingOptions}
   processSteps={processSteps}
   proofStats={proofStats}
+  customizationOptions={customizationOptions}
+  faqs={faqs}
 />

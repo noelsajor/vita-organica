@@ -16,22 +16,16 @@ const benefits = [
     title: "Automated Precision Dosing",
     description: "Our high-speed starchless depositing technology ensures every gummy contains the exact ingredient levels your customers expect.",
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>`
-  },
-  {
-    title: "Rapid Scalability",
-    description: "From mid-tier pilot runs to industrial-scale production, our lines are optimized for speed-to-market and operational efficiency.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`
-  },
-  {
-    title: "Proprietary Temperature Control",
-    description: "We utilize advanced heat-shielding during the cooking phase to preserve the potency of sensitive vitamins and adaptogens.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
-  },
-  {
-    title: "Shelf-Stable Formulations",
-    description: "Expert texture engineering ensures your gummies maintain their structural integrity across diverse environmental conditions.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v13m0-13V6a2 2 0 114 0v2l5 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8l5-2V6a2 2 0 114 0v2z"/></svg>`
   }
+];
+
+const customizationOptions = [
+  { title: "Flavor Profiles", description: "From classic fruit to exotic botanical blends." },
+  { title: "Custom Shapes", description: "Bears, cubes, or proprietary 3D-molding." },
+  { title: "Functional Actives", description: "Vitamins, minerals, Nootropics, and Botanicals." },
+  { title: "Dietary Targets", description: "Sugar-free, Vegan (Pectin), and Gelatin-based." },
+  { title: "Natural Colors", description: "Vibrant hues derived from fruits and vegetables." },
+  { title: "Functional Coatings", description: "Sanded, oiled, or acid-finished textures." }
 ];
 
 const capabilities = [
@@ -46,78 +40,43 @@ const capabilities = [
   {
     title: "Sugar-Free Specialization",
     description: "Formulations utilizing Allulose, Xylitol, and Stevia that maintain traditional mouthfeel and texture."
-  },
-  {
-    title: "Functional Performance",
-    description: "Expertise in pre-workout, cognitive focus (nootropics), and post-recovery gummy solutions."
-  },
-  {
-    title: "Custom Shapes & Colors",
-    description: "In-house mold design allows for proprietary shapes that strengthen your brand's visual identity."
-  },
-  {
-    title: "Organic Certification Support",
-    description: "Documentation and process control for brands pursuing USDA Organic or non-GMO project verification."
   }
 ];
 
 const packagingOptions = [
   {
     title: "Retail Bottling",
-    items: ["PET & HDPE Colors", "Child-Resistant Packaging", "Induction & Pressure Seals", "Shrink-Sleeve Branding"]
+    items: ["PET & HDPE Colors", "Child-Resistant Packaging", "Induction & Pressure Seals"]
   },
   {
     title: "Secondary Packaging",
-    items: ["Custom Display Trays", "Master Shipping Cartons", "Environmentally Controlled Transit", "Multi-Pack Bundling"]
-  },
-  {
-    title: "Sustainable Options",
-    items: ["Recycled Plastic Material", "Compostable Pouching", "Minimalist Eco-Designs", "Soy-Based Ink Labeling"]
-  },
-  {
-    title: "Fulfillment Prep",
-    items: ["Amazon FBA Compliant", "Direct-to-Consumer Kitting", "Inventory Palletization", "Dynamic Barcoding"]
+    items: ["Custom Display Trays", "Master Shipping Cartons", "Environmentally Controlled Transit"]
   }
 ];
 
 const processSteps = [
-  {
-    step: "01",
-    title: "R&D Formulation",
-    description: "Technical review and iterative flavor profiling.",
-    duration: "2 Weeks"
-  },
-  {
-    step: "02",
-    title: "Pilot Validation",
-    description: "Small-scale run to confirm texture and stability.",
-    duration: "1 Week"
-  },
-  {
-    step: "03",
-    title: "Batch Production",
-    description: "Starchless depositing and clean-room curing.",
-    duration: "3-4 Weeks"
-  },
-  {
-    step: "04",
-    title: "Quality Analytics",
-    description: "Third-party potency and microbial verification.",
-    duration: "1 Week"
-  },
-  {
-    step: "05",
-    title: "Automated Bottling",
-    description: "Precision counting and retail-ready fulfillment.",
-    duration: "1 Week"
-  }
+  { step: "01", title: "R&D Formulation", description: "Technical review and iterative flavor profiling.", duration: "2 Weeks" },
+  { step: "02", title: "Pilot Validation", description: "Small-scale run to confirm texture and stability.", duration: "1 Week" },
+  { step: "03", title: "Batch Production", description: "Starchless depositing and clean-room curing.", duration: "3-4 Weeks" },
+  { step: "04", title: "Quality Analytics", description: "Third-party potency and microbial verification.", duration: "1 Week" }
 ];
 
 const proofStats = [
-  { num: "50M+", label: "Units Produced Annually" },
+  { num: "50M+", label: "Gummies Annually" },
   { num: "99.8%", label: "Batch Consistency" },
-  { num: "400+", label: "Custom Formulations" },
+  { num: "400+", label: "Custom Formulas" },
   { num: "Zero", label: "Contamination Record" }
+];
+
+const faqs = [
+  { question: "What is the MOQ for gummy manufacturing?", answer: "Our minimum order quantities typically start at 50,000 units per SKU, allowing emerging brands to scale with manageable initial investments." },
+  { question: "Can you manufacture pectin (vegan) gummies?", answer: "Yes, we specialize in high-quality citrus pectin formulations that are 100% vegan and heat-stable." },
+  { question: "How long does the formulation process take?", answer: "A typical R&D cycle for a new gummy formula takes 2-4 weeks, depending on the complexity of the active ingredients and flavor targets." },
+  { question: "Do you offer sugar-free gummy options?", answer: "Absolutely. We utilize advanced sweeteners like Allulose and Monk Fruit to create sugar-free gummies with excellent texture." },
+  { question: "What certifications does your facility hold?", answer: "Our manufacturing partners operate in cGMP-certified and FDA-registered facilities to ensure the highest safety standards." },
+  { question: "Can you assist with custom gummy shapes?", answer: "Yes, we offer proprietary mold design services to create gummies in unique shapes that match your branding." },
+  { question: "Are your ingredients third-party tested?", answer: "Every batch undergoes rigorous testing for purity, potency, and safety through accredited third-party laboratories." },
+  { question: "What is the total time to market?", answer: "From final formulation approval and label design, typical production lead times are 8-10 weeks." }
 ];
 ---
 
@@ -126,11 +85,11 @@ const proofStats = [
   heroTitle="Premium Gummy Manufacturing Solutions"
   heroDescription="Scale your brand with industrial-grade gummy supplement manufacturing. From clean-label pectin formulations to proprietary flavor masking, we provide the technical expertise to transform complex active ingredients into market-ready delivery systems."
   canonical="https://vitaorganica.com/manufacturing/gummies"
-  showMockupTeaser={true}
-  mockupHref="/mockup?format=gummies"
   benefits={benefits}
   capabilities={capabilities}
   packagingOptions={packagingOptions}
   processSteps={processSteps}
   proofStats={proofStats}
+  customizationOptions={customizationOptions}
+  faqs={faqs}
 />
