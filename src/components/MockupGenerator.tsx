@@ -1,15 +1,13 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { MOCKUP_PRESETS } from '../lib/mockup-presets';
-import { Candy, Pill, Droplet, FlaskConical, GlassWater, Utensils, Box, Square } from 'lucide-react';
+import { Candy, Pill, FlaskConical, GlassWater, Utensils, Package } from 'lucide-react';
 
 const formatIcons: Record<string, React.ReactNode> = {
     gummies: <Candy size={24} />,
     capsules: <Pill size={24} />,
-    'soft-gels': <Droplet size={24} />,
     gel: <FlaskConical size={24} />,
     powders: <GlassWater size={24} />,
-    spoons: <Utensils size={24} />,
-    sachets: <Square size={24} />
+    spoons: <Utensils size={24} />
 };
 
 interface MockupGeneratorProps {
@@ -168,7 +166,7 @@ const MockupGenerator: React.FC<MockupGeneratorProps> = ({ initialFormat }) => {
                             {Object.entries(MOCKUP_PRESETS).map(([slug, p]) => (
                                 <button key={slug} onClick={() => { setSelectedSlug(slug); setStep(2); }} className={`format-card ${selectedSlug === slug ? 'active' : ''}`}>
                                     <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', marginBottom: '8px', color: selectedSlug === slug ? 'var(--color-green)' : 'var(--color-ink-soft)' }}>
-                                        {formatIcons[slug] || <Box size={24} />}
+                                        {formatIcons[slug] || <Package size={24} />}
                                     </span>
                                     <span>{p.label}</span>
                                 </button>

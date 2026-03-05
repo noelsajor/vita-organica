@@ -13,11 +13,9 @@ const getPresetSlug = (name: string) => {
   const n = name.toLowerCase();
   if (n.includes('gummy')) return 'gummies';
   if (n.includes('capsule')) return 'capsules';
-  if (n.includes('soft-gel')) return 'soft-gels';
-  if (n.includes('gel')) return 'gel';
   if (n.includes('powder')) return 'powders';
-  if (n.includes('stick pack') || n.includes('spoon')) return 'spoons';
-  if (n.includes('sachet')) return 'sachets';
+  if (n.includes('honey gel')) return 'gel';
+  if (n.includes('honey spoon')) return 'spoons';
   return 'gummies'; // Default fallback
 };
 
