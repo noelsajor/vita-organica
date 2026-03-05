@@ -1,5 +1,10 @@
 ---
-// src/components/manufacturing/sections/FormatQuality.astro
+interface Props {
+  subtitle?: string;
+}
+
+const { subtitle } = Astro.props;
+
 const standards = [
   { title: "Quality-first manufacturing practices", description: "Rigorous cGMP protocols applied to every production run." },
   { title: "Third-party testing options", description: "Validation through independent labs for potency and purity." },
@@ -13,6 +18,7 @@ const standards = [
     <div class="section-header" style="text-align: center;">
       <span class="section-eyebrow">Quality & Compliance</span>
       <h2>Trusted Manufacturing Standards</h2>
+      {subtitle && <p style="font-size: 1.1rem; color: var(--color-ink-soft); margin-top: 1rem; font-weight: 500;">{subtitle}</p>}
     </div>
     <div class="who-grid">
       {standards.map(item => (
