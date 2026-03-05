@@ -7,6 +7,21 @@ interface Props {
 }
 
 const { formatName } = Astro.props;
+
+// Robust mapping from page formatName to mockup preset slugs
+const getPresetSlug = (name: string) => {
+  const n = name.toLowerCase();
+  if (n.includes('gummy')) return 'gummies';
+  if (n.includes('capsule')) return 'capsules';
+  if (n.includes('soft-gel')) return 'soft-gels';
+  if (n.includes('gel')) return 'gel';
+  if (n.includes('powder')) return 'powders';
+  if (n.includes('stick pack') || n.includes('spoon')) return 'spoons';
+  if (n.includes('sachet')) return 'sachets';
+  return 'gummies'; // Default fallback
+};
+
+const initialFormat = getPresetSlug(formatName);
 ---
 
 <section class="section-padding" style="padding: 80px 0; background: var(--color-white);">
@@ -18,7 +33,10 @@ const { formatName } = Astro.props;
     </div>
     
     <div class="mockup-embed-wrapper" style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface-alt);">
-      <MockupGenerator client:visible />
+      <MockupGenerator 
+        client:visible 
+        initialFormat={initialFormat} 
+      />
     </div>
   </div>
 </section>

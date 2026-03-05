@@ -1,9 +1,24 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { MOCKUP_PRESETS } from '../lib/mockup-presets';
+import { Candy, Pill, Droplet, FlaskConical, GlassWater, Utensils, Box, Square } from 'lucide-react';
 
-const MockupGenerator: React.FC = () => {
+const formatIcons: Record<string, React.ReactNode> = {
+    gummies: <Candy size={24} />,
+    capsules: <Pill size={24} />,
+    'soft-gels': <Droplet size={24} />,
+    gel: <FlaskConical size={24} />,
+    powders: <GlassWater size={24} />,
+    spoons: <Utensils size={24} />,
+    sachets: <Square size={24} />
+};
+
+interface MockupGeneratorProps {
+    initialFormat?: string;
+}
+
+const MockupGenerator: React.FC<MockupGeneratorProps> = ({ initialFormat }) => {
     const [step, setStep] = useState(1);
-    const [selectedSlug, setSelectedSlug] = useState<string>('gummies');
+    const [selectedSlug, setSelectedSlug] = useState<string>(initialFormat || 'gummies');
     const [labelImage, setLabelImage] = useState<HTMLImageElement | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [isRendering, setIsRendering] = useState(false);
@@ -13,7 +28,8 @@ const MockupGenerator: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const templateCache = useRef<Record<string, HTMLImageElement>>({});
 
-    const preset = MOCKUP_PRESETS[selectedSlug];
+    // Guard against invalid slugs from props or state updates
+    const preset = MOCKUP_PRESETS[selectedSlug] || MOCKUP_PRESETS['gummies'];
     const BASE_RES = 1200; // Slightly higher base res for UI sharpness
 
     const render = useCallback(async () => {
@@ -121,25 +137,16 @@ const MockupGenerator: React.FC = () => {
         handleDownload();
     };
 
-    const formatIcons: Record<string, string> = {
-        gummies: '🍬',
-        capsules: '💊',
-        'soft-gels': '💧',
-        gel: '🧪',
-        powders: '🥤',
-        spoons: '🥄'
-    };
 
     return (
-        <div className="mockup-exp" style={{ display: 'grid', gridTemplateColumns: '400px 1fr', gap: '3rem', minHeight: '600px' }}>
+        <div className="mockup-exp" style={{ display: 'grid', gridTemplateColumns: '400px 1fr', minHeight: '600px', background: 'var(--color-white)' }}>
 
             {/* ── LEFT: INTERACTIVE CONTROLS ── */}
             <div className="exp-controls" style={{
                 background: 'var(--color-white)',
                 borderRadius: 'var(--radius-xl)',
-                padding: '2.5rem',
-                border: '1px solid var(--color-border-light)',
-                boxShadow: 'var(--shadow-lg)'
+                padding: '2.5rem 3.5rem',
+                border: '0px solid var(--color-border-light)'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '2rem' }}>
                     {[1, 2, 3].map(i => (
@@ -160,7 +167,9 @@ const MockupGenerator: React.FC = () => {
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                             {Object.entries(MOCKUP_PRESETS).map(([slug, p]) => (
                                 <button key={slug} onClick={() => { setSelectedSlug(slug); setStep(2); }} className={`format-card ${selectedSlug === slug ? 'active' : ''}`}>
-                                    <span style={{ fontSize: '24px', marginBottom: '8px' }}>{formatIcons[slug] || '📦'}</span>
+                                    <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', marginBottom: '8px', color: selectedSlug === slug ? 'var(--color-green)' : 'var(--color-ink-soft)' }}>
+                                        {formatIcons[slug] || <Box size={24} />}
+                                    </span>
                                     <span>{p.label}</span>
                                 </button>
                             ))}
@@ -236,7 +245,6 @@ const MockupGenerator: React.FC = () => {
                     position: 'sticky',
                     top: '120px',
                     background: 'var(--color-surface)',
-                    borderRadius: 'var(--radius-xl)',
                     padding: '2.5rem',
                     border: '1px solid var(--color-border-light)',
                     display: 'flex',
@@ -252,7 +260,7 @@ const MockupGenerator: React.FC = () => {
                     </div>
                     <p style={{ marginTop: '2rem', fontSize: '13px', color: 'var(--color-ink-soft)', display: 'flex', alignItems: 'center', gap: '8px' }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></svg>
-                        Professional Quality • {BASE_RES * preset.exportScale}px Resolution
+                        Professional Quality • {BASE_RES * (preset?.exportScale || 1)}px Resolution
                     </p>
                 </div>
             </div>
