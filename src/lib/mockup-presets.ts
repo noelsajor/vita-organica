@@ -37,14 +37,8 @@ export const MOCKUP_PRESETS: Record<string, MockupPreset> = {
         labelBox: { x: 280, y: 420, w: 440, h: 350 },
         exportScale: 2.0,
     },
-    'soft-gels': {
-        label: 'Soft Gels',
-        templateSrc: '/mockups/soft-gels.png',
-        labelBox: { x: 280, y: 420, w: 440, h: 350 },
-        exportScale: 2.0,
-    },
     gel: {
-        label: 'Specialty Gel',
+        label: 'Honey Gel',
         templateSrc: '/mockups/gel.png',
         labelBox: { x: 350, y: 350, w: 300, h: 450 },
         exportScale: 2.0,
@@ -56,15 +50,9 @@ export const MOCKUP_PRESETS: Record<string, MockupPreset> = {
         exportScale: 2.0,
     },
     spoons: {
-        label: 'Stick Packs',
+        label: 'Honey Spoon',
         templateSrc: '/mockups/spoons.png',
         labelBox: { x: 430, y: 250, w: 140, h: 600 },
-        exportScale: 2.0,
-    },
-    sachets: {
-        label: 'Sachets',
-        templateSrc: '/mockups/capsules.png', // Placeholder
-        labelBox: { x: 280, y: 420, w: 440, h: 350 },
         exportScale: 2.0,
     }
 };

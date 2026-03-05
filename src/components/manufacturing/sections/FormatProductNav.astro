@@ -3,11 +3,9 @@
 const products = [
   { label: "Gummies", href: "/manufacturing/gummies", active: true },
   { label: "Powders", href: "/manufacturing/powders", active: true },
-  { label: "Spoons", href: "/manufacturing/spoons", active: true },
-  { label: "Gels", href: "/manufacturing/gel", active: true },
-  { label: "Soft Gels", href: "/manufacturing/soft-gels", active: true },
-  { label: "Capsules", href: "/manufacturing/capsules", active: true },
-  { label: "Sachets", href: "/manufacturing/sachets", active: true }
+  { label: "Honey Spoons", href: "/manufacturing/spoons", active: true },
+  { label: "Honey Gels", href: "/manufacturing/gel", active: true },
+  { label: "Capsules", href: "/manufacturing/capsules", active: true }
 ];
 
 const { currentFormat } = Astro.props;
@@ -21,11 +19,9 @@ const isMatch = (current: string, label: string) => {
   const mappings: Record<string, string[]> = {
     'gummies': ['gummy', 'gummies'],
     'powders': ['powder', 'powders'],
-    'spoons': ['spoon', 'spoons', 'stick pack'],
-    'gels': ['gel', 'gels', 'specialty gel'],
-    'soft gels': ['soft gel', 'soft gels'],
-    'capsules': ['capsule', 'capsules'],
-    'sachets': ['sachet', 'sachets']
+    'honey spoons': ['spoon', 'spoons', 'honey spoon', 'stick pack'],
+    'honey gels': ['gel', 'gels', 'honey gel', 'specialty gel'],
+    'capsules': ['capsule', 'capsules']
   };
 
   // Check if our current format matches any of the mapped values for this label
