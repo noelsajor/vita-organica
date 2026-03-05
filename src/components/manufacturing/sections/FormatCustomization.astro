@@ -8,12 +8,13 @@ interface Option {
 interface Props {
   formatName: string;
   options: Option[];
+  bg?: string;
 }
 
-const { formatName, options } = Astro.props;
+const { formatName, options, bg = 'var(--color-white)' } = Astro.props;
 ---
 
-<section class="who-section" style="padding: 80px 0;">
+<section class="who-section" style={`padding: 80px 0; background: ${bg};`}>
   <div class="container">
     <div class="section-header">
       <span class="section-eyebrow">Customization Options</span>

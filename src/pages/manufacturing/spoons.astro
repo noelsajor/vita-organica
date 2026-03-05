@@ -1,82 +1,120 @@
 ---
-import FormatTemplate from '../../components/manufacturing/FormatTemplate.astro';
+import FormatTemplate from "../../components/manufacturing/FormatTemplate.astro";
 
 const benefits = [
   {
     title: "Ultimate Consumer Convenience",
-    description: "Single-serve delivery systems that fit perfectly into a modern, active lifestyle—no measuring required.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`
+    description:
+      "Single-serve delivery systems that fit perfectly into a modern, active lifestyle—no measuring required.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`,
   },
   {
     title: "High-Barrier Protection",
-    description: "Our medical-grade foil laminates protect sensitive ingredients from light, oxygen, and moisture better than standard jars.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
+    description:
+      "Our medical-grade foil laminates protect sensitive ingredients from light, oxygen, and moisture better than standard jars.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
   },
   {
     title: "Zero-Leak Technology",
-    description: "Specialized heat-seal parameters ensure 100% leak-proof integrity for both liquid shots and fine powders.",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
-  }
+    description:
+      "Specialized heat-seal parameters ensure 100% leak-proof integrity for both liquid shots and fine powders.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+  },
 ];
 
 const customizationOptions = [
-  { title: "Foil Substrates", description: "Selection of matte, gloss, and metallic medical-grade foils." },
-  { title: "Custom Sizing", description: "Stick packs ranging from 2g to 30g fill weights." },
-  { title: "Liquid or Powder", description: "Dual-capability lines for both dry and fluid delivery." },
-  { title: "Easy-Tear Notches", description: "Laser-perforated options for effortless consumer opening." },
-  { title: "Variety Packing", description: "Automated collation for multi-flavor retail kits." },
-  { title: "Eco-Friendly Foils", description: "Compostable and recyclable barrier options." }
+  {
+    title: "Foil Substrates",
+    description: "Selection of matte, gloss, and metallic medical-grade foils.",
+  },
+  {
+    title: "Custom Sizing",
+    description: "Stick packs ranging from 2g to 30g fill weights.",
+  },
+  {
+    title: "Liquid or Powder",
+    description: "Dual-capability lines for both dry and fluid delivery.",
+  },
+  {
+    title: "Easy-Tear Notches",
+    description: "Laser-perforated options for effortless consumer opening.",
+  },
+  {
+    title: "Variety Packing",
+    description: "Automated collation for multi-flavor retail kits.",
+  },
+  {
+    title: "Eco-Friendly Foils",
+    description: "Compostable and recyclable barrier options.",
+  },
 ];
 
 const capabilities = [
   {
     title: "Hydration & Electrolytes",
-    description: "High-speed filling of rapid-dissolve mineral and carbohydrate complexes."
+    description:
+      "High-speed filling of rapid-dissolve mineral and carbohydrate complexes.",
   },
   {
     title: "Liquid Wellness Shots",
-    description: "Filling of high-viscosity gels and sublingual liquid vitamins with zero-drip technology."
+    description:
+      "Filling of high-viscosity gels and sublingual liquid vitamins with zero-drip technology.",
   },
   {
     title: "Probiotic Stick Packs",
-    description: "Low-humidity processing to maintain microbial viability throughout the packaging cycle."
-  }
-];
-
-const packagingOptions = [
-  {
-    title: "Retail Cartoning",
-    items: ["Perforated Counter Displays", "Hanging Hook Boxes", "Custom Finishes"]
+    description:
+      "Low-humidity processing to maintain microbial viability throughout the packaging cycle.",
   },
-  {
-    title: "Secondary Logistics",
-    items: ["Master Shipper Palletization", "Amazon Transparency Labels", "Dynamic QR Printing"]
-  }
-];
-
-const processSteps = [
-  { step: "01", title: "Barrier Selection", description: "Choosing the optimal foil for stability.", duration: "3 Days" },
-  { step: "02", title: "Formation & Fill", description: "High-speed vertical form-fill-seal (VFFS).", duration: "2 Weeks" },
-  { step: "03", title: "Integrity Audit", description: "Burst and seal testing in our clean labs.", duration: "1 Week" },
-  { step: "04", title: "Retail Kitting", description: "Loading into cartons and secondary shipment.", duration: "1 Week" }
 ];
 
 const proofStats = [
   { num: "100M+", label: "Packs Shipped" },
   { num: "Zero", label: "Leakage Claims" },
   { num: "48Hr", label: "QA Release Cycle" },
-  { num: "FDA", label: "Registered Facility" }
+  { num: "FDA", label: "Registered Facility" },
 ];
 
 const faqs = [
-  { question: "What is the MOQ for honey spoon manufacturing?", answer: "MOQs generally start at 25,000 - 50,000 units depending on the formulation and quantity of flavors." },
-  { question: "Can you handle both powders and liquids?", answer: "Yes, we have specialized lines for dry powders and viscous liquids/gels." },
-  { question: "Are your foils recyclable?", answer: "We offer both traditional high-barrier foils and newer recyclable/compostable alternatives." },
-  { question: "How accurate is the dose in each stick?", answer: "Our VFFS lines utilize precision auger or piston fillers with ±1% tolerance." },
-  { question: "Do you offer custom printing on the film?", answer: "Yes, we provide full-color flexographic or digital printing for vibrant, retail-ready branding." },
-  { question: "Can you kit stick packs into retail boxes?", answer: "Absolutely. We offer automated cartoning for various counts (7ct, 14ct, 30ct, etc.)." },
-  { question: "What is the shelf life of ingredients in sachets?", answer: "Because of the high-barrier foil, stick packs often extend shelf life up to 24 months." },
-  { question: "Can you manufacture variety packs?", answer: "Yes, we can collate multiple flavors into a single retail unit or subscription box." }
+  {
+    question: "What is the MOQ for honey spoon manufacturing?",
+    answer:
+      "MOQs generally start at 25,000 - 50,000 units depending on the formulation and quantity of flavors.",
+  },
+  {
+    question: "Can you handle both powders and liquids?",
+    answer:
+      "Yes, we have specialized lines for dry powders and viscous liquids/gels.",
+  },
+  {
+    question: "Are your foils recyclable?",
+    answer:
+      "We offer both traditional high-barrier foils and newer recyclable/compostable alternatives.",
+  },
+  {
+    question: "How accurate is the dose in each stick?",
+    answer:
+      "Our VFFS lines utilize precision auger or piston fillers with ±1% tolerance.",
+  },
+  {
+    question: "Do you offer custom printing on the film?",
+    answer:
+      "Yes, we provide full-color flexographic or digital printing for vibrant, retail-ready branding.",
+  },
+  {
+    question: "Can you kit stick packs into retail boxes?",
+    answer:
+      "Absolutely. We offer automated cartoning for various counts (7ct, 14ct, 30ct, etc.).",
+  },
+  {
+    question: "What is the shelf life of ingredients in sachets?",
+    answer:
+      "Because of the high-barrier foil, stick packs often extend shelf life up to 24 months.",
+  },
+  {
+    question: "Can you manufacture variety packs?",
+    answer:
+      "Yes, we can collate multiple flavors into a single retail unit or subscription box.",
+  },
 ];
 ---
 
@@ -87,8 +125,6 @@ const faqs = [
   canonical="https://vitaorganica.com/manufacturing/spoons"
   benefits={benefits}
   capabilities={capabilities}
-  packagingOptions={packagingOptions}
-  processSteps={processSteps}
   proofStats={proofStats}
   customizationOptions={customizationOptions}
   faqs={faqs}

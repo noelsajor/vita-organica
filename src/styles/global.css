@@ -1087,7 +1087,7 @@ h4 {
 }
 
 .bento-tile:nth-child(5) {
-    grid-column: span 8;
+    grid-column: span 12;
     background: var(--color-teal-light);
 }
 

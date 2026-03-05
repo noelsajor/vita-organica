@@ -8,10 +8,27 @@ interface Props {
 const { formatName } = Astro.props;
 ---
 
-<section class="funnel-integration" aria-labelledby="funnel-heading" style="padding: 80px 0; background: var(--color-white);">
+<section id="consultation" class="lead-capture-section">
   <div class="container">
-    <h2 id="funnel-heading" class="sr-only">Request a Custom Quote</h2>
-    <LeadFunnel format={formatName.toLowerCase()} />
+    <div class="lead-grid">
+      
+      <div class="lead-content" data-reveal>
+        <span class="section-eyebrow">Fast Turnaround</span>
+        <h2>Get a Custom Quote for {formatName}</h2>
+        <p>Tell us about your project and our team will get back to you with a detailed breakdown including MOQ, pricing, and an exact production timeline.</p>
+
+        <ul class="guide-checklist">
+          <li><span class="check-icon"></span> Dedicated account manager</li>
+          <li><span class="check-icon"></span> Fast 24-48 hr response time</li>
+          <li><span class="check-icon"></span> Transparent pricing &amp; MOQs</li>
+          <li><span class="check-icon"></span> Full regulatory compliance support</li>
+        </ul>
+      </div>
+
+      <!-- Built-in Form Card which naturally fits right column -->
+      <LeadFunnel format={formatName.toLowerCase()} />
+
+    </div>
   </div>
 </section>
 

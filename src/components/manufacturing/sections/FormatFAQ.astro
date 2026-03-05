@@ -7,12 +7,13 @@ interface FAQ {
 
 interface Props {
   faqs: FAQ[];
+  bg?: string;
 }
 
-const { faqs } = Astro.props;
+const { faqs, bg = 'var(--color-white)' } = Astro.props;
 ---
 
-<section class="section-padding" style="padding: 80px 0;">
+<section class="section-padding" style={`padding: 80px 0; background: ${bg};`}>
   <div class="container">
     <div class="section-header">
       <span class="section-eyebrow">Common Questions</span>

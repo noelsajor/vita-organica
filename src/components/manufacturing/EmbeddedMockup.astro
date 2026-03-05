@@ -22,15 +22,15 @@ const getPresetSlug = (name: string) => {
 const initialFormat = getPresetSlug(formatName);
 ---
 
-<section class="section-padding" style="padding: 80px 0; background: var(--color-white);">
+<section class="audience-section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <span class="section-eyebrow">Visual Experience</span>
       <h2>Visualize Your {formatName} Product</h2>
-      <p>See what your branding will look like on our premium, retail-ready formats instantly.</p>
+      <p class="section-subhead">See what your branding will look like on our premium, retail-ready formats instantly.</p>
     </div>
     
-    <div class="mockup-embed-wrapper" style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface-alt);">
+    <div class="mockup-embed-wrapper" data-reveal style="border-radius: var(--radius-lg); overflow: hidden; background: transparent;">
       <MockupGenerator 
         client:visible 
         initialFormat={initialFormat} 
