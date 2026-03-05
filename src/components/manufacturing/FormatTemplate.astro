@@ -1,17 +1,16 @@
 ---
 // src/components/manufacturing/FormatTemplate.astro
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import FormatHero from './sections/FormatHero.astro';
-import FormatProof from './sections/FormatProof.astro';
-import FormatProductNav from './sections/FormatProductNav.astro';
-import FormatCustomization from './sections/FormatCustomization.astro';
-import FormatCapabilities from './sections/FormatCapabilities.astro';
-import FormatPackaging from './sections/FormatPackaging.astro';
-import EmbeddedMockup from './EmbeddedMockup.astro';
-import FormatFunnelSlot from './sections/FormatFunnelSlot.astro';
-import FormatProcess from './sections/FormatProcess.astro';
-import FormatQuality from './sections/FormatQuality.astro';
-import FormatFAQ from './sections/FormatFAQ.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormatHero from "./sections/FormatHero.astro";
+import FormatProof from "./sections/FormatProof.astro";
+import FormatProductNav from "./sections/FormatProductNav.astro";
+import FormatCustomization from "./sections/FormatCustomization.astro";
+import FormatCapabilities from "./sections/FormatCapabilities.astro";
+import EmbeddedMockup from "./EmbeddedMockup.astro";
+import FormatFunnelSlot from "./sections/FormatFunnelSlot.astro";
+import FormatProcess from "./sections/FormatProcess.astro";
+import FormatQuality from "./sections/FormatQuality.astro";
+import FormatFAQ from "./sections/FormatFAQ.astro";
 
 interface Benefit {
   title: string;
@@ -22,11 +21,6 @@ interface Benefit {
 interface Capability {
   title: string;
   description: string;
-}
-
-interface PackagingOption {
-  title: string;
-  items: string[];
 }
 
 interface ProcessStep {
@@ -57,11 +51,10 @@ interface Props {
   heroDescription: string;
   benefits: Benefit[];
   capabilities: Capability[];
-  packagingOptions: PackagingOption[];
-  processSteps: ProcessStep[];
   proofStats: ProofStat[];
   customizationOptions: CustomOption[];
   faqs: FAQ[];
+  qualityStandards?: { title: string; description: string }[];
   canonical?: string;
 }
 
@@ -70,113 +63,140 @@ const {
   heroTitle,
   heroDescription,
   capabilities,
-  packagingOptions,
-  processSteps,
   proofStats,
   customizationOptions,
   faqs,
-  canonical
+  qualityStandards,
+  canonical,
 } = Astro.props;
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": `${formatName} Manufacturing`,
-  "description": heroDescription,
-  "provider": {
+  name: `${formatName} Manufacturing`,
+  description: heroDescription,
+  provider: {
     "@type": "Organization",
-    "name": "Vita Organica"
+    name: "Vita Organica",
   },
-  "serviceType": "Supplement Manufacturing",
-  "areaServed": "US",
-  "hasOfferCatalog": {
+  serviceType: "Supplement Manufacturing",
+  areaServed: "US",
+  hasOfferCatalog: {
     "@type": "OfferCatalog",
-    "name": "Manufacturing Formats",
-    "itemListElement": capabilities.map(cap => ({
+    name: "Manufacturing Formats",
+    itemListElement: capabilities.map((cap) => ({
       "@type": "Offer",
-      "itemOffered": {
+      itemOffered: {
         "@type": "Service",
-        "name": cap.title,
-        "description": cap.description
-      }
-    }))
-  }
+        name: cap.title,
+        description: cap.description,
+      },
+    })),
+  },
 };
 ---
 
-<BaseLayout 
-  title={`${formatName} Manufacturing | Vita Organica`} 
+<BaseLayout
+  title={`${formatName} Manufacturing | Vita Organica`}
   description={heroDescription}
   canonical={canonical}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <main id="main-content">
     <article class="format-detail">
-      
       {/* 1) HERO */}
-      <FormatHero 
-        formatName={formatName} 
-        heroTitle={heroTitle} 
-        heroDescription={heroDescription} 
+      <FormatHero
+        formatName={formatName}
+        heroTitle={heroTitle}
+        heroDescription={heroDescription}
       />
 
       {/* 2) TRUST / PROOF BAR */}
-      <FormatProof 
-        formatName={formatName} 
-        proofStats={proofStats} 
-      />
+      <FormatProof formatName={formatName} proofStats={proofStats} />
 
       {/* 3) PRODUCT OVERVIEW NAV */}
       <FormatProductNav currentFormat={formatName} />
 
       {/* 4) CUSTOMIZATION OPTIONS */}
-      <FormatCustomization 
-        formatName={formatName} 
-        options={customizationOptions} 
+      <FormatCustomization
+        formatName={formatName}
+        options={customizationOptions}
+        bg="var(--color-white)"
       />
 
       {/* 5) CAPABILITIES */}
-      <FormatCapabilities 
-        formatName={formatName} 
-        capabilities={capabilities} 
-      />
-
-      {/* 6) PACKAGING / RETAIL READY */}
-      <FormatPackaging 
-        packagingOptions={packagingOptions} 
+      <FormatCapabilities
+        formatName={formatName}
+        capabilities={capabilities}
+        bg="var(--color-surface-alt)"
       />
 
       {/* 7) MOCKUP GENERATOR INLINE */}
       <EmbeddedMockup formatName={formatName} />
 
       {/* 8) QUOTE FORM / LEAD FUNNEL */}
-      <div id="consultation" style="padding-top: 40px; background: var(--color-white); text-align: center;">
-        <p style="font-size: 0.9rem; color: var(--color-ink-muted); margin-bottom: 0;">Get a custom quote within 1 business day.</p>
-        <FormatFunnelSlot formatName={formatName} />
-      </div>
+      <FormatFunnelSlot formatName={formatName} />
 
       {/* 9) MANUFACTURING PROCESS */}
-      <FormatProcess 
-        processSteps={processSteps} 
-      />
+      <FormatProcess bg="var(--color-white)" />
 
       {/* 10) QUALITY & COMPLIANCE */}
-      <FormatQuality />
+      <FormatQuality
+        standards={qualityStandards}
+        bg="var(--color-surface-alt)"
+      />
 
       {/* 11) FAQ */}
-      <FormatFAQ faqs={faqs} />
+      <FormatFAQ faqs={faqs} bg="var(--color-white)" />
 
       {/* 12) FINAL CTA */}
-      <footer class="final-cta-section" style="padding: 100px 0; background: var(--color-surface); text-align: center;">
+      <footer
+        class="final-cta-section"
+        style="padding: 120px 0; background: var(--color-ink); text-align: center; color: var(--color-white);"
+      >
         <div class="container">
-          <h2>Ready to Scale Your {formatName} Brand?</h2>
-          <p style="margin: 1.5rem 0 2rem; color: var(--color-ink-soft);">Join 500+ brands that trust Vita Organica for premium manufacturing.</p>
-          <a href="/request-quote" class="btn btn-primary btn-lg">Request a Custom Quote</a>
+          <h2
+            style="color: var(--color-white); font-size: 3rem; margin-bottom: 1.5rem;"
+          >
+            Ready to Scale Your {formatName} Brand?
+          </h2>
+          <p
+            style="margin: 0 0 3rem; color: rgba(255,255,255,0.7); font-size: 1.2rem; max-width: 600px; margin-inline: auto;"
+          >
+            Join 500+ brands that trust Vita Organica for premium manufacturing.
+          </p>
+          <a href="/request-quote" class="btn btn-primary btn-lg"
+            >Request a Custom Quote</a
+          >
         </div>
       </footer>
-
     </article>
   </main>
+
+  <script>
+    (function () {
+      /* ── Scroll reveal ── */
+      const revealEls = document.querySelectorAll(
+        "[data-reveal], [data-reveal-stagger]",
+      );
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add("revealed"));
+      }
+    })();
+  </script>
 </BaseLayout>
 
 <style>

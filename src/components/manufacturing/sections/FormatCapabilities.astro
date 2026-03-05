@@ -2,54 +2,99 @@
 interface Capability {
   title: string;
   description: string;
+  tag?: string;
+  tagColor?: string;
 }
 
 interface Props {
   formatName: string;
   capabilities: Capability[];
+  bg?: string;
 }
 
-const { formatName, capabilities } = Astro.props;
+const { formatName, capabilities, bg = "var(--color-white)" } = Astro.props;
 
 // Bento styling logic: assign specific classes based on index
 const getBentoClass = (index: number) => {
-  const patterns = ['large', 'medium', 'small', 'medium', 'small', 'small'];
-  return patterns[index % patterns.length];
+  return index === 0 ? "large" : "standard";
+};
+
+// Color mapping for pills
+const getPillStyles = (color?: string) => {
+  switch (color?.toLowerCase()) {
+    case "green":
+      return "background: #e8f5e9; color: #2e7d32;";
+    case "purple":
+      return "background: #f3e5f5; color: #7b1fa2;";
+    case "blue":
+      return "background: #e3f2fd; color: #1565c0;";
+    case "orange":
+      return "background: #fff3e0; color: #e65100;";
+    case "red":
+      return "background: #ffebee; color: #c62828;";
+    case "teal":
+      return "background: #e0f2f1; color: #00695c;";
+    case "brown":
+      return "background: #efebe9; color: #4e342e;";
+    default:
+      return "background: #f5f5f5; color: #616161;";
+  }
 };
 
 // Map items to icons (placeholder logic or generic icons)
 const getIcon = (title: string) => {
-  if (title.toLowerCase().includes('botanical') || title.toLowerCase().includes('premium')) {
+  if (
+    title.toLowerCase().includes("botanical") ||
+    title.toLowerCase().includes("premium")
+  ) {
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`;
   }
-  if (title.toLowerCase().includes('precision') || title.toLowerCase().includes('accuracy')) {
+  if (
+    title.toLowerCase().includes("precision") ||
+    title.toLowerCase().includes("accuracy")
+  ) {
     return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`;
   }
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`;
 };
 ---
 
-<section class="manufacturing-section" aria-labelledby="capabilities-heading" style="background: var(--color-white); padding: 120px 0;">
+<section
+  class="manufacturing-section"
+  aria-labelledby="capabilities-heading"
+  style={`background: ${bg}; padding: 120px 0;`}
+>
   <div class="container">
     <header class="section-header" style="margin-bottom: 5rem;">
       <span class="section-eyebrow">Formulation Expertise</span>
-      <h2 id="capabilities-heading" style="font-size: 3rem;">{formatName} Capabilities</h2>
+      <h2 id="capabilities-heading" style="font-size: 3rem;">
+        {formatName} Capabilities
+      </h2>
     </header>
 
     <div class="bento-grid-container">
-      {capabilities.map((cap, index) => {
-        const bentoClass = getBentoClass(index);
-        return (
-          <div class={`bento-item ${bentoClass}`}>
-            <div class="bento-icon" set:html={getIcon(cap.title)} />
-            <div class="bento-content">
-              <h3>{cap.title}</h3>
-              <p>{cap.description}</p>
+      {
+        capabilities.map((cap, index) => {
+          const bentoClass = getBentoClass(index);
+          return (
+            <div class={`bento-item ${bentoClass}`}>
+              {!cap.tag && (
+                <div class="bento-icon" set:html={getIcon(cap.title)} />
+              )}
+              <div class="bento-content">
+                <h3>{cap.title}</h3>
+                <p>{cap.description}</p>
+              </div>
+              {cap.tag && (
+                <div class="category-pill" style={getPillStyles(cap.tagColor)}>
+                  {cap.tag}
+                </div>
+              )}
+              <div class="bento-bg" />
             </div>
-            <div class="bento-bg"></div>
-          </div>
-        );
-      })}
+          );
+        })
+      }
     </div>
   </div>
 </section>
@@ -57,8 +102,8 @@ const getIcon = (title: string) => {
 <style>
   .bento-grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 240px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(240px, auto);
     gap: 1.5rem;
   }
 
@@ -66,19 +111,13 @@ const getIcon = (title: string) => {
     position: relative;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    background: var(--color-surface);
+    background: var(--color-white);
     border: 1px solid var(--color-border-light);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 2.5rem;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  .bento-item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--color-teal);
   }
 
   .bento-icon {
@@ -86,6 +125,20 @@ const getIcon = (title: string) => {
     height: 32px;
     color: var(--color-teal);
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .category-pill {
+    margin-top: 1.5rem;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-self: flex-start;
     position: relative;
     z-index: 2;
   }
@@ -118,43 +171,35 @@ const getIcon = (title: string) => {
     max-width: 90%;
   }
 
-  .medium {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-
-  .small {
+  .standard {
     grid-column: span 1;
     grid-row: span 1;
+    background: var(--color-white);
   }
 
   /* Decorative Backgrounds */
   .large .bento-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(143, 194, 20, 0.15) 0%, transparent 70%);
+    background: radial-gradient(
+      circle at 70% 30%,
+      rgba(143, 194, 20, 0.15) 0%,
+      transparent 70%
+    );
     pointer-events: none;
-  }
-
-  .medium {
-    background: var(--color-white);
-    border: 1px solid var(--color-border-light);
-  }
-
-  .small {
-    background: var(--color-surface-alt);
   }
 
   .bento-content {
     position: relative;
     z-index: 2;
-    margin-top: auto;
   }
 
   h3 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     font-size: 1.4rem;
     letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-weight: 700;
   }
 
   p {
@@ -164,10 +209,16 @@ const getIcon = (title: string) => {
     margin: 0;
   }
 
+  .large .category-pill {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--color-white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
   @media (max-width: 1024px) {
     .bento-grid-container {
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(220px, auto);
+      grid-auto-rows: minmax(240px, auto);
     }
     .large h3 {
       font-size: 2rem;
@@ -179,7 +230,8 @@ const getIcon = (title: string) => {
       grid-template-columns: 1fr;
       grid-auto-rows: auto;
     }
-    .large, .medium, .small {
+    .large,
+    .standard {
       grid-column: span 1;
       grid-row: span 1;
     }

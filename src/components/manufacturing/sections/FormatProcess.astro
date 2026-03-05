@@ -1,119 +1,89 @@
 ---
-interface ProcessStep {
-  step: string;
-  title: string;
-  description: string;
-  duration: string;
-}
-
 interface Props {
-  processSteps: ProcessStep[];
+  bg?: string;
 }
 
-const { processSteps } = Astro.props;
+const {
+  bg = 'var(--color-white)'
+} = Astro.props;
 ---
 
-<section class="process-section" aria-labelledby="process-heading" style="background: var(--color-ink); color: var(--color-white); padding: 120px 0;">
+<section class="process-section" aria-labelledby="how-it-works-title" style={`background: ${bg};`}>
   <div class="container">
     <div class="process-grid">
-      
-      <!-- Left side: Sticky content -->
+
+      <!-- Left: sticky heading -->
       <div class="process-sticky">
-        <span class="section-eyebrow" style="color: var(--color-green);">Production Timeline</span>
-        <h2 id="process-heading" style="color: var(--color-white); font-size: 3rem; margin-bottom: 1.5rem;">From Concept to Production Simplified</h2>
-        <p style="color: rgba(255, 255, 255, 0.7); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-          We handle the technical complexity so you can focus on building your brand. Our streamlined manufacturing process ensures quality at every milestone.
-        </p>
-        <a href="#consultation" class="btn btn-primary">Book a Consultation</a>
+        <span class="section-eyebrow">How It Works?</span>
+        <h2 id="how-it-works-title">From Concept to Production Simplified</h2>
+        <p>We've built a streamlined process so you can focus on your brand while we handle the complexity of manufacturing.</p>
+        <a href="/request-quote" class="btn btn-primary">Request a Quote</a>
       </div>
 
-      <!-- Right side: Steps -->
-      <div class="process-steps" role="list">
-        {processSteps.map((step) => (
-          <div class="process-step" role="listitem">
-            <div class="step-track">
-              <div class="step-num" style="background: var(--color-green); color: var(--color-ink); font-weight: 800;">{step.step}</div>
-              <div class="step-line" style="background: rgba(255, 255, 255, 0.1);"></div>
-            </div>
-            <div class="step-body">
-              <h3 style="color: var(--color-white); font-size: 1.5rem; margin-bottom: 0.75rem;">{step.title}</h3>
-              <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 1rem;">{step.description}</p>
-              <span class="step-duration" style="background: rgba(143, 194, 20, 0.1); color: var(--color-green); border: 1px solid rgba(143, 194, 20, 0.2); font-size: 0.8rem; padding: 4px 12px; border-radius: var(--radius-pill);">
-                {step.duration}
-              </span>
-            </div>
+      <!-- Right: scrollable steps -->
+      <div class="process-steps" role="list" aria-label="How it works steps" data-reveal-stagger>
+
+        <div class="process-step" role="listitem">
+          <div class="step-track">
+            <div class="step-num" aria-hidden="true">1</div>
+            <div class="step-line"></div>
           </div>
-        ))}
-      </div>
+          <div class="step-body">
+            <h3>Consultation &amp; Strategy</h3>
+            <p>Define your goals, target audience, and budget. We'll help you choose the right format and formulation path.</p>
+            <span class="step-duration">Week 1</span>
+          </div>
+        </div>
 
+        <div class="process-step" role="listitem">
+          <div class="step-track">
+            <div class="step-num" aria-hidden="true">2</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>Formulation &amp; Sampling</h3>
+            <p>Develop a custom formula or choose from white label SKUs. You'll receive physical samples for approval.</p>
+            <span class="step-duration">Weeks 2–3</span>
+          </div>
+        </div>
+
+        <div class="process-step" role="listitem">
+          <div class="step-track">
+            <div class="step-num" aria-hidden="true">3</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>Design &amp; Compliance Review</h3>
+            <p>FDA-compliant labeling and full regulatory review. Our team identifies potential regulatory hurdles early in the process.</p>
+            <span class="step-duration">Weeks 3–4</span>
+          </div>
+        </div>
+
+        <div class="process-step" role="listitem">
+          <div class="step-track">
+            <div class="step-num" aria-hidden="true">4</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>Production &amp; Quality Testing</h3>
+            <p>Manufactured in our cGMP facility with rigorous QA protocols and third-party testing at every batch.</p>
+            <span class="step-duration">Weeks 4–7</span>
+          </div>
+        </div>
+
+        <div class="process-step" role="listitem">
+          <div class="step-track">
+            <div class="step-num" aria-hidden="true">5</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <h3>Delivery &amp; Ongoing Scaling</h3>
+            <p>Receive your finished products. We stay on as your manufacturing partner for reorders and new SKU growth.</p>
+            <span class="step-duration">Week 8+</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
-
-<style>
-  /* Match the homepage process grid structure */
-  .process-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 5rem;
-    align-items: start;
-  }
-
-  .process-sticky {
-    position: sticky;
-    top: 120px;
-  }
-
-  .process-steps {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .process-step {
-    display: flex;
-    gap: 2rem;
-    padding-bottom: 4rem;
-  }
-
-  .process-step:last-child {
-    padding-bottom: 0;
-  }
-
-  .step-track {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  .step-num {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    z-index: 2;
-  }
-
-  .step-line {
-    width: 2px;
-    flex-grow: 1;
-    margin-top: 0.5rem;
-  }
-
-  .process-step:last-child .step-line {
-    display: none;
-  }
-
-  @media (max-width: 900px) {
-    .process-grid {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-    .process-sticky {
-      position: static;
-    }
-  }
-</style>
