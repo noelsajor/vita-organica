@@ -1,0 +1,89 @@
+---
+import FormatTemplate from '../../components/manufacturing/FormatTemplate.astro';
+
+const benefits = [
+  {
+    title: "Precision Barrier Packaging",
+    description: "Multi-layer foil laminates engineered for ultimate stability and moisture protection for sensitive powder formulas.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
+  },
+  {
+    title: "On-the-Go Convenience",
+    description: "Measured single-dose delivery that's retail-ready and perfect for travel, gyms, and modern active lifestyles.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/></svg>`
+  },
+  {
+    title: "Advanced Seal Integrity",
+    description: "Zero-leak heat-sealing technology ensuring product freshness and safety from batch to batch.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+  }
+];
+
+const customizationOptions = [
+  { title: "Sized for Performance", description: "Ranging from 1g samples to 50g family-sized servings." },
+  { title: "Material Selection", description: "Matte, gloss, metallic, and sustainable paper-based films." },
+  { title: "Direct-to-Film Print", description: "High-resolution 8-color printing for premium branding." },
+  { title: "Notch & Perforation", description: "Easy-tear laser notches and multi-strip collation." }
+];
+
+const capabilities = [
+  {
+    title: "Powder Wellness Drinks",
+    description: "Precision filling of electrolytes, aminos, and rapid-dissolve wellness complexes."
+  },
+  {
+    title: "Probiotic Delivery",
+    description: "Low-humidity cleanroom environment for moisture-sensitive microbial stability."
+  },
+  {
+    title: "Protein Sachet Kits",
+    description: "High-speed filling of various protein isolates with ±1% weight accuracy."
+  }
+];
+
+const packagingOptions = [
+  {
+    title: "Display Ready",
+    items: ["Perforated Counter Display Boxes", "Hanging Retail Cards", "Custom Corrugated Shippers"]
+  },
+  {
+    title: "Supply Chain Support",
+    items: ["Amazon FBA Prep", "Dynamic QR/Lot Coding", "Automated Bundle Kitting"]
+  }
+];
+
+const processSteps = [
+  { step: "01", title: "Barrier Selection", description: "Engineering the right film for ingredient shelf-life.", duration: "3 Days" },
+  { step: "02", title: "Print & Prep", description: "Finalizing artwork and preparing high-speed plates.", duration: "2 Weeks" },
+  { step: "03", title: "Filling & Seal", description: "Precision batch production on our VFFS lines.", duration: "2 Weeks" },
+  { step: "04", title: "QA Release", description: "Third-party validation and integrity batch testing.", duration: "1 Week" }
+];
+
+const proofStats = [
+  { num: "50M+", label: "Packs Shipped" },
+  { num: "Zero", label: "Leakage Claims" },
+  { num: "48Hr", label: "QA Release Cycle" },
+  { num: "FDA", label: "Registered Facility" }
+];
+
+const faqs = [
+  { question: "What is the MOQ for sachet manufacturing?", answer: "Our standard MOQs for custom sachets typically start at 25,000 units per flavor profile." },
+  { question: "Can you handle moisture-sensitive probiotics?", answer: "Yes, our facility includes low-humidity suites designed specifically for probiotic sachet packaging." },
+  { question: "Do you offer recyclable packaging films?", answer: "We provide several sustainable options, including compostable and fully recyclable sachet materials." },
+  { question: "How many colors can you print on the film?", answer: "Our high-speed lines support up to 8 colors with matte or gloss spot finish options." }
+];
+---
+
+<FormatTemplate
+  formatName="Sachets"
+  heroTitle="Custom Sachet & Stick Pack Manufacturing"
+  heroDescription="Scale your brand with pre-portioned, retail-ready sachet solutions. From meal replacement powders to single-serve drink mixes, our high-precision lines deliver premium barrier protection and ultimate consumer convenience."
+  canonical="https://vitaorganica.com/manufacturing/sachets"
+  benefits={benefits}
+  capabilities={capabilities}
+  packagingOptions={packagingOptions}
+  processSteps={processSteps}
+  proofStats={proofStats}
+  customizationOptions={customizationOptions}
+  faqs={faqs}
+/>

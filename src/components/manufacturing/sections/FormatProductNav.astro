@@ -7,18 +7,31 @@ const products = [
   { label: "Gels", href: "/manufacturing/gel", active: true },
   { label: "Soft Gels", href: "/manufacturing/soft-gels", active: true },
   { label: "Capsules", href: "/manufacturing/capsules", active: true },
-  { label: "Sachets", href: "#", active: false }
+  { label: "Sachets", href: "/manufacturing/sachets", active: true }
 ];
 
 const { currentFormat } = Astro.props;
 
-// Better matching logic: check if currentFormat (singular) is contained in label (plural) 
-// or if they are both "Stick Pack"/"Spoons" or "Specialty Gel"/"Gels"
 const isMatch = (current: string, label: string) => {
-  const c = current.toLowerCase();
-  const l = label.toLowerCase();
-  if (c === "stick pack" && l === "spoons") return true;
-  if (c === "specialty gel" && l === "gels") return true;
+  if (!current) return false;
+  const c = current.toLowerCase().trim();
+  const l = label.toLowerCase().trim();
+  
+  // Supplement-specific mappings (singular to plural & alternative names)
+  const mappings: Record<string, string[]> = {
+    'gummies': ['gummy', 'gummies'],
+    'powders': ['powder', 'powders'],
+    'spoons': ['spoon', 'spoons', 'stick pack'],
+    'gels': ['gel', 'gels', 'specialty gel'],
+    'soft gels': ['soft gel', 'soft gels'],
+    'capsules': ['capsule', 'capsules'],
+    'sachets': ['sachet', 'sachets']
+  };
+
+  // Check if our current format matches any of the mapped values for this label
+  if (mappings[l]?.some(m => c.includes(m) || m.includes(c))) return true;
+
+  // Final containment fallback
   return l.includes(c) || c.includes(l);
 };
 ---

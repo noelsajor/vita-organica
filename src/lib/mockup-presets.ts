@@ -60,5 +60,11 @@ export const MOCKUP_PRESETS: Record<string, MockupPreset> = {
         templateSrc: '/mockups/spoons.png',
         labelBox: { x: 430, y: 250, w: 140, h: 600 },
         exportScale: 2.0,
+    },
+    sachets: {
+        label: 'Sachets',
+        templateSrc: '/mockups/capsules.png', // Placeholder
+        labelBox: { x: 280, y: 420, w: 440, h: 350 },
+        exportScale: 2.0,
     }
 };
