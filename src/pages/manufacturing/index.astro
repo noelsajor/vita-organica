@@ -1,20 +1,31 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Manufacturing Capabilities | Vita Organica" description="Explore our comprehensive range of supplement manufacturing solutions, from gummies and capsules to premium honey-based delivery systems.">
-  
+<BaseLayout
+  title="Manufacturing Capabilities | Vita Organica"
+  description="Explore our comprehensive range of supplement manufacturing solutions, from gummies and capsules to premium honey-based delivery systems."
+>
   {/* ── HERO SECTION ── */}
   <section class="hero" style="padding: 120px 0 80px; text-align: center;">
     <div class="container">
-      <div class="hero-content" style="max-width: 800px; margin: 0 auto; float: none;">
+      <div
+        class="hero-content"
+        style="max-width: 800px; margin: 0 auto; float: none;"
+      >
         <span class="section-eyebrow">End-to-End Solutions</span>
-        <h1 style="margin-top: 1rem;">Manufacturing <span class="highlight">Excellence</span></h1>
+        <h1 style="margin-top: 1rem;">
+          Manufacturing <span class="highlight">Excellence</span>
+        </h1>
         <p class="hero-subhead" style="margin: 1.5rem auto;">
-          From innovative formulations to retail-ready packaging, we provide the industrial capacity and technical expertise required to scale your supplement brand with confidence.
+          From innovative formulations to retail-ready packaging, we provide the
+          industrial capacity and technical expertise required to scale your
+          supplement brand with confidence.
         </p>
         <div class="cta-row" style="justify-content: center;">
-          <a href="/request-quote" class="btn btn-primary btn-lg">Start Your Project</a>
+          <a href="/request-quote" class="btn btn-primary btn-lg"
+            >Start Your Project</a
+          >
           <a href="#capabilities" class="btn btn-ghost">Explore Formats</a>
         </div>
       </div>
@@ -24,90 +35,328 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   {/* ── OVERVIEW SECTION ── */}
   <section class="who-section" id="capabilities" style="padding: 80px 0;">
     <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+      <div
+        class="section-header"
+        style="text-align: center; margin-bottom: 4rem;"
+      >
         <span class="section-eyebrow">What We Make</span>
         <h2>Precision Manufacturing Formats</h2>
-        <p class="section-subhead" style="max-width: 700px; margin-left: auto; margin-right: auto;">
-          Select a manufacturing format below to explore our specific technical capabilities, packaging options, and production timelines.
+        <p
+          class="section-subhead"
+          style="max-width: 700px; margin-left: auto; margin-right: auto;"
+        >
+          Select a manufacturing format below to explore our specific technical
+          capabilities, packaging options, and production timelines.
         </p>
       </div>
 
-      <div class="bento-grid">
-        
+      <div class="bento-grid-container">
         <!-- Gummies -->
-        <div class="bento-tile">
-          <div class="tile-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-            </svg>
+        <div class="bento-item large">
+          <div class="bento-content">
+            <div class="tile-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Gummies</h3>
+            <p>
+              Premium pectin and gelatin-based solutions with custom flavors and
+              bioactive infusions.
+            </p>
+            <a href="/manufacturing/gummies" class="text-link"
+              >Explore Gummies →</a
+            >
           </div>
-          <h3>Gummies</h3>
-          <p>Premium pectin and gelatin-based solutions with custom flavors and bioactive infusions.</p>
-          <a href="/manufacturing/gummies" class="text-link">Explore Gummies →</a>
+          <div class="bento-bg"></div>
         </div>
 
         <!-- Capsules -->
-        <div class="bento-tile">
-          <div class="tile-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M2 12h20L12 2z"/>
-            </svg>
+        <div class="bento-item standard">
+          <div class="bento-content">
+            <div class="tile-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2v20M2 12h20L12 2z"></path>
+              </svg>
+            </div>
+            <h3>Capsules</h3>
+            <p>
+              Vegetarian, HPMC, and gelatin options in all industry-standard
+              sizes and colors.
+            </p>
+            <a href="/manufacturing/capsules" class="text-link"
+              >Explore Capsules →</a
+            >
           </div>
-          <h3>Capsules</h3>
-          <p>Vegetarian, HPMC, and gelatin options in all industry-standard sizes and colors.</p>
-          <a href="/manufacturing/capsules" class="text-link">Explore Capsules →</a>
+          <div class="bento-bg"></div>
         </div>
 
         <!-- Honey Gels -->
-        <div class="bento-tile">
-          <div class="tile-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-            </svg>
+        <div class="bento-item standard">
+          <div class="bento-content">
+            <div class="tile-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3>Honey Gels</h3>
+            <p>
+              Advanced high-viscosity honey-based delivery systems for
+              performance and wellness.
+            </p>
+            <a href="/manufacturing/gel" class="text-link"
+              >Explore Honey Gels →</a
+            >
           </div>
-          <h3>Honey Gels</h3>
-          <p>Advanced high-viscosity honey-based delivery systems for performance and wellness.</p>
-          <a href="/manufacturing/gel" class="text-link">Explore Honey Gels →</a>
+          <div class="bento-bg"></div>
         </div>
 
         <!-- Powders -->
-        <div class="bento-tile">
-          <div class="tile-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
+        <div class="bento-item standard">
+          <div class="bento-content">
+            <div class="tile-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Powders</h3>
+            <p>
+              Scalable industrial blending and filling for proteins,
+              pre-workouts, and greens.
+            </p>
+            <a href="/manufacturing/powders" class="text-link"
+              >Explore Powders →</a
+            >
           </div>
-          <h3>Powders</h3>
-          <p>Scalable industrial blending and filling for proteins, pre-workouts, and greens.</p>
-          <a href="/manufacturing/powders" class="text-link">Explore Powders →</a>
+          <div class="bento-bg"></div>
         </div>
 
         <!-- Honey Spoons -->
-        <div class="bento-tile">
-          <div class="tile-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"/>
-            </svg>
+        <div class="bento-item standard">
+          <div class="bento-content">
+            <div class="tile-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M13 2L3 14h9l-1 8L21 10h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3>Honey Spoons</h3>
+            <p>
+              Innovative honey-based single-serve delivery formats for ultimate
+              convenience.
+            </p>
+            <a href="/manufacturing/spoons" class="text-link"
+              >Explore Honey Spoons →</a
+            >
           </div>
-          <h3>Honey Spoons</h3>
-          <p>Innovative honey-based single-serve delivery formats for ultimate convenience.</p>
-          <a href="/manufacturing/spoons" class="text-link">Explore Honey Spoons →</a>
+          <div class="bento-bg"></div>
         </div>
-
       </div>
     </div>
   </section>
 
   {/* ── FINAL CTA ── */}
-  <section class="final-cta-section" style="padding: 100px 0; background: var(--color-surface); text-align: center;">
+  <section
+    class="final-cta-section"
+    style="padding: 100px 0; background: var(--color-surface); text-align: center;"
+  >
     <div class="container">
       <h2>Transform Your Product Vision into Reality</h2>
-      <p style="margin: 1.5rem 0 2rem; color: var(--color-ink-soft);">Get a detailed cost breakdown and production timeline for your project within 24–48 hours.</p>
+      <p style="margin: 1.5rem 0 2rem; color: var(--color-ink-soft);">
+        Get a detailed cost breakdown and production timeline for your project
+        within 24–48 hours.
+      </p>
       <div class="cta-btn-row" style="justify-content: center;">
-        <a href="/request-quote" class="btn btn-primary btn-lg">Request a Custom Quote</a>
+        <a href="/request-quote" class="btn btn-primary btn-lg"
+          >Request a Custom Quote</a
+        >
         <a href="/about" class="btn btn-secondary">Our Certifications</a>
       </div>
     </div>
   </section>
-
 </BaseLayout>
+
+<style>
+  .bento-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(240px, auto);
+    gap: 1.5rem;
+  }
+
+  .bento-item {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--color-white);
+    border: 1px solid var(--color-border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .bento-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .tile-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--color-teal);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .bento-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  .bento-item p {
+    font-size: 1rem;
+    color: var(--color-ink-soft);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-link {
+    color: var(--color-teal);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .text-link:hover {
+    color: var(--color-ink);
+  }
+
+  /* Bento Spans */
+  .large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: var(--color-ink);
+    color: var(--color-white);
+    padding: 3.5rem;
+  }
+
+  .large .tile-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-green);
+  }
+
+  .large h3 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .large p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .large .text-link {
+    color: var(--color-green);
+  }
+
+  .standard {
+    grid-column: span 1;
+    grid-row: span 1;
+    background: var(--color-white);
+  }
+
+  /* Decorative Backgrounds */
+  .large .bento-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 70% 30%,
+      rgba(143, 194, 20, 0.15) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  .bento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-teal-light);
+  }
+
+  .large:hover {
+    border-color: var(--color-green);
+  }
+
+  @media (max-width: 1024px) {
+    .bento-grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(240px, auto);
+    }
+    .large h3 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid-container {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+    .large,
+    .standard {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    .bento-item {
+      padding: 2rem;
+    }
+  }
+</style>

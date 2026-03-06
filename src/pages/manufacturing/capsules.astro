@@ -24,47 +24,85 @@ const benefits = [
 
 const customizationOptions = [
   {
-    title: "Shell Material",
-    description: "HPMC (Vegan), Bovine Gelatin, or Premium Pullulan options.",
+    title: "Capsule Shells",
+    description: "HPMC vegetarian shell options available.",
   },
   {
-    title: "Standard Sizing",
-    description: "Complete range from 000 (largest) down to size 4 (smallest).",
+    title: "Bottle Counts",
+    description: "Flexible 30 / 60 / 90 / 120 count configurations.",
   },
   {
-    title: "Color Matching",
-    description: "Custom translucent or opaque non-GMO color patterns.",
+    title: "Custom Aesthetics",
+    description: "Full custom capsule colour matching.",
   },
   {
-    title: "Delayed Release",
-    description:
-      "Acid-resistant shells for targeted intestinal ingredient delivery.",
+    title: "Specialized Delivery",
+    description: "Delayed-release technology available.",
   },
   {
-    title: "Band Sealing",
-    description: "Added security and oxygen barrier with liquid-tight sealing.",
+    title: "Jar Packaging",
+    description: "Professional jar formats for bulk or retail.",
   },
   {
-    title: "Custom Printing",
-    description: "Edible-ink branding or dosage identifiers on the shell.",
+    title: "Blister Packs",
+    description: "Single and Double Card (Blister) packaging options.",
   },
 ];
 
 const capabilities = [
   {
-    title: "Complex Botanical Blending",
-    description:
-      "Homogeneous mixing of diverse herbal extracts for consistent cross-batch potency.",
+    title: "Omega-3 Fish Oil",
+    description: "EPA 180mg · DHA 120mg",
+    tag: "HEART HEALTH",
+    tagColor: "blue",
   },
   {
-    title: "Micro-Dosage Precision",
-    description:
-      "Specialized equipment for accurate measurement of ultra-low dose active ingredients.",
+    title: "Turmeric & Black Pepper Extract",
+    description: "95% Curcuminoids · 95% Piperine",
+    tag: "ANTI-INFLAMMATORY",
+    tagColor: "orange",
   },
   {
-    title: "Beads-in-Capsule (DR)",
-    description:
-      "Delayed-release beadlet technology for multi-phase nutrient delivery systems.",
+    title: "Probiotics 50B CFU",
+    description: "Multi-Strain Formula",
+    tag: "GUT HEALTH",
+    tagColor: "green",
+  },
+  {
+    title: "B-Complex Complete",
+    description: "B1 B2 B3 B5 B6 B7 B9 B12",
+    tag: "ENERGY",
+    tagColor: "red",
+  },
+  {
+    title: "Vitamin K2 MK-7",
+    description: "200mcg · Natto Derived",
+    tag: "CARDIOVASCULAR",
+    tagColor: "blue",
+  },
+  {
+    title: "Iron + Vitamin C",
+    description: "Ferrous Bisglycinate 25mg",
+    tag: "BLOOD HEALTH",
+    tagColor: "purple",
+  },
+  {
+    title: "Magnesium Glycinate",
+    description: "400mg · High Bioavailability",
+    tag: "SLEEP & CALM",
+    tagColor: "blue",
+  },
+  {
+    title: "Zinc + Vitamin C",
+    description: "Zinc Bisglycinate 25mg",
+    tag: "IMMUNE SUPPORT",
+    tagColor: "green",
+  },
+  {
+    title: "NAC 600mg",
+    description: "N-Acetyl Cysteine",
+    tag: "ANTIOXIDANT",
+    tagColor: "green",
   },
 ];
 
@@ -73,6 +111,24 @@ const proofStats = [
   { num: "99.9%", label: "Dosing Accuracy" },
   { num: "24Hr", label: "QA Lab Turnaround" },
   { num: "CGMP", label: "Certified Environment" },
+];
+
+const qualityStandards = [
+  {
+    title: "HPMC Vegetarian Shell",
+    description:
+      "Vegan-friendly capsules made from plant-derived HPMC for a clean label profile.",
+  },
+  {
+    title: "High-Capacity Filling",
+    description:
+      "Optimized encapsulation supporting up to 950mg of active formulation per capsule.",
+  },
+  {
+    title: "Delayed-Release Option",
+    description:
+      "Advanced acid-resistant shell technology for targeted intestinal nutrient delivery.",
+  },
 ];
 
 const faqs = [
@@ -128,5 +184,6 @@ const faqs = [
   capabilities={capabilities}
   proofStats={proofStats}
   customizationOptions={customizationOptions}
+  qualityStandards={qualityStandards}
   faqs={faqs}
 />

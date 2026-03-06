@@ -24,47 +24,61 @@ const benefits = [
 
 const customizationOptions = [
   {
-    title: "Viscosity Control",
-    description: "Ranging from thin syrups to high-density structured gels.",
+    title: "Honey Base",
+    description: "Specialized Raw / Manuka honey bases for premium gels.",
   },
   {
-    title: "Mouthfeel Engineering",
-    description:
-      "Optimizing for smoothness and clean finish after consumption.",
+    title: "Sachet Sizes",
+    description: "Versatile 15ml or 25ml sachet volumes to suit your dose.",
   },
   {
-    title: "Functional Base",
-    description: "Water, honey, agave, or lipid-based suspension systems.",
+    title: "Clean Formulations",
+    description: "Clean label friendly focus for health-conscious brands.",
   },
   {
-    title: "Ingredient Loading",
-    description: "High-potency active integration with minimal fillers.",
+    title: "Natural Stability",
+    description: "Expertly formulated for ambient shelf stable storage.",
   },
   {
-    title: "Flavor Masking",
-    description: "Advanced systems for bitter or metallic active ingredients.",
+    title: "Direct Packaging",
+    description: "Sachet delivery formats available with or without caps.",
   },
   {
-    title: "Shelf Stabilization",
-    description: "Natural preservative systems and pH balancing.",
+    title: "Secondary Formats",
+    description: "Professional Stand-up Pouch and Box secondary packaging.",
   },
 ];
 
 const capabilities = [
   {
-    title: "Performance Energy Gels",
-    description:
-      "Rapid-release carbohydrate and electrolyte complexes for endurance athletes.",
+    title: "Royal Jelly + Propolis",
+    description: "Raw Honey Base · Natural",
+    tag: "IMMUNITY",
+    tagColor: "green",
   },
   {
-    title: "Liposomal Gels",
-    description:
-      "Advanced nutrient delivery utilizing phospholipid bilayers for maximum bioavailability.",
+    title: "Manuka + Echinacea",
+    description: "MGO 250+ Manuka Base",
+    tag: "IMMUNE DEFENCE",
+    tagColor: "green",
   },
   {
-    title: "Botanical Paste Infusions",
-    description:
-      "High-density Turmeric, CBD, and adaptogenic blends with precise active loading.",
+    title: "Ginger & Black Seed",
+    description: "Wildflower Honey · Spiced",
+    tag: "DIGESTIVE",
+    tagColor: "green",
+  },
+  {
+    title: "Turmeric & Ginger",
+    description: "Raw Honey Base · Black Pepper",
+    tag: "ANTI-INFLAMMATORY",
+    tagColor: "orange",
+  },
+  {
+    title: "Energy Gel Blend",
+    description: "Honey · Guaraná · B12",
+    tag: "ENERGY",
+    tagColor: "red",
   },
 ];
 
@@ -73,6 +87,24 @@ const proofStats = [
   { num: "100%", label: "Leak-Free Guarantee" },
   { num: "FDA", label: "Registered Facility" },
   { num: "48hr", label: "Rapid Lab Testing" },
+];
+
+const qualityStandards = [
+  {
+    title: "Precision Filling",
+    description:
+      "High-accuracy 15–25ml single-serve sachet capacity for targeted active delivery.",
+  },
+  {
+    title: "Tear & Squeeze",
+    description:
+      "Ergonomic, convenient delivery format with an easy-open seal for mess-free consumption.",
+  },
+  {
+    title: "Ambient Stability",
+    description:
+      "Advanced formulation technology ensures shelf-stable storage with no refrigeration required.",
+  },
 ];
 
 const faqs = [
@@ -128,5 +160,6 @@ const faqs = [
   capabilities={capabilities}
   proofStats={proofStats}
   customizationOptions={customizationOptions}
+  qualityStandards={qualityStandards}
   faqs={faqs}
 />

@@ -32,6 +32,8 @@ const getPillStyles = (color?: string) => {
       return "background: #fff3e0; color: #e65100;";
     case "red":
       return "background: #ffebee; color: #c62828;";
+    case "yellow":
+      return "background: #fef3c7; color: #92400e;";
     case "teal":
       return "background: #e0f2f1; color: #00695c;";
     case "brown":
@@ -210,8 +212,8 @@ const getIcon = (title: string) => {
   }
 
   .large .category-pill {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: var(--color-white) !important;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 

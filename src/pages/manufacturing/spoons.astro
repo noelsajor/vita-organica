@@ -24,46 +24,67 @@ const benefits = [
 
 const customizationOptions = [
   {
-    title: "Foil Substrates",
-    description: "Selection of matte, gloss, and metallic medical-grade foils.",
+    title: "Spoon Weight",
+    description:
+      "Precision 8–10g fill per spoon for consistent, standardized dosing.",
   },
   {
-    title: "Custom Sizing",
-    description: "Stick packs ranging from 2g to 30g fill weights.",
+    title: "Individual Wrapping",
+    description:
+      "Each unit is individually wrapped to ensure hygiene, portability, and safety.",
   },
   {
-    title: "Liquid or Powder",
-    description: "Dual-capability lines for both dry and fluid delivery.",
+    title: "Drink Compatibility",
+    description:
+      "Specifically designed for hot drink compatibility and seamless stirring usage.",
   },
   {
-    title: "Easy-Tear Notches",
-    description: "Laser-perforated options for effortless consumer opening.",
+    title: "Handle Branding",
+    description:
+      "Custom handle branding options for premium corporate and retail positioning.",
   },
   {
-    title: "Variety Packing",
-    description: "Automated collation for multi-flavor retail kits.",
+    title: "Dispensing Formats",
+    description:
+      "Sachet options available with or without caps for targeted delivery.",
   },
   {
-    title: "Eco-Friendly Foils",
-    description: "Compostable and recyclable barrier options.",
+    title: "Secondary Packaging",
+    description:
+      "Retail-ready formats including professional stand-up pouches and boxes.",
   },
 ];
 
 const capabilities = [
   {
-    title: "Hydration & Electrolytes",
-    description:
-      "High-speed filling of rapid-dissolve mineral and carbohydrate complexes.",
+    title: "Raw Wildflower Honey",
+    description: "Classic · Everyday",
+    tag: "EVERYDAY",
+    tagColor: "yellow",
   },
   {
-    title: "Liquid Wellness Shots",
-    description:
-      "Filling of high-viscosity gels and sublingual liquid vitamins with zero-drip technology.",
+    title: "Lemon & Propolis",
+    description: "Bright · Citrusy",
+    tag: "THROAT SOOTHING",
+    tagColor: "yellow",
   },
   {
-    title: "Probiotic Stick Packs",
-    description:
-      "Low-humidity processing to maintain microbial viability throughout the packaging cycle.",
+    title: "Manuka + Ginger",
+    description: "Warming · Spiced",
+    tag: "IMMUNITY",
+    tagColor: "yellow",
+  },
+  {
+    title: "Lavender & Chamomile",
+    description: "Floral · Calming",
+    tag: "SLEEP & CALM",
+    tagColor: "blue",
+  },
+  {
+    title: "Cinnamon & Cardamom",
+    description: "Spiced · Chai Inspired",
+    tag: "METABOLIC",
+    tagColor: "red",
   },
 ];
 
@@ -72,6 +93,24 @@ const proofStats = [
   { num: "Zero", label: "Leakage Claims" },
   { num: "48Hr", label: "QA Release Cycle" },
   { num: "FDA", label: "Registered Facility" },
+];
+
+const qualityStandards = [
+  {
+    title: "Precision Dosing",
+    description:
+      "Each honey spoon is calibrated to 8–10g, providing a consistent serving size for perfect sweetness every time.",
+  },
+  {
+    title: "Hygienic Wrapping",
+    description:
+      "Every unit is individually wrapped to ensure maximum food safety, portability, and long-term shelf stability.",
+  },
+  {
+    title: "Premium Presentation",
+    description:
+      "Elegant, hot drink compatible design that is perfectly suited for high-end gift sets and hospitality.",
+  },
 ];
 
 const faqs = [
@@ -127,5 +166,6 @@ const faqs = [
   capabilities={capabilities}
   proofStats={proofStats}
   customizationOptions={customizationOptions}
+  qualityStandards={qualityStandards}
   faqs={faqs}
 />
