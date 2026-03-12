@@ -953,7 +953,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <h3>Download Free Guide</h3>
           <p>Instant access. No spam, just helpful manufacturing insights.</p>
 
-          <form>
+          <form onsubmit="event.preventDefault(); window.open('/manufacturing-starter-guide.pdf', '_blank');">
             <div class="form-group">
               <label for="first-name">First Name</label>
               <input
@@ -1055,7 +1055,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           btn.classList.add("active");
           btn.setAttribute("aria-selected", "true");
           document
-            .getElementById(btn.getAttribute("aria-controls"))
+            .getElementById(btn.getAttribute("aria-controls") || "")
             ?.classList.add("active");
         });
       });
