@@ -2147,12 +2147,9 @@ h4 {
     margin-bottom: var(--sp-4);
 }
 
-.footer-brand .site-logo .cls-1 {
-    fill: rgba(151, 204, 25, .75);
-}
-
+.footer-brand .site-logo .cls-1,
 .footer-brand .site-logo .cls-2 {
-    fill: rgba(189, 52, 208, .6);
+    fill: var(--color-white);
 }
 
 .footer-brand p {
