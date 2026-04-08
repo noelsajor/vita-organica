@@ -223,6 +223,8 @@ const MockupGenerator: React.FC<MockupGeneratorProps> = ({ initialFormat }) => {
 
                         {!leadCaptured ? (
                             <form onSubmit={handleLeadSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                {/* Honeypot for spam protection */}
+                                <input type="text" name="b_name" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} aria-hidden="true" />
                                 <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)', background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: 'var(--radius-lg)', marginBottom: '0.5rem' }}>
                                     ✨ <strong>Almost there!</strong> Enter your email to unlock your high-res 2000x2000px branding export instantly.
                                 </p>

@@ -13,6 +13,9 @@ const { format = "" } = Astro.props;
     <p>Complete the details below to unlock our team's calendar for a discovery call.</p>
 
     <form id="funnel-form" class="funnel-form">
+      <!-- Honeypot for spam protection -->
+      <input type="text" name="b_name" tabindex="-1" autocomplete="off" style="display: none;" aria-hidden="true" />
+      
       <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
         <div class="form-group" style="margin-bottom: 0;">
           <label for="funnel-name">Full Name</label>

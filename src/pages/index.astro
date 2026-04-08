@@ -68,10 +68,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
 
           <div class="cta-row">
-            <a href="/request-quote" class="btn btn-primary btn-lg"
-              >Request a Quote</a
+            <a href="/request-quote" class="btn btn-primary btn-lg" data-track="cta-click" data-cta-name="index-start"
+              >Start Your Project</a
             >
-            <a href="/manufacturing" class="btn btn-secondary"
+            <a href="/manufacturing" class="btn btn-secondary" data-track="cta-click" data-cta-name="index-view-cap"
               >View Capabilities</a
             >
           </div>
@@ -432,7 +432,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             We've built a streamlined process so you can focus on your brand
             while we handle the complexity of manufacturing.
           </p>
-          <a href="/request-quote" class="btn btn-primary">Request a Quote</a>
+          <a href="/request-quote" class="btn btn-primary" data-track="cta-click" data-cta-name="index-process-quote">Request a Quote</a>
         </div>
 
         <!-- Right: scrollable steps -->
@@ -954,6 +954,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <p>Instant access. No spam, just helpful manufacturing insights.</p>
 
           <form onsubmit="event.preventDefault(); window.open('/manufacturing-starter-guide.pdf', '_blank');">
+            <!-- Honeypot for spam protection -->
+            <input type="text" name="b_name" tabindex="-1" autocomplete="off" style="display: none;" aria-hidden="true" />
             <div class="form-group">
               <label for="first-name">First Name</label>
               <input
@@ -1027,10 +1029,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="cta-btn-row">
-          <a href="/request-quote" class="btn btn-primary btn-lg"
+          <a href="/request-quote" class="btn btn-primary btn-lg" data-track="cta-click" data-cta-name="index-final-quote"
             >Request a Quote</a
           >
-          <a href="/manufacturing" class="btn btn-ghost">View Capabilities</a>
+          <a href="/manufacturing" class="btn btn-ghost" data-track="cta-click" data-cta-name="index-final-cap">View Capabilities</a>
         </div>
 
         <p class="cta-sub-note">
