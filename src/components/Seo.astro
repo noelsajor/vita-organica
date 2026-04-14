@@ -9,9 +9,9 @@ interface Props {
 
 const {
   title = "Vita Organica | Private Label Supplement Manufacturing",
-  description = "Private Label & Contract Supplement Manufacturing in the USA. We help founders, eCommerce brands, influencers, and retailers create high-quality, compliant, and scalable supplement products.",
-  image = "/images/og-image.png", // Fallback if exists
-  canonical = Astro.url.href,
+  description = "Premium Private Label & Contract Supplement Manufacturing in the USA. We help founders and brands create high-quality, compliant, and scalable supplement products.",
+  image = "/images/og-image.png",
+  canonical = Astro.url.href.replace(Astro.url.origin, "https://vita-organica.com"),
   type = "website",
 } = Astro.props;
 
@@ -23,17 +23,6 @@ const siteName = "Vita Organica";
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
-<meta name="google-site-verification" content="Jm0sntQ3EHCpvUFvubjLxs5lZ5w316cLz2X1tkDnIM0" />
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWWVZZBSTR"></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QWWVZZBSTR');
-</script>
-
 <!-- Canonical URL -->
 <link rel="canonical" href={canonical} />
 
@@ -59,3 +48,13 @@ const siteName = "Vita Organica";
 
 <!-- Robots -->
 <meta name="robots" content="index, follow" />
+
+<!-- Google Analytics & Search Console -->
+<meta name="google-site-verification" content="Jm0sntQ3EHCpvUFvubjLxs5lZ5w316cLz2X1tkDnIM0" />
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-QWWVZZBSTR"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-QWWVZZBSTR');
+</script>
