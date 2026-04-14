@@ -9,9 +9,9 @@ interface Props {
 
 const {
   title = "Vita Organica | Private Label Supplement Manufacturing",
-  description = "Private Label & Contract Supplement Manufacturing in the USA. We help founders, eCommerce brands, influencers, and retailers create high-quality, compliant, and scalable supplement products.",
-  image = "/images/og-image.png", // Fallback if exists
-  canonical = Astro.url.href,
+  description = "Premium Private Label & Contract Supplement Manufacturing in the USA. We help founders and brands create high-quality, compliant, and scalable supplement products.",
+  image = "/images/og-image.png",
+  canonical = Astro.url.href.replace(Astro.url.origin, "https://vita-organica.com"),
   type = "website",
 } = Astro.props;
 
