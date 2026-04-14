@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/contract-manufacturing",
+      "destination": "/manufacturing",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
