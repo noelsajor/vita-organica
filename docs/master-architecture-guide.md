@@ -55,7 +55,8 @@ Global variables are defined at the root in `styles.css` (and/or `src/styles/glo
 Data fetching occurs server-side inside the standard Astro frontmatter (`---`).
 1. **Client Setup:** Sanity configuration logic resides in `src/lib/` or `src/sanity/`.
 2. **Querying:** Use `groq` to query Sanity inside an `.astro` page's frontmatter.
-3. **Schema (Current State):** *Note:* As of V1, Sanity schemas are managed externally or will be implemented via dedicated backend deployments. The `.env` variables `PUBLIC_SANITY_PROJECT_ID` and `PUBLIC_SANITY_DATASET` must map correctly.
+3. **Multi-Tenant Architecture:** Note that all agency templates share the singular `ascent-web-test/studio` Sanity monorepo. Routing is managed exclusively via the `PUBLIC_SANITY_PROJECT_ID` dataset mapping.
+4. **AI Developer Workflow:** Before making any Sanity changes, SSG routing, or deploying webhook components, refer to the [AI Sanity Integration Playbook](./ai-sanity-integration-playbook.md) to review critical `.tsx` wrapper requirements and CSS scoping techniques.
 
 ## 6. Build & Deployment Rules
 
