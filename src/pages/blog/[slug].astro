@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { client, isConfigured } from '../../lib/sanity/client';
 import { postBySlugQuery, allSlugsQuery } from '../../lib/sanity/queries';
 import { urlForImage } from '../../lib/sanity/urlForImage';
+import { PortableText } from '@portabletext/react';
 
 export async function getStaticPaths() {
   if (!isConfigured) {
@@ -85,9 +86,7 @@ const jsonLd = {
           )}
 
           <div class="post-content" style="font-size: var(--text-lg); line-height: 1.8;">
-            {/* In a real implementation, use a PortableText component here */}
-            {/* For now, just a placeholder for the block content */}
-            <p>Body content from Sanity goes here.</p>
+            <PortableText value={post.body} />
           </div>
         </>
       )}
