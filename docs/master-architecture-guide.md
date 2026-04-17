@@ -1,6 +1,34 @@
 # Master Architecture Guide
 
 This blueprint documents the routing map, styling strategy, and architectural design of the Agency Master Operation Template. Future developers and AI assistants should refer to this guide to understand the codebase structure without confusion.
+## High-Level System Architecture
+
+```mermaid
+graph TD
+    classDef sanity fill:#f04d21,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef astro fill:#ff5d01,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef vercel fill:#000,stroke:#fff,stroke-width:2px,color:#fff;
+
+    subgraph The Agency Backend "The Agency Backend (Sanity Monorepo)"
+        A["Sanity Studio Dashboard<br>(Multi-Tenant)"]:::sanity
+        B["Sanity Graph API<br>(Global Dataset)"]:::sanity
+    end
+
+    subgraph Client Workspaces "Client Workspaces (Vercel deployments)"
+        C["Client Frontend A<br>(Astro SSG + React)"]:::astro
+        D["Client Frontend B<br>(Astro SSG + React)"]:::astro
+    end
+
+    %% Data Flow
+    A -- "Content Writers Publish" --> B
+    B -- "GROQ Queries via API" --> C
+    B -- "GROQ Queries via API" --> D
+
+    %% Build Hooks
+    B -. "Triggers Vercel Deploy Hook<br>(_type == 'post')" .-> V1{"Vercel CI/CD"}:::vercel
+    V1 -. "Rebuilds Static Assets" .-> C
+    V1 -. "Rebuilds Static Assets" .-> D
+```
 
 ## 1. Purpose & Optimal Use Cases
 
