@@ -7,6 +7,7 @@ export const allPostsQuery = groq`
     excerpt,
     mainImage,
     publishedAt,
+    body,
     "author": author->name,
     "categories": categories[]->title
   }
