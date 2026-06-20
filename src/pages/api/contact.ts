@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
-const TO = 'alex@vitaorganicasupps.com';
+const TO = 'noelsajor@gmail.com';
 const FROM = 'submissions@vitaorganicasupps.com';
 
 export const POST: APIRoute = async ({ request }) => {
