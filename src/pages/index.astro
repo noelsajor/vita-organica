@@ -958,7 +958,7 @@ import heroImg4 from "../assets/images/hero_img_4.png";
           <h3>Download Free Guide</h3>
           <p>Instant access. No spam, just helpful manufacturing insights.</p>
 
-          <form onsubmit="event.preventDefault(); window.open('/manufacturing-starter-guide.pdf', '_blank');">
+          <form id="guide-form" onsubmit="return false;">
             <!-- Honeypot for spam protection -->
             <input type="text" name="b_name" tabindex="-1" autocomplete="off" style="display: none;" aria-hidden="true" />
             <div class="form-group">
@@ -1046,6 +1046,30 @@ import heroImg4 from "../assets/images/hero_img_4.png";
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    (function () {
+      const guideForm = document.getElementById('guide-form');
+      if (guideForm) {
+        guideForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          const fd = new FormData(guideForm);
+          await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              type: 'guide',
+              b_name: fd.get('b_name'),
+              firstName: fd.get('first-name'),
+              email: fd.get('email'),
+              interest: fd.get('interest'),
+            }),
+          }).catch(function () {});
+          window.open('/manufacturing-starter-guide.pdf', '_blank');
+        });
+      }
+    })();
+  </script>
 
   <script is:inline>
     (function () {

@@ -132,10 +132,17 @@ const MockupGenerator: React.FC<MockupGeneratorProps> = ({ initialFormat }) => {
         link.click();
     };
 
-    const handleLeadSubmit = (e: React.FormEvent) => {
+    const handleLeadSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const payload = { ...formData, format: selectedSlug, timestamp: new Date().toISOString() };
         localStorage.setItem('lead_mockup', JSON.stringify(payload));
+
+        await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type: 'mockup', email: formData.email, format: preset.label }),
+        }).catch(() => {});
+
         setLeadCaptured(true);
         handleDownload();
     };

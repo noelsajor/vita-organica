@@ -93,18 +93,27 @@ const { format = "" } = Astro.props;
     const successContainer = document.getElementById('success-container');
 
     if (funnelForm) {
-      funnelForm.addEventListener('submit', (e) => {
+      funnelForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // In a real app, we would send the data here
-        // const formData = new FormData(funnelForm);
-        // console.log('Form submitted:', Object.fromEntries(formData));
+        const fd = new FormData(funnelForm as HTMLFormElement);
 
-        // UI Transition
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'quote',
+            b_name: fd.get('b_name'),
+            name: fd.get('name'),
+            email: fd.get('email'),
+            company: fd.get('company'),
+            format: fd.get('format'),
+            quantity: fd.get('quantity'),
+            timeline: fd.get('timeline'),
+          }),
+        }).catch(() => {});
+
         formCard.style.display = 'none';
         successContainer.style.display = 'block';
-        
-        // Scroll to top of container
         successContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     }

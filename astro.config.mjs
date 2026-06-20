@@ -1,11 +1,11 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-
 import react from '@astrojs/react';
+import vercel from '@astrojs/vercel';
 
-// https://astro.build/config
 export default defineConfig({
-    site: 'https://vita-organica.com', // Replace with actual production URL
+    site: 'https://vita-organica.com',
     integrations: [react(), sitemap()],
-    output: 'static',
+    output: 'hybrid',
+    adapter: vercel(),
 });
