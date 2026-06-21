@@ -68,21 +68,14 @@ const { format = "" } = Astro.props;
     </form>
   </div>
 
-  {/* Success & Calendly Container (Initially Hidden) */}
-  <div class="success-calendly-container" id="success-container" style="display: none; text-align: center;">
-    <div class="success-message" style="margin-bottom: 2rem;">
-      <div class="check-circle" style="width: 64px; height: 64px; background: var(--color-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" style="width: 32px; height: 32px;">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-      </div>
-      <h2>Information Received!</h2>
-      <p style="max-width: 500px; margin: 0 auto;">We've received your project details. To accelerate the process, please select a time for a 15-minute technical discovery call below.</p>
+  <div id="success-container" style="display: none; text-align: center; padding: 3rem 1rem;">
+    <div style="width: 64px; height: 64px; background: var(--color-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" style="width: 32px; height: 32px;">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
     </div>
-
-    {/* Calendly Inline Widget */}
-    <div class="calendly-inline-widget" data-url="https://calendly.com/vita-organica/discovery" style="min-width:320px;height:700px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <h2>Request Received!</h2>
+    <p style="max-width: 480px; margin: 0 auto 2rem; color: var(--color-ink-soft);">Our team will review your project details and reach out within 1 business day with a custom quote.</p>
   </div>
 </div>
 
