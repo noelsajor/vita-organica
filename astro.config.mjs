@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-    site: 'https://vita-organica.com',
+    site: 'https://vitaorganicasupps.com',
     integrations: [react(), sitemap()],
     output: 'static',
     adapter: vercel(),
